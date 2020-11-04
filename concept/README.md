@@ -54,6 +54,10 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
     * Possibly a single use medkit here if the player hasn't unlocked the med bay yet?
     * [ ] The player starts off here and is confronted by a single spider who is attacking a wall. It doesn't engage the player until they make their first move, at which point the spider will start moving towards the player.
     * [ ] The player successfully defeats the spider when they shoot it into the airlock square, sending the spider out of the moon base.
+
+    <img src="images/01_crew_quarters_layout.png" width="100" height="100">
+
+   
 1. ### Oxygenator Room
     * Prevent aliens from destroying oxygen supply.
     * This can add a time limit to the game at first, which is alleviated once the threat is neutralized.
