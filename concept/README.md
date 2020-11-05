@@ -72,7 +72,11 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
     * [ ] Gather supplies will check off an item on the pre-flight checklist
     * [ ] Saving the crew member will have the friend pop up a dialogue saying they will do some repairs IF the player brings them a tool from the storage room. (New quest objective added to the quest tracker)
     * [ ] 2 Red spiders are the primary threat in this room. There are 2-4 stasis pods. The player has to knock the spiders back into a pod, which will incapacitate them. 
+
+
     ![Medical Bay](images/03_medical_bay_layout.png)
+
+
 1. ### Storage Room
     * Gather tools required to repair the ship
     *  [ ] If the player has talked to the crew member in the med bay, then the Wrench tool will have an interaction to pick it up. If the player completes this room before the medical bay, there will be no reason to pick it up, and the player will have to come back.
