@@ -55,7 +55,7 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
     * [ ] The player starts off here and is confronted by a single spider who is attacking a wall. It doesn't engage the player until they make their first move, at which point the spider will start moving towards the player.
     * [ ] The player successfully defeats the spider when they shoot it into the airlock square, sending the spider out of the moon base.
 
-    <img src="images/01_crew_quarters_layout.png" width="100" height="100">
+    ![Crew Quarters](images/01_crew_quarters_layout.png)
 
    
 1. ### Oxygenator Room
@@ -72,6 +72,7 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
     * [ ] Gather supplies will check off an item on the pre-flight checklist
     * [ ] Saving the crew member will have the friend pop up a dialogue saying they will do some repairs IF the player brings them a tool from the storage room. (New quest objective added to the quest tracker)
     * [ ] 2 Red spiders are the primary threat in this room. There are 2-4 stasis pods. The player has to knock the spiders back into a pod, which will incapacitate them. 
+    ![Medical Bay](images/03_medical_bay_layout.png)
 1. ### Storage Room
     * Gather tools required to repair the ship
     *  [ ] If the player has talked to the crew member in the med bay, then the Wrench tool will have an interaction to pick it up. If the player completes this room before the medical bay, there will be no reason to pick it up, and the player will have to come back.
