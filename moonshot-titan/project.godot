@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Titan",
+"language": "GDScript",
+"path": "res://levels/titan.gd"
+} ]
 _global_script_class_icons={
-
+"Titan": ""
 }
 
 [application]
@@ -58,11 +63,11 @@ shoot={
 
 [layer_names]
 
-2d_physics/layer_1="walls"
-2d_physics/layer_2="player"
-2d_physics/layer_3="enemies"
-2d_physics/layer_4="projectiles"
-2d_physics/layer_5="hazards"
+2d_physics/layer_1="WALL"
+2d_physics/layer_2="PLAYER"
+2d_physics/layer_3="ENEMY"
+2d_physics/layer_4="PROJECTILE"
+2d_physics/layer_5="HAZARD"
 
 [physics]
 
