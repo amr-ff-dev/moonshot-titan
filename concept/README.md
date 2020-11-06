@@ -68,7 +68,7 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
     * [ ] Interactible 1: The player can either shoot or interact with an oxygen canister to cause it to explode, resulting in a fire square that will destroy the enemy.
     * [ ] Interactible 2: After the spiders are destroyed, the player can interact with the computer console to shut down the oxygen timer and extinguish the fires.
 
-    ![Crew Quarters](images/02_oxygenator_layout.png)
+    ![Oxygenator Room](images/02_oxygenator_layout.png)
 
 1. ### Medical Bay
     * Gather medical supplies for the journey home
@@ -86,6 +86,9 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
     * Gather tools required to repair the ship
     *  [ ] If the player has talked to the crew member in the med bay, then the Wrench tool will have an interaction to pick it up. If the player completes this room before the medical bay, there will be no reason to pick it up, and the player will have to come back.
     * [ ] 2 Green spiders are the main threat. There are overhead pipes that have been destroyed which are sending down gusts of superheated steam. These are fatal to everyone (spiders and player). The player will have to be careful not to send themselves flying into one of the hazards while they are dealing with the spiders.
+
+    ![Storage Room](images/04_storage_room_layout.png)
+
 1. ### Mess Hall
     * Grab a pile of snacks to last you the journey back to Earth.
     * [ ] Acquiring the picnic basket of food supplies will mark off a pre-flight checklist item.
