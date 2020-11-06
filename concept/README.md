@@ -96,12 +96,18 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
     * [ ] The player has to run around the tables, but the big spiders can run over them. The player moves at the same speed as the spider, so the spiders will eventually catch the player if they don't use the recoil gun to move faster.
     * [ ] There will be an interactible flame in the kitchen part. If the player interacts with it, they have a flaming torch they carry around with them. They can then interact with one of the tables (at which point the torch disappears) and this becomes the hazard they can kite the big spider onto.
     * [ ] Upon level complete, the table will be destroyed and the flame will go out.
+
+    ![Mess Hall](images/05_mess_hall_layout.png)
+
+
 1. ### Computer Core
     * Unlock doors to sealed rooms
     * [ ] Interactible computer will unlock all doors in the compound (except the top secret research lab). This won't check off an objective on the quest tracker - it will just enable the player to proceed.
         * *Discussion* - To prevent the player from skipping to the hard zones, should we have the computer be "Rebooting..." until they have completed Rooms 1-5 first?
     * [ ] Several computer workstations (all except for the interactible one) has been destroyed by the spiders and are sparking. The squares adjacent to the consoles are hazards. The room is smaller, and recoiling into the computer spark range becomes a real hazard.
-        * [ ] Bonus scope creep: The size of the sparks might vary in a pattern. 2 squares out twice, then 1 square out, then 0 squares out. Repeat.
+        * [ ] ~~Bonus scope creep: The size of the sparks might vary in a pattern. 2 squares out twice, then 1 square out, then 0 squares out. Repeat.~~ MNG: After designing the graphic, this zone feels that it's likely deadly enough. Probably don't need this.
+
+    ![Mess Hall](images/05_mess_hall_layout.png)
 1. ### Reactor Room (*)
     * Power up the ship!
     * [ ] Interactible: Reaching the end of this level and triggering the console will power up the ship and check off an item on the pre-flight checklist.
