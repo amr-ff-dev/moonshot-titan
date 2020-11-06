@@ -9,7 +9,7 @@ radius = 8.0
 height = 12.0
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 150.0
+radius = 200.0
 
 [node name="Spider" type="KinematicBody2D"]
 collision_layer = 4
