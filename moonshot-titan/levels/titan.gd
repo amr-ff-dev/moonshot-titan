@@ -13,3 +13,6 @@ enum CollisionLayers {
 func _on_Player_shoot(projectile, origin, direction):
 	add_child(projectile)
 	projectile.launch(origin, direction)
+
+func _on_Player_game_over():
+	$HUD/Message.text = "Game Over"

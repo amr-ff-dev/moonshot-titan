@@ -503,4 +503,18 @@ position = Vector2( 160, 128 )
 
 [node name="Spider" parent="." instance=ExtResource( 4 )]
 position = Vector2( 384, 192 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Message" type="Label" parent="HUD"]
+margin_left = 224.0
+margin_top = 192.0
+margin_right = 416.0
+margin_bottom = 206.0
+custom_colors/font_color = Color( 0, 0.2, 0.466667, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="game_over" from="Player" to="." method="_on_Player_game_over"]
 [connection signal="shoot" from="Player" to="." method="_on_Player_shoot"]

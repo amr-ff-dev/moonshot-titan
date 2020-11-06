@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal shoot(Projectile, origin, direction)
+signal game_over()
 
 export(int) var speed = 200
 export(float, 0, 1, 0.1) var accelerate = 0.2
@@ -14,10 +15,7 @@ var recoiling = false
 func _physics_process(delta):
 	velocity = velocity.linear_interpolate(desired_velocity, accelerate)
 	var collision = move_and_collide(velocity * delta)
-	if collision and collision.collider.get_collision_layer() == Titan.CollisionLayers.WALL:
-		velocity = Vector2.ZERO
-		desired_velocity = Vector2.ZERO
-		recoiling = false
+	collide(collision)
 
 func _input(event):
 	if event.is_action_pressed("shoot"):
@@ -25,6 +23,24 @@ func _input(event):
 	else:
 		update_desired_velocity()
 
+func collide(collision):
+	if !collision:
+		return
+	match collision.collider.get_collision_layer():
+		Titan.CollisionLayers.WALL:
+			collide_with_wall()
+		Titan.CollisionLayers.ENEMY:
+			collide_with_enemy()
+
+func collide_with_wall():
+	velocity = Vector2.ZERO
+	desired_velocity = Vector2.ZERO
+	recoiling = false
+
+func collide_with_enemy():
+	queue_free()
+	emit_signal("game_over")
+		
 func update_desired_velocity():
 	if recoiling:
 		return
@@ -45,3 +61,4 @@ func shoot():
 	
 	desired_velocity = -direction_to_target * projectile.speed
 	recoiling = true
+
