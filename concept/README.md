@@ -48,6 +48,8 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
 
 **Note**: All rooms are sealed once the player enters them. They have to complete the challenge to leave.
 
+![Legend](images/00_room_legend.png)
+
 1. ### Crew Quarters 
     * Starting room? Safe room with no monsters if the player needs a breather.
     * Retrieve your personal effects?
@@ -63,7 +65,7 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
     * This can add a time limit to the game at first, which is alleviated once the threat is neutralized.
     * *Discussion* - Should this be a recurring threat that the player might have to revisit a few times if they are taking too long?
     * [ ] From the start of the game, the oxygen levels will start to drain. The player has 5 real-time minutes to defeat the spiders in this room before game over.
-    * [ ] Interactible 1: The player can either shoot or interact with an oxygen canister to cause it to explode, resulting in a fire square that will destroy the enemy.**
+    * [ ] Interactible 1: The player can either shoot or interact with an oxygen canister to cause it to explode, resulting in a fire square that will destroy the enemy.
     * [ ] Interactible 2: After the spiders are destroyed, the player can interact with the computer console to shut down the oxygen timer and extinguish the fires.
 1. ### Medical Bay
     * Gather medical supplies for the journey home
