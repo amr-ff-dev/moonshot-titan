@@ -107,7 +107,7 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
     * [ ] Several computer workstations (all except for the interactible one) has been destroyed by the spiders and are sparking. The squares adjacent to the consoles are hazards. The room is smaller, and recoiling into the computer spark range becomes a real hazard.
         * [ ] ~~Bonus scope creep: The size of the sparks might vary in a pattern. 2 squares out twice, then 1 square out, then 0 squares out. Repeat.~~ MNG: After designing the graphic, this zone feels that it's likely deadly enough. Probably don't need this.
 
-    ![Mess Hall](images/05_mess_hall_layout.png)
+    ![Mess Hall](images/06_computer_core_layout.png)
 1. ### Reactor Room (*)
     * Power up the ship!
     * [ ] Interactible: Reaching the end of this level and triggering the console will power up the ship and check off an item on the pre-flight checklist.
