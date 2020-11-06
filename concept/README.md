@@ -67,6 +67,9 @@ Research Lab | 1 Normal, 1 Red, 1 Green, 1 Large + Recoil avoidance + Grav Plati
     * [ ] From the start of the game, the oxygen levels will start to drain. The player has 5 real-time minutes to defeat the spiders in this room before game over.
     * [ ] Interactible 1: The player can either shoot or interact with an oxygen canister to cause it to explode, resulting in a fire square that will destroy the enemy.
     * [ ] Interactible 2: After the spiders are destroyed, the player can interact with the computer console to shut down the oxygen timer and extinguish the fires.
+
+    ![Crew Quarters](images/02_oxygenator_layout.png)
+
 1. ### Medical Bay
     * Gather medical supplies for the journey home
     * Possibly heal/recruit a required crew member for launching the ship (your pilot)
