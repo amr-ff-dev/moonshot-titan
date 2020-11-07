@@ -9,7 +9,7 @@ height = 8.0
 
 [node name="RepulsorProjectile" type="KinematicBody2D"]
 collision_layer = 8
-collision_mask = 5
+collision_mask = 37
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
