@@ -542,16 +542,16 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=58]
+[sub_resource type="RectangleShape2D" id=55]
 extents = Vector2( 51.5, 86 )
 
 [sub_resource type="RectangleShape2D" id=56]
 extents = Vector2( 12, 14.5 )
 
-[sub_resource type="RectangleShape2D" id=55]
+[sub_resource type="RectangleShape2D" id=57]
 extents = Vector2( 31.5, 27 )
 
-[sub_resource type="RectangleShape2D" id=57]
+[sub_resource type="RectangleShape2D" id=58]
 extents = Vector2( 14, 28 )
 
 [node name="Titan" type="Node2D"]
@@ -595,7 +595,7 @@ texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AirlockHazard"]
 position = Vector2( 7.85724, -7.62939e-06 )
-shape = SubResource( 58 )
+shape = SubResource( 55 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 335.362, 720.797 )
@@ -704,7 +704,7 @@ texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
 position = Vector2( 0, -5.79089 )
-shape = SubResource( 55 )
+shape = SubResource( 57 )
 
 [node name="Table2" type="StaticBody2D" parent="."]
 position = Vector2( 463.641, 533.106 )
@@ -718,7 +718,7 @@ texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table2"]
 position = Vector2( 0, -5.79089 )
-shape = SubResource( 55 )
+shape = SubResource( 57 )
 
 [node name="Stool4" type="StaticBody2D" parent="."]
 position = Vector2( 399.884, 321.221 )
@@ -761,7 +761,7 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
 position = Vector2( 0, -12.5 )
-shape = SubResource( 57 )
+shape = SubResource( 58 )
 
 [node name="Bed2" type="StaticBody2D" parent="."]
 position = Vector2( 112.453, 300.65 )
@@ -776,7 +776,7 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed2"]
 position = Vector2( -0.943878, -13.4439 )
-shape = SubResource( 57 )
+shape = SubResource( 58 )
 
 [node name="Bed3" type="StaticBody2D" parent="."]
 position = Vector2( 113.397, 396.059 )
@@ -791,7 +791,7 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed3"]
 position = Vector2( -1.12374, -12.8746 )
-shape = SubResource( 57 )
+shape = SubResource( 58 )
 
 [node name="Bed4" type="StaticBody2D" parent="."]
 position = Vector2( 112.453, 491.469 )
@@ -806,7 +806,7 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed4"]
 position = Vector2( -2.28882e-05, -12.5 )
-shape = SubResource( 57 )
+shape = SubResource( 58 )
 
 [node name="Bed5" type="StaticBody2D" parent="."]
 position = Vector2( 112.453, 587.744 )
@@ -821,7 +821,7 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed5"]
 position = Vector2( -0.280617, -12.4999 )
-shape = SubResource( 57 )
+shape = SubResource( 58 )
 
 [node name="Bed6" type="StaticBody2D" parent="."]
 position = Vector2( 48.2696, 301.75 )
@@ -836,7 +836,7 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed6"]
 position = Vector2( -0.561226, -14.4643 )
-shape = SubResource( 57 )
+shape = SubResource( 58 )
 
 [node name="Bed7" type="StaticBody2D" parent="."]
 position = Vector2( 48.2696, 396.137 )
@@ -851,7 +851,7 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed7"]
 position = Vector2( -0.561234, -13.3419 )
-shape = SubResource( 57 )
+shape = SubResource( 58 )
 
 [node name="Bed8" type="StaticBody2D" parent="."]
 position = Vector2( 48.2696, 491.469 )
@@ -866,7 +866,7 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed8"]
 position = Vector2( -0.84185, -12.5 )
-shape = SubResource( 57 )
+shape = SubResource( 58 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
