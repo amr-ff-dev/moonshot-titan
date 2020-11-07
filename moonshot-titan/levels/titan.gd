@@ -7,7 +7,8 @@ enum CollisionLayers {
 	PLAYER = 2,
 	ENEMY = 4,
 	PROJECTILE = 8,
-	HAZARD = 16
+	HAZARD = 16,
+	OBSTACLE = 32,
 }
 
 func _on_Player_shoot(projectile, origin, direction):

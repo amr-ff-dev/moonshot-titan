@@ -27,17 +27,17 @@ func collide(collision):
 	if !collision:
 		return
 	match collision.collider.get_collision_layer():
-		Titan.CollisionLayers.WALL:
-			collide_with_wall()
-		Titan.CollisionLayers.ENEMY:
-			collide_with_enemy()
+		Titan.CollisionLayers.WALL, Titan.CollisionLayers.OBSTACLE:
+			collide_and_stop()
+		Titan.CollisionLayers.ENEMY, Titan.CollisionLayers.HAZARD:
+			collide_and_die()
 
-func collide_with_wall():
+func collide_and_stop():
 	velocity = Vector2.ZERO
 	desired_velocity = Vector2.ZERO
 	recoiling = false
 
-func collide_with_enemy():
+func collide_and_die():
 	queue_free()
 	emit_signal("game_over")
 		
