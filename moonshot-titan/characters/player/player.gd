@@ -7,10 +7,12 @@ export(int) var speed = 200
 export(float, 0, 1, 0.1) var accelerate = 0.2
 
 var RepulsorProjectile = preload("res://models/repulsor_projectile/repulsor_projectile.tscn")
+onready var animation_player = $AnimationPlayer
 
 var velocity = Vector2.ZERO
 var desired_velocity = Vector2.ZERO
 var recoiling = false
+var dead = false
 
 func _physics_process(delta):
 	velocity = velocity.linear_interpolate(desired_velocity, accelerate)
@@ -18,27 +20,31 @@ func _physics_process(delta):
 	collide(collision)
 
 func _input(event):
+	if dead:
+		return
 	if event.is_action_pressed("shoot"):
 		shoot()
 	else:
 		update_desired_velocity()
 
 func collide(collision):
-	if !collision:
+	if !collision or dead:
 		return
 	match collision.collider.get_collision_layer():
 		Titan.CollisionLayers.WALL, Titan.CollisionLayers.OBSTACLE:
-			collide_and_stop()
+			stop_collision()
 		Titan.CollisionLayers.ENEMY, Titan.CollisionLayers.HAZARD:
-			collide_and_die()
+			die_collision()
 
-func collide_and_stop():
+func stop_collision():
 	velocity = Vector2.ZERO
 	desired_velocity = Vector2.ZERO
 	recoiling = false
 
-func collide_and_die():
-	queue_free()
+func die_collision():
+	stop_collision()
+	dead = true
+	animation_player.play("game_over")
 	emit_signal("game_over")
 		
 func update_desired_velocity():
@@ -61,3 +67,8 @@ func shoot():
 	
 	desired_velocity = -direction_to_target * projectile.speed
 	recoiling = true
+
+func respawn(respawn_point):
+	self.position = respawn_point.position
+	animation_player.play_backwards("game_over")
+	dead = false
