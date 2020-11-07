@@ -545,7 +545,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="RectangleShape2D" id=55]
 extents = Vector2( 51.5, 86 )
 
-[sub_resource type="RectangleShape2D" id=57]
+[sub_resource type="RectangleShape2D" id=56]
 extents = Vector2( 31.5, 27 )
 
 [node name="Titan" type="Node2D"]
@@ -616,14 +616,18 @@ position = Vector2( 464, 576 )
 
 [node name="Chair1" parent="." instance=ExtResource( 10 )]
 position = Vector2( 400, 528 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 528, 528 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Chair3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 464, 272 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Table" type="StaticBody2D" parent="."]
 position = Vector2( 400, 272 )
@@ -637,7 +641,7 @@ texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
 position = Vector2( 0, -5.79089 )
-shape = SubResource( 57 )
+shape = SubResource( 56 )
 
 [node name="Table2" type="StaticBody2D" parent="."]
 position = Vector2( 464, 528 )
@@ -651,7 +655,7 @@ texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table2"]
 position = Vector2( 0, -5.79089 )
-shape = SubResource( 57 )
+shape = SubResource( 56 )
 
 [node name="Bed1" parent="." instance=ExtResource( 11 )]
 position = Vector2( 112, 208 )

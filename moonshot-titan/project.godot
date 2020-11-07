@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Moonshot Titan"
 run/main_scene="res://levels/titan.tscn"
-config/icon="res://icon.png"
+config/icon="res://characters/player/player.png"
 
 [display]
 
