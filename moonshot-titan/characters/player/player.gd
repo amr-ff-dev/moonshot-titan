@@ -61,4 +61,3 @@ func shoot():
 	
 	desired_velocity = -direction_to_target * projectile.speed
 	recoiling = true
-

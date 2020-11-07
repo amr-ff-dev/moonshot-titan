@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/moonsurface_autotile.png" type="Texture" id=2]
@@ -8,9 +8,9 @@
 [ext_resource path="res://models/hazard.png" type="Texture" id=6]
 [ext_resource path="res://models/obstacles/table.png" type="Texture" id=7]
 [ext_resource path="res://models/obstacles/table_cards.png" type="Texture" id=8]
-[ext_resource path="res://models/obstacles/stool.png" type="Texture" id=9]
-[ext_resource path="res://models/obstacles/chair.png" type="Texture" id=10]
-[ext_resource path="res://models/obstacles/bed.png" type="Texture" id=11]
+[ext_resource path="res://models/obstacles/stool.tscn" type="PackedScene" id=9]
+[ext_resource path="res://models/obstacles/chair.tscn" type="PackedScene" id=10]
+[ext_resource path="res://models/obstacles/bed.tscn" type="PackedScene" id=11]
 [ext_resource path="res://models/hazards/airlock_hazard.png" type="Texture" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -545,14 +545,8 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="RectangleShape2D" id=55]
 extents = Vector2( 51.5, 86 )
 
-[sub_resource type="RectangleShape2D" id=56]
-extents = Vector2( 12, 14.5 )
-
 [sub_resource type="RectangleShape2D" id=57]
 extents = Vector2( 31.5, 27 )
-
-[sub_resource type="RectangleShape2D" id=58]
-extents = Vector2( 14, 28 )
 
 [node name="Titan" type="Node2D"]
 script = ExtResource( 3 )
@@ -606,91 +600,30 @@ position = Vector2( 466.292, 390.946 )
 collision_mask = 63
 speed = 80
 
-[node name="Stool" type="StaticBody2D" parent="."]
-position = Vector2( 399.279, 224.57 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Stool1" parent="." instance=ExtResource( 9 )]
 
-[node name="Sprite" type="Sprite" parent="Stool"]
-texture = ExtResource( 9 )
+[node name="Stool2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 336, 272 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stool"]
-position = Vector2( 0, -4.00452 )
-shape = SubResource( 56 )
+[node name="Stool3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 400, 320 )
 
-[node name="Stool2" type="StaticBody2D" parent="."]
-position = Vector2( 339.279, 275.744 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Stool4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 464, 480 )
 
-[node name="Sprite" type="Sprite" parent="Stool2"]
-texture = ExtResource( 9 )
+[node name="Stool5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 464, 576 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stool2"]
-position = Vector2( 0, -4.00452 )
-shape = SubResource( 56 )
+[node name="Chair1" parent="." instance=ExtResource( 10 )]
+position = Vector2( 400, 528 )
 
-[node name="Stool6" type="StaticBody2D" parent="."]
-position = Vector2( 464.696, 484.883 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Chair2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 528, 528 )
+flip_horizontal = true
 
-[node name="Sprite" type="Sprite" parent="Stool6"]
-texture = ExtResource( 9 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stool6"]
-position = Vector2( 0, -4.00452 )
-shape = SubResource( 56 )
-
-[node name="Chair" type="StaticBody2D" parent="."]
-position = Vector2( 409.517, 533.969 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Chair"]
-texture = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair"]
-position = Vector2( 0.1539, 5.22096 )
-shape = SubResource( 56 )
-
-[node name="Chair2" type="StaticBody2D" parent="."]
-position = Vector2( 521.356, 533.969 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Chair2"]
-texture = ExtResource( 10 )
-flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair2"]
-position = Vector2( 0.1539, 5.22096 )
-shape = SubResource( 56 )
-
-[node name="Chair3" type="StaticBody2D" parent="."]
-position = Vector2( 459.129, 266.564 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Chair3"]
-texture = ExtResource( 10 )
-flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair3"]
-position = Vector2( 0.1539, 5.22096 )
-shape = SubResource( 56 )
+[node name="Chair3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 464, 272 )
+flip_horizontal = true
 
 [node name="Table" type="StaticBody2D" parent="."]
 position = Vector2( 400.712, 272.4 )
@@ -720,153 +653,29 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -5.79089 )
 shape = SubResource( 57 )
 
-[node name="Stool4" type="StaticBody2D" parent="."]
-position = Vector2( 399.884, 321.221 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Bed1" parent="." instance=ExtResource( 11 )]
+position = Vector2( 112, 208 )
 
-[node name="Sprite" type="Sprite" parent="Stool4"]
-texture = ExtResource( 9 )
+[node name="Bed2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 112, 304 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stool4"]
-position = Vector2( 0, -4.00452 )
-shape = SubResource( 56 )
+[node name="Bed3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 112, 400 )
 
-[node name="Stool5" type="StaticBody2D" parent="."]
-position = Vector2( 464.074, 576.652 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Bed4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 112, 496 )
 
-[node name="Sprite" type="Sprite" parent="Stool5"]
-texture = ExtResource( 9 )
+[node name="Bed5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 112, 592 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stool5"]
-position = Vector2( 0, -4.00452 )
-shape = SubResource( 56 )
+[node name="Bed6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 48, 304 )
 
-[node name="Bed" type="StaticBody2D" parent="."]
-position = Vector2( 112.453, 204.118 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Bed7" parent="." instance=ExtResource( 11 )]
+position = Vector2( 48, 400 )
 
-[node name="Sprite" type="Sprite" parent="Bed"]
-position = Vector2( 0, -8 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
-position = Vector2( 0, -12.5 )
-shape = SubResource( 58 )
-
-[node name="Bed2" type="StaticBody2D" parent="."]
-position = Vector2( 112.453, 300.65 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Bed2"]
-position = Vector2( -0.943863, -8.02295 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed2"]
-position = Vector2( -0.943878, -13.4439 )
-shape = SubResource( 58 )
-
-[node name="Bed3" type="StaticBody2D" parent="."]
-position = Vector2( 113.397, 396.059 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Bed3"]
-position = Vector2( -1.12373, -7.86609 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed3"]
-position = Vector2( -1.12374, -12.8746 )
-shape = SubResource( 58 )
-
-[node name="Bed4" type="StaticBody2D" parent="."]
-position = Vector2( 112.453, 491.469 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Bed4"]
-position = Vector2( 0, -7.57663 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed4"]
-position = Vector2( -2.28882e-05, -12.5 )
-shape = SubResource( 58 )
-
-[node name="Bed5" type="StaticBody2D" parent="."]
-position = Vector2( 112.453, 587.744 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Bed5"]
-position = Vector2( -0.280617, -7.57666 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed5"]
-position = Vector2( -0.280617, -12.4999 )
-shape = SubResource( 58 )
-
-[node name="Bed6" type="StaticBody2D" parent="."]
-position = Vector2( 48.2696, 301.75 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Bed6"]
-position = Vector2( -0.280609, -9.54092 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed6"]
-position = Vector2( -0.561226, -14.4643 )
-shape = SubResource( 58 )
-
-[node name="Bed7" type="StaticBody2D" parent="."]
-position = Vector2( 48.2696, 396.137 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Bed7"]
-position = Vector2( -0.280609, -8.41846 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed7"]
-position = Vector2( -0.561234, -13.3419 )
-shape = SubResource( 58 )
-
-[node name="Bed8" type="StaticBody2D" parent="."]
-position = Vector2( 48.2696, 491.469 )
-collision_layer = 32
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Bed8"]
-position = Vector2( -0.841843, -7.57663 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed8"]
-position = Vector2( -0.84185, -12.5 )
-shape = SubResource( 58 )
+[node name="Bed8" parent="." instance=ExtResource( 11 )]
+position = Vector2( 48, 496 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
