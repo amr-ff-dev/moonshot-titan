@@ -8,6 +8,7 @@ export(float, 0, 1, 0.1) var accelerate = 0.2
 
 var RepulsorProjectile = preload("res://models/repulsor_projectile/repulsor_projectile.tscn")
 onready var animation_player = $AnimationPlayer
+onready var player_camera = $PlayerCamera
 
 var velocity = Vector2.ZERO
 var desired_velocity = Vector2.ZERO
@@ -20,6 +21,10 @@ func _physics_process(delta):
 	collide(collision)
 
 func _input(event):
+	if event.is_action_pressed("zoom_in"):
+		player_camera.zoom_in()
+	elif event.is_action_pressed("zoom_out"):
+		player_camera.zoom_out()
 	if dead:
 		return
 	if event.is_action_pressed("shoot"):
