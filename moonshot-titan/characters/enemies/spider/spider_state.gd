@@ -4,16 +4,16 @@ class_name SpiderState
 
 var SpiderRecoil = load("res://characters/enemies/spider/spider_recoil.gd")
 
-func enter(spider):
+func enter(_spider):
 	pass
 
-func update_physics(spider, _delta):
+func update_physics(_spider, _delta):
 	pass
 
 func chase(spider, target):
 	spider.target = target
 
-func stop_chase(spider):
+func stop_chase(_spider):
 	pass
 
 func launch(spider, velocity):

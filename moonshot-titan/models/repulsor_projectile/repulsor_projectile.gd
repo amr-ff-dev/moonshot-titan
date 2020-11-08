@@ -11,10 +11,10 @@ func _physics_process(delta):
 			collision.collider.launch(direction * speed)
 		queue_free()
 
-func launch(origin, direction):
-	position = origin + direction * get_length() * 0.5
-	rotation = Vector2.RIGHT.angle_to(direction)
-	self.direction = direction
+func launch(origin, target_direction):
+	position = origin + target_direction * get_length() * 0.5
+	rotation = Vector2.RIGHT.angle_to(target_direction)
+	direction = target_direction
 
 func get_length():
 	return $Sprite.texture.get_size().length()

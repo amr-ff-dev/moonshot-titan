@@ -1,10 +1,13 @@
 extends KinematicBody2D
 
 export(int) var speed = 100
+export(NodePath) var nav_2d_path
 
 var target
 
 onready var state = SpiderIdle.new()
+onready var nav_2d : Navigation2D = get_node(nav_2d_path)
+onready var nav_line = $NavLine
 
 func _physics_process(delta):
 	state.update_physics(self, delta)

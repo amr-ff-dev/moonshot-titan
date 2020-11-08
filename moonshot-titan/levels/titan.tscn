@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/moonsurface_autotile.png" type="Texture" id=2]
@@ -14,6 +14,11 @@
 [ext_resource path="res://models/hazards/airlock_hazard.png" type="Texture" id=12]
 [ext_resource path="res://models/obstacles/locker_rows.png" type="Texture" id=13]
 [ext_resource path="res://levels/base_tile_grid.png" type="Texture" id=14]
+
+[sub_resource type="NavigationPolygon" id=57]
+vertices = PoolVector2Array( 128, 320, 304, 304, 368, 304, 368, 352, 128, 352, 160, 112, 352, 224, 352, 240, 304, 240, 128, 224, 128, 160, 144, 112, 496, 448, 432, 448, 128, 416, 432, 352, 496, 304, 624, 240, 656, 240, 656, 528, 624, 528, 560, 496, 496, 240, 592, 208, 624, 208, 560, 560, 592, 560, 128, 256, 96, 224, 96, 256, 128, 512, 128, 448, 368, 496, 368, 560, 480, 112, 480, 80, 496, 80, 496, 112, 448, 224, 528, 112, 528, 144, 448, 240, 560, 144, 560, 176, 592, 176, 432, 192, 432, 224, 368, 192, 368, 224, 96, 320, 64, 320, 64, 256, 48, 208, 16, 240, 16, 208, 432, 304, 512, 496, 512, 480, 496, 480, 96, 352, 96, 416, 64, 416, 64, 352, 432, 480, 416, 480, 416, 496, 96, 448, 96, 512, 64, 512, 64, 448, 32, 416, 32, 448, 128, 608, 432, 560, 432, 608, 368, 720, 304, 720, 176, 688, 144, 656, 128, 544, 96, 544, 496, 608, 496, 560, 560, 592, 624, 560, 592, 592, 560, 624, 528, 624, 528, 656, 496, 656, 496, 688, 464, 688, 464, 720, 368, 800, 304, 800, 176, 720, 144, 688, 112, 656, 112, 624, 96, 608, 80, 624, 80, 592, 48, 592, 48, 560, 32, 512, 16, 560, 16, 528, -16, 528, -16, 240, 32, 352, 48, 176, 80, 176, 112, 144, 112, 112, 144, 80, 160, 80, 96, 160, 80, 144, 32, 256, 32, 320 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14, 4, 3 ), PoolIntArray( 15, 16, 17, 18, 19, 20, 21, 12 ), PoolIntArray( 17, 16, 22, 23, 24 ), PoolIntArray( 25, 21, 20, 26 ), PoolIntArray( 1, 0, 27, 8 ), PoolIntArray( 28, 9, 8, 27, 29 ), PoolIntArray( 30, 31, 32, 33 ), PoolIntArray( 34, 35, 36, 37 ), PoolIntArray( 38, 37, 39, 40, 22, 41 ), PoolIntArray( 40, 42, 43, 22 ), PoolIntArray( 43, 44, 23, 22 ), PoolIntArray( 45, 34, 37, 38, 46 ), PoolIntArray( 5, 34, 45, 47 ), PoolIntArray( 47, 48, 6, 5 ), PoolIntArray( 29, 49, 50, 51 ), PoolIntArray( 52, 28, 29, 51, 53, 54 ), PoolIntArray( 15, 55, 16 ), PoolIntArray( 21, 56, 57 ), PoolIntArray( 57, 58, 12 ), PoolIntArray( 59, 60, 61, 62 ), PoolIntArray( 13, 63, 64, 14 ), PoolIntArray( 14, 64, 65, 32, 31, 60 ), PoolIntArray( 60, 31, 66, 61 ), PoolIntArray( 66, 67, 68, 69 ), PoolIntArray( 61, 66, 69, 70 ), PoolIntArray( 70, 69, 71 ), PoolIntArray( 72, 33, 73, 74, 75, 76, 77, 78 ), PoolIntArray( 33, 72, 79 ), PoolIntArray( 30, 33, 79, 67 ), PoolIntArray( 67, 79, 80, 68 ), PoolIntArray( 81, 82, 25, 83 ), PoolIntArray( 20, 84, 26 ), PoolIntArray( 25, 26, 85, 83 ), PoolIntArray( 81, 83, 86, 87 ), PoolIntArray( 81, 87, 88, 89, 74 ), PoolIntArray( 89, 90, 91, 74 ), PoolIntArray( 91, 92, 75, 74 ), PoolIntArray( 75, 93, 94, 76 ), PoolIntArray( 76, 95, 77 ), PoolIntArray( 77, 96, 78 ), PoolIntArray( 72, 78, 97, 98 ), PoolIntArray( 99, 72, 98, 100 ), PoolIntArray( 99, 100, 101, 80 ), PoolIntArray( 80, 101, 102, 103, 68 ), PoolIntArray( 104, 68, 103, 105, 106 ), PoolIntArray( 104, 106, 107, 108, 71 ), PoolIntArray( 70, 71, 108 ), PoolIntArray( 109, 70, 108, 53 ), PoolIntArray( 52, 110, 111, 28 ), PoolIntArray( 112, 113, 11, 10 ), PoolIntArray( 11, 114, 115, 5 ), PoolIntArray( 112, 10, 116, 117 ), PoolIntArray( 111, 117, 116, 28 ), PoolIntArray( 53, 51, 118 ), PoolIntArray( 21, 57, 12 ), PoolIntArray( 3, 15, 12 ), PoolIntArray( 49, 0, 4, 59 ), PoolIntArray( 50, 49, 59, 62 ), PoolIntArray( 119, 50, 62, 109 ), PoolIntArray( 119, 109, 53 ), PoolIntArray( 53, 118, 119 ) ]
+outlines = [ PoolVector2Array( 480, 112, 480, 80, 496, 80, 496, 112, 528, 112, 528, 144, 560, 144, 560, 176, 592, 176, 592, 208, 624, 208, 624, 240, 656, 240, 656, 528, 624, 528, 624, 560, 592, 560, 592, 592, 560, 592, 560, 624, 528, 624, 528, 656, 496, 656, 496, 688, 464, 688, 464, 720, 368, 720, 368, 800, 304, 800, 304, 720, 176, 720, 176, 688, 144, 688, 144, 656, 112, 656, 112, 624, 80, 624, 80, 592, 48, 592, 48, 560, 16, 560, 16, 528, -16, 528, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 80, 176, 80, 144, 112, 144, 112, 112, 144, 112, 144, 80, 160, 80, 160, 112 ), PoolVector2Array( 352, 240, 352, 224, 368, 224, 368, 192, 432, 192, 432, 224, 448, 224, 448, 240, 496, 240, 496, 304, 432, 304, 432, 352, 368, 352, 368, 304, 304, 304, 304, 240 ), PoolVector2Array( 416, 496, 416, 480, 432, 480, 432, 448, 496, 448, 496, 480, 512, 480, 512, 496, 560, 496, 560, 560, 496, 560, 496, 608, 432, 608, 432, 560, 368, 560, 368, 496 ), PoolVector2Array( 96, 320, 128, 320, 128, 256, 96, 256 ), PoolVector2Array( 32, 320, 64, 320, 64, 256, 32, 256 ), PoolVector2Array( 96, 224, 128, 224, 128, 160, 96, 160 ), PoolVector2Array( 96, 416, 128, 416, 128, 352, 96, 352 ), PoolVector2Array( 32, 416, 64, 416, 64, 352, 32, 352 ), PoolVector2Array( 96, 512, 128, 512, 128, 448, 96, 448 ), PoolVector2Array( 32, 512, 64, 512, 64, 448, 32, 448 ), PoolVector2Array( 96, 608, 128, 608, 128, 544, 96, 544 ) ]
 
 [sub_resource type="TileSet" id=1]
 0/name = "base_tile_grid.png 0"
@@ -551,6 +556,11 @@ extents = Vector2( 146, 28.5 )
 [node name="Titan" type="Node2D"]
 script = ExtResource( 3 )
 
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 57 )
+
 [node name="FloorTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
@@ -596,6 +606,7 @@ collision_mask = 53
 [node name="Spider" parent="." instance=ExtResource( 4 )]
 position = Vector2( 480, 400 )
 collision_mask = 63
+nav_2d_path = NodePath("../Navigation2D")
 
 [node name="Stool1" parent="." instance=ExtResource( 9 )]
 
@@ -613,14 +624,18 @@ position = Vector2( 464, 576 )
 
 [node name="Chair1" parent="." instance=ExtResource( 10 )]
 position = Vector2( 400, 528 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 528, 528 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Chair3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 464, 272 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Table" type="StaticBody2D" parent="."]
 position = Vector2( 400, 272 )

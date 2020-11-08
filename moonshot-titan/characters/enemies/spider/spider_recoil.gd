@@ -7,11 +7,11 @@ var SpiderIdle = load("res://characters/enemies/spider/spider_idle.gd")
 var SpiderChase = load("res://characters/enemies/spider/spider_chase.gd")
 var SpiderDead = load("res://characters/enemies/spider/spider_dead.gd")
 
-func _init(velocity):
-	self.velocity = velocity
+func _init(launch_velocity):
+	velocity = launch_velocity
 
-func update_physics(spider, _delta):
-	var collision = spider.move_and_collide(velocity * _delta)
+func update_physics(spider, delta):
+	var collision = spider.move_and_collide(velocity * delta)
 	if collision:
 		collide(spider, collision)
 
