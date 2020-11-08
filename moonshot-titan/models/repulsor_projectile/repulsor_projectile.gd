@@ -12,6 +12,9 @@ func _physics_process(delta):
 		queue_free()
 
 func launch(origin, direction):
-	position = origin
+	position = origin + direction * get_length() * 0.5
 	rotation = Vector2.RIGHT.angle_to(direction)
 	self.direction = direction
+
+func get_length():
+	return $Sprite.texture.get_size().length()
