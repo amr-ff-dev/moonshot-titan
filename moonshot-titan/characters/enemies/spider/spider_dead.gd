@@ -4,6 +4,7 @@ class_name SpiderDead
 
 func enter(spider):
 	spider.rotate(PI)
+	spider.nav_line.queue_free()
 
 func chase(_spider, _target):
 	pass
