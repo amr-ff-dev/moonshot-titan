@@ -71,4 +71,5 @@ func shoot():
 func respawn(respawn_point):
 	self.position = respawn_point.position
 	animation_player.play_backwards("game_over")
+	yield(animation_player, "animation_finished")
 	dead = false

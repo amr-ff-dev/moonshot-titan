@@ -9,12 +9,42 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "SpiderState",
+"class": "SpiderChase",
+"language": "GDScript",
+"path": "res://characters/enemies/spider/spider_chase.gd"
+}, {
+"base": "SpiderState",
+"class": "SpiderDead",
+"language": "GDScript",
+"path": "res://characters/enemies/spider/spider_dead.gd"
+}, {
+"base": "SpiderState",
+"class": "SpiderIdle",
+"language": "GDScript",
+"path": "res://characters/enemies/spider/spider_idle.gd"
+}, {
+"base": "SpiderState",
+"class": "SpiderRecoil",
+"language": "GDScript",
+"path": "res://characters/enemies/spider/spider_recoil.gd"
+}, {
+"base": "Reference",
+"class": "SpiderState",
+"language": "GDScript",
+"path": "res://characters/enemies/spider/spider_state.gd"
+}, {
 "base": "Node2D",
 "class": "Titan",
 "language": "GDScript",
 "path": "res://levels/titan.gd"
 } ]
 _global_script_class_icons={
+"SpiderChase": "",
+"SpiderDead": "",
+"SpiderIdle": "",
+"SpiderRecoil": "",
+"SpiderState": "",
 "Titan": ""
 }
 

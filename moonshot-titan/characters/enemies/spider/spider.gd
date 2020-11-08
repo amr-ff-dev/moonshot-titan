@@ -2,19 +2,22 @@ extends KinematicBody2D
 
 export(int) var speed = 100
 
-var target = null
+var target
+
+onready var state = SpiderIdle.new()
 
 func _physics_process(delta):
-	move_and_slide(get_chasing_velocity(target))
+	state.update_physics(self, delta)
 
 func _on_PlayerDetection_chase(body):
-	target = body
+	state.chase(self, body)
 
 func _on_PlayerDetection_stop_chase():
-	target = null
+	state.stop_chase(self)
 
-func get_chasing_velocity(target):
-	if target:
-		return position.direction_to(target.position) * speed
-	else:
-		return Vector2.ZERO
+func change_state(new_state: SpiderState):
+	state = new_state
+	state.enter(self)
+	
+func launch(velocity):
+	state.launch(self, velocity)
