@@ -619,14 +619,18 @@ position = Vector2( 464, 576 )
 
 [node name="Chair1" parent="." instance=ExtResource( 10 )]
 position = Vector2( 400, 528 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 528, 528 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Chair3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 464, 272 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Table" type="StaticBody2D" parent="."]
 position = Vector2( 400, 272 )
