@@ -19,7 +19,7 @@ func collide(spider, collision):
 	match collision.collider.get_collision_layer():
 		Titan.CollisionLayers.HAZARD:
 			spider.change_state(SpiderDead.new())
-		Titan.CollisionLayers.OBSTACLE, Titan.CollisionLayers.WALL:
+		Titan.CollisionLayers.OBSTACLE, Titan.CollisionLayers.WALL, Titan.CollisionLayers.ENEMY:
 			idle_or_chase(spider)
 
 func idle_or_chase(spider):
