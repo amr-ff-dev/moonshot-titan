@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "CrewQuarters",
+"language": "GDScript",
+"path": "res://levels/crew_quarters/crew_quarters.gd"
+}, {
 "base": "SpiderState",
 "class": "SpiderChase",
 "language": "GDScript",
@@ -37,9 +42,10 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "Titan",
 "language": "GDScript",
-"path": "res://levels/titan.gd"
+"path": "res://levels/titan/titan.gd"
 } ]
 _global_script_class_icons={
+"CrewQuarters": "",
 "SpiderChase": "",
 "SpiderDead": "",
 "SpiderIdle": "",
@@ -51,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Moonshot Titan"
-run/main_scene="res://levels/titan.tscn"
+run/main_scene="res://levels/titan/titan.tscn"
 config/icon="res://characters/player/player.png"
 
 [display]
