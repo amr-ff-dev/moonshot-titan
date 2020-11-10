@@ -19,9 +19,10 @@ func get_chasing_velocity(spider, delta):
 		return Vector2.ZERO
 
 func get_nav_path_to(spider):
-	var path = spider.nav_2d.get_simple_path(spider.position, spider.target.position)
+	var local_offset = spider.global_position - spider.position
+	var path = spider.nav_2d.get_simple_path(spider.position, spider.target.global_position - local_offset)
 	if OS.is_debug_build():
-		spider.nav_line.points = spider.global_transform.xform_inv(path)
+		spider.nav_line.points = spider.transform.xform_inv(path)
 	return path
 
 func get_chase_target_from_path(origin, path, travel_distance):
