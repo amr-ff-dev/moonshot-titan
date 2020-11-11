@@ -56,41 +56,48 @@ navpoly = SubResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 336, 720 )
-collision_mask = 53
+collision_mask = 117
 
 [node name="Spider" parent="." instance=ExtResource( 4 )]
 position = Vector2( 480, 400 )
-collision_mask = 63
 nav_2d_path = NodePath("../../CrewQuarters/Navigation2D")
 
 [node name="Stool1" parent="." instance=ExtResource( 13 )]
+collision_layer = 64
 
 [node name="Stool2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 344, 272 )
+collision_layer = 64
 
 [node name="Stool3" parent="." instance=ExtResource( 13 )]
 position = Vector2( 400, 320 )
+collision_layer = 64
 
 [node name="Stool4" parent="." instance=ExtResource( 13 )]
 position = Vector2( 464, 480 )
+collision_layer = 64
 
 [node name="Stool5" parent="." instance=ExtResource( 13 )]
 position = Vector2( 464, 576 )
+collision_layer = 64
 
 [node name="Chair1" parent="." instance=ExtResource( 10 )]
 position = Vector2( 408, 528 )
+collision_layer = 64
 
 [node name="Chair2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 520, 528 )
+collision_layer = 64
 flip_horizontal = true
 
 [node name="Chair3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 456, 272 )
+collision_layer = 64
 flip_horizontal = true
 
 [node name="Table" type="StaticBody2D" parent="."]
 position = Vector2( 400, 272 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -104,7 +111,7 @@ shape = SubResource( 3 )
 
 [node name="Table2" type="StaticBody2D" parent="."]
 position = Vector2( 464, 528 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -118,31 +125,40 @@ shape = SubResource( 3 )
 
 [node name="Bed1" parent="." instance=ExtResource( 14 )]
 position = Vector2( 112, 208 )
+collision_layer = 64
 
 [node name="Bed2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 112, 304 )
+collision_layer = 64
 
 [node name="Bed3" parent="." instance=ExtResource( 14 )]
 position = Vector2( 112, 400 )
+collision_layer = 64
 
 [node name="Bed4" parent="." instance=ExtResource( 14 )]
 position = Vector2( 112, 496 )
+collision_layer = 64
 
 [node name="Bed5" parent="." instance=ExtResource( 14 )]
 position = Vector2( 112, 592 )
+collision_layer = 64
 
 [node name="Bed6" parent="." instance=ExtResource( 14 )]
 position = Vector2( 48, 304 )
+collision_layer = 64
 
 [node name="Bed7" parent="." instance=ExtResource( 14 )]
 position = Vector2( 48, 400 )
+collision_layer = 64
 
 [node name="Bed8" parent="." instance=ExtResource( 14 )]
 position = Vector2( 48, 496 )
+collision_layer = 64
 
 [node name="LockerRows" type="StaticBody2D" parent="."]
 position = Vector2( 320, 85 )
-collision_layer = 32
+collision_layer = 64
+collision_mask = 15
 __meta__ = {
 "_edit_group_": true
 }

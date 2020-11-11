@@ -8,5 +8,6 @@ enum CollisionLayers {
 	ENEMY = 4,
 	PROJECTILE = 8,
 	HAZARD = 16,
-	OBSTACLE = 32,
+	PLAYER_HAZARD = 32,
+	OBSTACLE = 64,
 }
