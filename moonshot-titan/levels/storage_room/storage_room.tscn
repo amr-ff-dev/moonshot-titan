@@ -20,7 +20,7 @@ outlines = [ PoolVector2Array( -80, 336, -16, 336, -16, 240, 16, 240, 16, 208, 4
 extents = Vector2( 60.5, 14 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 18.5, 28.5 )
+extents = Vector2( 15, 28.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 12.5, 14.5 )
@@ -88,15 +88,12 @@ position = Vector2( 120, 248 )
 
 [node name="Locker2Open" type="StaticBody2D" parent="."]
 position = Vector2( 80, 248 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="Locker2Open"]
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Locker2Open"]
-position = Vector2( -1, -11 )
+position = Vector2( 2, -11 )
 shape = SubResource( 3 )
 
 [node name="Crate" type="StaticBody2D" parent="."]
