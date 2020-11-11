@@ -35,7 +35,6 @@ func _input(event):
 func collide(collision):
 	if !collision or dead:
 		return
-	print(collision.collider.get_collision_layer())
 	match collision.collider.get_collision_layer():
 		Titan.CollisionLayers.WALL, Titan.CollisionLayers.OBSTACLE:
 			stop_collision()
