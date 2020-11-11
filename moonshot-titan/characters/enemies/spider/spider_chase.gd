@@ -4,7 +4,7 @@ class_name SpiderChase
 
 var SpiderIdle = load("res://characters/enemies/spider/spider_idle.gd")
 
-func update_physics(spider, delta):
+func physics_process(spider, delta):
 	spider.move_and_slide(get_chasing_velocity(spider, delta))
 
 func stop_chase(spider):

@@ -10,7 +10,7 @@ var SpiderDead = load("res://characters/enemies/spider/spider_dead.gd")
 func _init(launch_velocity):
 	velocity = launch_velocity
 
-func update_physics(spider, delta):
+func physics_process(spider, delta):
 	var collision = spider.move_and_collide(velocity * delta)
 	if collision:
 		collide(spider, collision)

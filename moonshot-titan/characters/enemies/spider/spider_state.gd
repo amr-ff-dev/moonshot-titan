@@ -7,7 +7,7 @@ var SpiderRecoil = load("res://characters/enemies/spider/spider_recoil.gd")
 func enter(_spider):
 	pass
 
-func update_physics(_spider, _delta):
+func physics_process(_spider, _delta):
 	pass
 
 func chase(spider, target):

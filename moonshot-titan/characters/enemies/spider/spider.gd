@@ -10,7 +10,7 @@ onready var nav_2d : Navigation2D = get_node(nav_2d_path)
 onready var nav_line = $NavLine
 
 func _physics_process(delta):
-	state.update_physics(self, delta)
+	state.physics_process(self, delta)
 
 func _on_PlayerDetection_chase(body):
 	state.chase(self, body)
