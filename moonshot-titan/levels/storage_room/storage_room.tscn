@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://models/obstacles/storage_bay_locker_open.png" type="Texture" id=2]
+[ext_resource path="res://models/obstacles/rock_debris.png" type="Texture" id=3]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=4]
 [ext_resource path="res://models/obstacles/crate_lid.png" type="Texture" id=5]
 [ext_resource path="res://models/obstacles/crate_closed.png" type="Texture" id=6]
@@ -365,11 +366,20 @@ shape = SubResource( 4 )
 [node name="Bench" parent="." instance=ExtResource( 10 )]
 position = Vector2( 216, 720 )
 
+[node name="RockDebris" type="Sprite" parent="Bench"]
+position = Vector2( 0, -11 )
+texture = ExtResource( 3 )
+
 [node name="Bench2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 320, 720 )
 
 [node name="Bench3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 432, 720 )
+
+[node name="RockDebris2" type="Sprite" parent="Bench3"]
+position = Vector2( 0, -11 )
+texture = ExtResource( 3 )
+flip_h = true
 
 [node name="Fire" parent="." instance=ExtResource( 11 )]
 position = Vector2( 80, 400 )
