@@ -1,14 +1,14 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=2]
 [ext_resource path="res://models/obstacles/medical_locker_open.png" type="Texture" id=3]
+[ext_resource path="res://models/obstacles/bench.tscn" type="PackedScene" id=4]
 [ext_resource path="res://models/obstacles/bed.tscn" type="PackedScene" id=5]
 [ext_resource path="res://models/obstacles/stool.tscn" type="PackedScene" id=6]
 [ext_resource path="res://models/obstacles/medical_locker.png" type="Texture" id=7]
 [ext_resource path="res://models/obstacles/desk_with_computer.png" type="Texture" id=8]
 [ext_resource path="res://models/obstacles/heart_monitor.png" type="Texture" id=9]
-[ext_resource path="res://models/obstacles/bench.png" type="Texture" id=10]
 [ext_resource path="res://models/obstacles/stasis_chamber_empty.png" type="Texture" id=11]
 
 [sub_resource type="NavigationPolygon" id=1]
@@ -19,10 +19,7 @@ outlines = [ PoolVector2Array( 168, 48, 272, 48, 272, -16, 368, -16, 368, 48, 46
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 15, 22.5 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 45, 18.5 )
-
-[sub_resource type="CapsuleShape2D" id=4]
+[sub_resource type="CapsuleShape2D" id=3]
 radius = 18.0
 height = 40.0
 
@@ -228,33 +225,11 @@ polygon = PoolVector2Array( -56.0241, 8.59327, -56.0241, 47.3911, 54.5722, 47.53
 position = Vector2( 432, 464 )
 collision_layer = 64
 
-[node name="Bench" type="StaticBody2D" parent="."]
+[node name="Bench" parent="." instance=ExtResource( 4 )]
 position = Vector2( 112, 504 )
-collision_layer = 64
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="Sprite" type="Sprite" parent="Bench"]
-texture = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bench"]
-position = Vector2( 0, -6 )
-shape = SubResource( 3 )
-
-[node name="Bench2" type="StaticBody2D" parent="."]
+[node name="Bench2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 272, 504 )
-collision_layer = 64
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Bench2"]
-texture = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bench2"]
-position = Vector2( 0, -6 )
-shape = SubResource( 3 )
 
 [node name="StasisPod" type="StaticBody2D" parent="."]
 position = Vector2( 48, 408 )
@@ -268,7 +243,7 @@ position = Vector2( 0, 16 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod"]
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="StasisPod2" type="StaticBody2D" parent="."]
 position = Vector2( 160, 584 )
@@ -282,7 +257,7 @@ position = Vector2( 0, 16 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod2"]
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="StasisPod3" type="StaticBody2D" parent="."]
 position = Vector2( 280, 632 )
@@ -296,7 +271,7 @@ position = Vector2( 0, 16 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod3"]
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="StasisPod4" type="StaticBody2D" parent="."]
 position = Vector2( 384, 632 )
@@ -310,7 +285,7 @@ position = Vector2( 0, 16 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod4"]
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="StasisPod5" type="StaticBody2D" parent="."]
 position = Vector2( 512, 568 )
@@ -324,4 +299,4 @@ position = Vector2( 0, 16 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod5"]
-shape = SubResource( 4 )
+shape = SubResource( 3 )
