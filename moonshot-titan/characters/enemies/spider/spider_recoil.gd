@@ -19,8 +19,16 @@ func collide(spider, collision):
 	match collision.collider.get_collision_layer():
 		Titan.CollisionLayers.HAZARD:
 			spider.change_state(SpiderDead.new())
-		Titan.CollisionLayers.OBSTACLE, Titan.CollisionLayers.WALL, Titan.CollisionLayers.ENEMY:
+			disable_hazard_for_enemies(collision.collider)
+			move_enemy_to_hazard(spider, collision.collider)
+		Titan.CollisionLayers.OBSTACLE, Titan.CollisionLayers.WALL, Titan.CollisionLayers.ENEMY, Titan.CollisionLayers.PLAYER_HAZARD:
 			idle_or_chase(spider)
+
+func move_enemy_to_hazard(spider, hazard):
+	spider.position = hazard.position
+
+func disable_hazard_for_enemies(hazard):
+	hazard.set_collision_layer(Titan.CollisionLayers.PLAYER_HAZARD)
 
 func idle_or_chase(spider):
 	if spider.get_node("PlayerDetection").get_overlapping_bodies().size() > 1:

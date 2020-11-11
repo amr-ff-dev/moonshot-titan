@@ -41,35 +41,39 @@ navpoly = SubResource( 1 )
 
 [node name="Spider" parent="." instance=ExtResource( 2 )]
 position = Vector2( 488, 384 )
-collision_mask = 63
 nav_2d_path = NodePath("../Navigation2D")
 
 [node name="Spider2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 144, 416 )
-collision_mask = 63
 nav_2d_path = NodePath("../Navigation2D")
 
 [node name="Bed" parent="." instance=ExtResource( 5 )]
 position = Vector2( 112, 296 )
+collision_layer = 64
 
 [node name="Bed2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 176, 296 )
+collision_layer = 64
 
 [node name="Bed3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 240, 296 )
+collision_layer = 64
 
 [node name="Bed4" parent="." instance=ExtResource( 5 )]
 position = Vector2( 464, 296 )
+collision_layer = 64
 
 [node name="Bed5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 528, 296 )
+collision_layer = 64
 
 [node name="Bed6" parent="." instance=ExtResource( 5 )]
 position = Vector2( 592, 296 )
+collision_layer = 64
 
 [node name="MedicalLocker" type="KinematicBody2D" parent="."]
 position = Vector2( 200, 112 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -83,7 +87,7 @@ shape = SubResource( 2 )
 
 [node name="MedicalLocker2" type="KinematicBody2D" parent="."]
 position = Vector2( 232, 112 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -97,7 +101,7 @@ shape = SubResource( 2 )
 
 [node name="MedicalLocker3" type="KinematicBody2D" parent="."]
 position = Vector2( 400, 112 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -111,7 +115,7 @@ shape = SubResource( 2 )
 
 [node name="MedicalLocker4" type="KinematicBody2D" parent="."]
 position = Vector2( 432, 112 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -125,7 +129,7 @@ shape = SubResource( 2 )
 
 [node name="HeartMonitor" type="KinematicBody2D" parent="."]
 position = Vector2( 80, 280 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -139,7 +143,7 @@ shape = SubResource( 2 )
 
 [node name="HeartMonitor2" type="KinematicBody2D" parent="."]
 position = Vector2( 144, 280 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -153,7 +157,7 @@ shape = SubResource( 2 )
 
 [node name="HeartMonitor3" type="KinematicBody2D" parent="."]
 position = Vector2( 208, 280 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -167,7 +171,7 @@ shape = SubResource( 2 )
 
 [node name="HeartMonitor4" type="KinematicBody2D" parent="."]
 position = Vector2( 432, 280 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -181,7 +185,7 @@ shape = SubResource( 2 )
 
 [node name="HeartMonitor5" type="KinematicBody2D" parent="."]
 position = Vector2( 496, 280 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -195,7 +199,7 @@ shape = SubResource( 2 )
 
 [node name="HeartMonitor6" type="KinematicBody2D" parent="."]
 position = Vector2( 560, 280 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -209,7 +213,7 @@ shape = SubResource( 2 )
 
 [node name="DeskWithComputer" type="StaticBody2D" parent="."]
 position = Vector2( 456, 472 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -222,10 +226,11 @@ polygon = PoolVector2Array( -56.0241, 8.59327, -56.0241, 47.3911, 54.5722, 47.53
 
 [node name="Stool" parent="." instance=ExtResource( 6 )]
 position = Vector2( 432, 464 )
+collision_layer = 64
 
 [node name="Bench" type="StaticBody2D" parent="."]
 position = Vector2( 112, 504 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -239,7 +244,7 @@ shape = SubResource( 3 )
 
 [node name="Bench2" type="StaticBody2D" parent="."]
 position = Vector2( 272, 504 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
@@ -252,71 +257,71 @@ position = Vector2( 0, -6 )
 shape = SubResource( 3 )
 
 [node name="StasisPod" type="StaticBody2D" parent="."]
-position = Vector2( 48, 424 )
+position = Vector2( 48, 408 )
 collision_layer = 16
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="StasisPod"]
+position = Vector2( 0, 16 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod"]
-position = Vector2( 0, -16 )
 shape = SubResource( 4 )
 
 [node name="StasisPod2" type="StaticBody2D" parent="."]
-position = Vector2( 160, 600 )
+position = Vector2( 160, 584 )
 collision_layer = 16
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="StasisPod2"]
+position = Vector2( 0, 16 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod2"]
-position = Vector2( 0, -16 )
 shape = SubResource( 4 )
 
 [node name="StasisPod3" type="StaticBody2D" parent="."]
-position = Vector2( 280, 648 )
+position = Vector2( 280, 632 )
 collision_layer = 16
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="StasisPod3"]
+position = Vector2( 0, 16 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod3"]
-position = Vector2( 0, -16 )
 shape = SubResource( 4 )
 
 [node name="StasisPod4" type="StaticBody2D" parent="."]
-position = Vector2( 384, 648 )
+position = Vector2( 384, 632 )
 collision_layer = 16
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="StasisPod4"]
+position = Vector2( 0, 16 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod4"]
-position = Vector2( 0, -16 )
 shape = SubResource( 4 )
 
 [node name="StasisPod5" type="StaticBody2D" parent="."]
-position = Vector2( 512, 584 )
+position = Vector2( 512, 568 )
 collision_layer = 16
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="StasisPod5"]
+position = Vector2( 0, 16 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod5"]
-position = Vector2( 0, -16 )
 shape = SubResource( 4 )
