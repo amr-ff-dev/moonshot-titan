@@ -307,8 +307,6 @@ shape = SubResource( 3 )
 [node name="PlayerRespawn" type="Position2D" parent="."]
 position = Vector2( 320, 32 )
 
-[node name="Entrance" type="Area2D" parent="." instance=ExtResource( 12 )]
+[node name="Entrance" parent="." instance=ExtResource( 12 )]
 position = Vector2( 320, -48 )
-collision_layer = 128
-collision_mask = 2
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]

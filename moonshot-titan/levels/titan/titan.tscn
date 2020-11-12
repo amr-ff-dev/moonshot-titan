@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://models/exterior/moon_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://levels/fuel_bay/fuel_bay.tscn" type="PackedScene" id=12]
 [ext_resource path="res://levels/research_lab/research_lab.tscn" type="PackedScene" id=13]
 [ext_resource path="res://levels/rocket_pad/rocket_pad.tscn" type="PackedScene" id=14]
+[ext_resource path="res://user_interface/hud/hud.tscn" type="PackedScene" id=15]
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=16]
 
 [node name="Titan" type="Node2D"]
@@ -67,18 +68,6 @@ position = Vector2( 608, 992 )
 position = Vector2( 336, 720 )
 collision_mask = 117
 
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="Restart" type="Button" parent="HUD"]
-visible = false
-margin_left = 291.0
-margin_top = 200.0
-margin_right = 348.0
-margin_bottom = 220.0
-text = "Restart"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="HUD" parent="." instance=ExtResource( 15 )]
 [connection signal="game_over" from="Player" to="." method="_on_Player_game_over"]
 [connection signal="shoot" from="Player" to="." method="_on_Player_shoot"]
-[connection signal="pressed" from="HUD/Restart" to="." method="_on_Restart_pressed"]

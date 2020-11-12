@@ -18,6 +18,9 @@ var QuestRoom = preload("res://levels/quest_room/quest_room.gd")
 onready var player = $Player
 onready var restart_button = $HUD/Restart
 onready var player_respawn = $CrewQuarters/PlayerRespawn
+onready var quest_tracker = $HUD/QuestTracker
+
+var quest_list = []
 
 func _ready():
 	for child in get_children():
@@ -35,5 +38,14 @@ func _on_Restart_pressed():
 	player.respawn(player_respawn)
 	restart_button.visible = false
 
-func _on_QuestRoom_player_entered(_quest, spawn_point):
+func _on_QuestRoom_player_entered(quest, spawn_point):
+	add_quest(quest)
+	update_player_resapwn(spawn_point)
+
+func add_quest(quest):
+	if !quest_list.has(quest):
+		quest_list.push_back(quest)
+	quest_tracker.update_quest_tracker(quest_list)
+
+func update_player_resapwn(spawn_point):
 	player_respawn = spawn_point
