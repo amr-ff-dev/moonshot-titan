@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://models/obstacles/table.png" type="Texture" id=1]
 [ext_resource path="res://models/obstacles/table_cards.png" type="Texture" id=2]
+[ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=4]
 [ext_resource path="res://models/hazards/airlock_hazard.png" type="Texture" id=5]
 [ext_resource path="res://models/obstacles/locker_rows.png" type="Texture" id=6]
@@ -170,4 +171,7 @@ position = Vector2( 0, -10.9317 )
 shape = SubResource( 4 )
 
 [node name="PlayerRespawn" type="Position2D" parent="."]
-position = Vector2( 336, 720 )
+position = Vector2( 320, 720 )
+
+[node name="Entrance" parent="." instance=ExtResource( 3 )]
+[connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]

@@ -1,10 +1,10 @@
 extends QuestRoom
 
-class_name CrewQuarters
+class_name StorageRoom
 
 var Quest = preload("res://levels/quest_room/quest.gd")
 
-onready var quest = Quest.new("Crew Quarters", false)
+onready var quest = Quest.new("Storage Room", false)
 
 func _on_Entrance_body_entered(body):
 	emit_signal("player_entered", quest, $PlayerRespawn)

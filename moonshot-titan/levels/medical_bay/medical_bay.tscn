@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=2]
@@ -9,7 +9,9 @@
 [ext_resource path="res://models/obstacles/medical_locker.png" type="Texture" id=7]
 [ext_resource path="res://models/obstacles/desk_with_computer.png" type="Texture" id=8]
 [ext_resource path="res://models/obstacles/heart_monitor.png" type="Texture" id=9]
+[ext_resource path="res://levels/medical_bay/medical_bay.gd" type="Script" id=10]
 [ext_resource path="res://models/obstacles/stasis_chamber_empty.png" type="Texture" id=11]
+[ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 496, 656, 496, 688, 464, 688, 408, 672, 408, 592, 488, 608, 616, 328, 616, 248, 624, 240, 656, 240, 656, 528, 624, 528, 456, 64, 464, 48, 464, 80, 456, 136, 560, 624, 528, 624, 536, 608, 560, 592, 536, 520, 592, 560, 368, 48, 376, 64, 184, 624, 184, 544, 256, 592, 256, 672, 392, 472, 392, 528, 328, 520, 328, 472, 440, 304, 440, 328, 264, 320, 408, 304, 408, 248, 264, 248, 376, 136, 416, 440, 416, 472, 72, 448, 72, 368, 216, 320, 216, 472, 272, 48, 272, -16, 368, -16, 256, 136, 256, 64, 168, 48, 176, 64, 168, 80, 176, 136, 496, 80, 496, 112, 528, 112, 528, 144, 560, 144, 560, 176, 592, 176, 592, 208, 624, 208, 56, 248, 56, 304, 88, 304, 88, 320, 24, 368, 136, 320, 136, 304, 152, 304, 152, 320, 200, 320, 200, 304, 216, 304, 488, 328, 488, 304, 504, 304, 504, 328, 552, 328, 552, 304, 568, 304, 568, 328, 624, 560, 520, 408, 592, 592, 520, 520, 472, 408, 472, 472, 448, 472, 448, 440, 488, 528, 528, 656, 360, 592, 168, 520, 216, 520, 360, 672, 304, 672, 304, 592, 136, 544, 56, 520, 464, 720, 176, 720, 176, 688, 136, 624, 144, 656, 144, 688, 112, 656, 112, 624, 80, 592, 80, 624, 48, 592, 48, 560, 56, 472, 16, 560, 16, 528, 24, 448, -16, 528, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 80, 176, 80, 144, 112, 144, 112, 112, 144, 112, 144, 80, 168, 472 )
@@ -24,6 +26,7 @@ radius = 18.0
 height = 40.0
 
 [node name="MedicalBay" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="FloorTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -300,3 +303,12 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StasisPod5"]
 shape = SubResource( 3 )
+
+[node name="PlayerRespawn" type="Position2D" parent="."]
+position = Vector2( 320, 32 )
+
+[node name="Entrance" type="Area2D" parent="." instance=ExtResource( 12 )]
+position = Vector2( 320, -48 )
+collision_layer = 128
+collision_mask = 2
+[connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
