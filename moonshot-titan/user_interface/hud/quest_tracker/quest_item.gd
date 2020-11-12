@@ -16,6 +16,7 @@ func set_quest(value):
 func display_quest():
 	quest_name.text = "{name} ...".format({name = quest.name})
 	if quest.complete:
-		quest_complete.text = "Y"
+		quest_complete.text = "[y]"
 	else:
-		quest_complete.text = "?"
+		quest_name.set("custom_colors/font_color", Color.palegreen)
+		quest_complete.text = "[ ]"
