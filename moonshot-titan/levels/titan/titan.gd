@@ -34,7 +34,7 @@ func _on_Player_shoot(projectile, origin, direction):
 func _on_Player_game_over():
 	restart_button.visible = true
 
-func _on_Restart_pressed():
+func _on_HUD_restart():
 	player.respawn(player_respawn)
 	restart_button.visible = false
 

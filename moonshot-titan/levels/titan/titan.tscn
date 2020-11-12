@@ -71,3 +71,4 @@ collision_mask = 117
 [node name="HUD" parent="." instance=ExtResource( 15 )]
 [connection signal="game_over" from="Player" to="." method="_on_Player_game_over"]
 [connection signal="shoot" from="Player" to="." method="_on_Player_shoot"]
+[connection signal="restart" from="HUD" to="." method="_on_HUD_restart"]
