@@ -5,7 +5,6 @@ class_name QuestItem
 var quest setget set_quest
 
 onready var quest_name = $QuestName
-onready var quest_complete = $QuestComplete
 
 func set_quest(value):
 	quest = value
@@ -14,9 +13,6 @@ func set_quest(value):
 	display_quest()
 
 func display_quest():
-	quest_name.text = "{name} ...".format({name = quest.name})
+	quest_name.text = quest.name
 	if quest.complete:
-		quest_complete.text = "[y]"
-	else:
-		quest_name.set("custom_colors/font_color", Color.palegreen)
-		quest_complete.text = "[ ]"
+		quest_name.add_color_override("font_color", Color.palegreen)

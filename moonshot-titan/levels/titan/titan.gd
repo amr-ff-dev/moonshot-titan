@@ -26,6 +26,7 @@ func _ready():
 	for child in get_children():
 		if child is QuestRoom:
 			child.connect("player_entered", self, "_on_QuestRoom_player_entered")
+			child.connect("quest_complete", self, "_on_QuestRoom_quest_complete")
 
 func _on_Player_shoot(projectile, origin, direction):
 	add_child(projectile)
@@ -42,9 +43,22 @@ func _on_QuestRoom_player_entered(quest, spawn_point):
 	add_quest(quest)
 	update_player_resapwn(spawn_point)
 
+func _on_QuestRoom_quest_complete(quest):
+	quest.complete = true
+	update_quest(quest)
+
 func add_quest(quest):
 	if !quest_list.has(quest):
 		quest_list.push_back(quest)
+	update_quest_tracker()
+
+func update_quest(quest):
+	var index = quest_list.find(quest)
+	if index >= 0:
+		quest_list[index] = quest
+	update_quest_tracker()
+
+func update_quest_tracker():
 	quest_tracker.update_quest_tracker(quest_list)
 
 func update_player_resapwn(spawn_point):

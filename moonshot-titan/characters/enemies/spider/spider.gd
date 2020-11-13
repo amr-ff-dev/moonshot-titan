@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal dead()
+
 export(int) var speed = 100
 export(NodePath) var nav_2d_path
 
@@ -24,3 +26,6 @@ func change_state(new_state: SpiderState):
 	
 func launch(velocity):
 	state.launch(self, velocity)
+
+func emit_dead():
+	emit_signal("dead")

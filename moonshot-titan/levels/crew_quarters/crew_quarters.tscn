@@ -174,4 +174,5 @@ shape = SubResource( 4 )
 position = Vector2( 320, 720 )
 
 [node name="Entrance" parent="." instance=ExtResource( 3 )]
+[connection signal="dead" from="Spider" to="." method="_on_Spider_dead"]
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]

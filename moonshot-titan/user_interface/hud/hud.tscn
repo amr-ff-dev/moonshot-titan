@@ -1,14 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://user_interface/hud/quest_tracker/quest_tracker.tscn" type="PackedScene" id=1]
 [ext_resource path="res://user_interface/hud/hud.gd" type="Script" id=2]
-[ext_resource path="res://user_interface/button_font.tres" type="DynamicFontData" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-size = 9
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 3 )
+[ext_resource path="res://user_interface/hud/button_font.tres" type="DynamicFont" id=3]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -21,7 +15,7 @@ margin_left = 284.0
 margin_top = 194.0
 margin_right = 359.0
 margin_bottom = 212.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 3 )
 text = "Restart"
 __meta__ = {
 "_edit_use_anchors_": false
