@@ -12,7 +12,10 @@ const fatal_layers = [Titan.CollisionLayers.ENEMY, Titan.CollisionLayers.HAZARD,
 onready var animation_player = $AnimationPlayer
 onready var camera = $PlayerCamera
 
-var state = PlayerActive.new()
+var state
+
+func _ready():
+	change_state(PlayerActive.new())
 
 func _physics_process(delta):
 	state.physics_process(self, delta)

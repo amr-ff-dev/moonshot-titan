@@ -7,6 +7,10 @@ var PlayerDead = load("res://characters/player/player_dead.gd")
 var velocity = Vector2.ZERO
 var desired_velocity = Vector2.ZERO
 
+func enter(player):
+	player.animation_player.play("active")
+	player.animation_player.seek(0)
+
 func physics_process(player, delta):
 	velocity = velocity.linear_interpolate(desired_velocity, player.acceleration)
 	var collision = player.move_and_collide(velocity * delta)
