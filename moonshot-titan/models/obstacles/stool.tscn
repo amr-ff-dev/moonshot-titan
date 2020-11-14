@@ -7,7 +7,7 @@ extents = Vector2( 12, 14.5 )
 
 [node name="Stool" type="StaticBody2D"]
 position = Vector2( 399.279, 224.57 )
-collision_layer = 32
+collision_layer = 64
 __meta__ = {
 "_edit_group_": true
 }
