@@ -4,7 +4,7 @@ class_name CrewQuarters
 
 var Quest = preload("res://levels/quest_room/quest.gd")
 
-onready var quest = Quest.new("Crew Quarters", false)
+onready var quest = Quest.new("Clear Crew Quarters", false)
 
 func _ready():
 	call_deferred("player_entered")
