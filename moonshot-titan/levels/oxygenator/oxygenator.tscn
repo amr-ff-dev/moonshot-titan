@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://models/obstacles/oxygen_tank.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://models/obstacles/stool.tscn" type="PackedScene" id=6]
 [ext_resource path="res://models/obstacles/desk_sw.tscn" type="PackedScene" id=7]
 [ext_resource path="res://models/obstacles/oxygenator.tscn" type="PackedScene" id=8]
+[ext_resource path="res://levels/oxygenator/oxygenator.gd" type="Script" id=9]
+[ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -41,6 +43,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ), PoolIntArray( 5, 6, 7, 8, 9, 10 )
 outlines = [ PoolVector2Array( 64, 264, 96, 264, 96, 224, 128, 224, 128, 152, 96, 152, 96, 192, 64, 192 ), PoolVector2Array( 104, 104, 136, 104, 136, 72, 168, 72, 168, 40, 464, 40, 464, 80, 496, 80, 496, 112, 528, 112, 528, 144, 560, 144, 560, 176, 592, 176, 592, 208, 624, 208, 624, 240, 656, 240, 656, 528, 624, 528, 624, 560, 592, 560, 592, 592, 560, 592, 560, 624, 528, 624, 528, 656, 496, 656, 496, 688, 464, 688, 464, 720, 368, 720, 368, 784, 272, 784, 272, 720, 176, 720, 176, 688, 144, 688, 144, 656, 112, 656, 112, 632, 72, 632, 72, 600, 40, 600, 40, 568, 8, 568, 8, 536, -24, 536, -24, 232, 8, 232, 8, 200, 40, 200, 40, 168, 72, 168, 72, 136, 104, 136 ), PoolVector2Array( 160, 160, 192, 160, 192, 128, 224, 128, 224, 56, 192, 56, 192, 88, 160, 88 ), PoolVector2Array( 256, 56, 352, 56, 352, 128, 256, 128 ), PoolVector2Array( 384, 56, 416, 56, 416, 88, 448, 88, 448, 160, 416, 160, 416, 128, 384, 128 ), PoolVector2Array( 480, 152, 512, 152, 512, 184, 544, 184, 544, 256, 504, 256, 504, 224, 480, 224 ), PoolVector2Array( 184, 496, 232, 496, 232, 528, 264, 528, 264, 560, 312, 560, 312, 616, 184, 616 ), PoolVector2Array( 216, 472, 328, 472, 328, 424, 312, 424, 312, 392, 280, 392, 280, 424, 264, 424, 264, 392, 232, 392, 232, 424, 216, 424 ), PoolVector2Array( 96, 400, 112, 408, 128, 400, 144, 408, 144, 464, 168, 480, 168, 576, 64, 576, 72, 544, 96, 528, 96, 512, 72, 496, 64, 464, 72, 416 ) ]
 
 [node name="Oxygenator" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="FloorTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -121,3 +124,12 @@ position = Vector2( 560, 312 )
 collision_mask = 63
 speed = 110
 nav_2d_path = NodePath("../Navigation2D")
+
+[node name="PlayerRespawn" type="Position2D" parent="."]
+position = Vector2( 320, 720 )
+
+[node name="Entrance" type="Area2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 320, 816 )
+collision_layer = 128
+collision_mask = 2
+[connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
