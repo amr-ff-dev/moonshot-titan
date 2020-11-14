@@ -97,15 +97,20 @@ position = Vector2( 496, 208 )
 
 [node name="Stool" parent="." instance=ExtResource( 6 )]
 position = Vector2( 248, 552 )
+collision_mask = 15
 
 [node name="Stool2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 296, 416 )
+collision_mask = 15
 
 [node name="Stool3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 248, 416 )
+collision_mask = 15
 
 [node name="DeskSW" parent="." instance=ExtResource( 7 )]
 position = Vector2( 248, 560 )
+collision_layer = 64
+collision_mask = 15
 
 [node name="Bench" parent="." instance=ExtResource( 5 )]
 position = Vector2( 272, 456 )
@@ -115,21 +120,16 @@ position = Vector2( 120, 504 )
 
 [node name="Spider" parent="." instance=ExtResource( 4 )]
 position = Vector2( 24, 472 )
-collision_mask = 63
 speed = 110
 nav_2d_path = NodePath("../Navigation2D")
 
 [node name="Spider2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 560, 312 )
-collision_mask = 63
 speed = 110
 nav_2d_path = NodePath("../Navigation2D")
 
 [node name="PlayerRespawn" type="Position2D" parent="."]
 position = Vector2( 320, 720 )
 
-[node name="Entrance" type="Area2D" parent="." instance=ExtResource( 10 )]
-position = Vector2( 320, 816 )
-collision_layer = 128
-collision_mask = 2
+[node name="Entrance" parent="." instance=ExtResource( 10 )]
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]

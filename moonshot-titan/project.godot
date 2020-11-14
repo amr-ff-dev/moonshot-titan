@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "QuestRoom",
+"class": "ComputerCore",
+"language": "GDScript",
+"path": "res://levels/computer_core/computer_core.gd"
+}, {
+"base": "QuestRoom",
 "class": "CrewQuarters",
 "language": "GDScript",
 "path": "res://levels/crew_quarters/crew_quarters.gd"
@@ -110,6 +115,7 @@ _global_script_classes=[ {
 "path": "res://levels/titan/titan.gd"
 } ]
 _global_script_class_icons={
+"ComputerCore": "",
 "CrewQuarters": "",
 "HUD": "",
 "MedicalBay": "",

@@ -3,6 +3,8 @@
 [ext_resource path="res://models/obstacles/oxygenator.png" type="Texture" id=1]
 
 [node name="Oxygenator" type="StaticBody2D"]
+collision_layer = 64
+collision_mask = 15
 __meta__ = {
 "_edit_group_": true
 }
