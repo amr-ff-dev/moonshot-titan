@@ -2,7 +2,6 @@
 
 [ext_resource path="res://models/obstacles/furniture/lockers/storage_bay_locker_open.png" type="Texture" id=1]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 28.5 )
 
