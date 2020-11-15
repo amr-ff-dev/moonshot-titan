@@ -132,4 +132,5 @@ nav_2d_path = NodePath("../Navigation2D")
 position = Vector2( 320, 720 )
 
 [node name="Entrance" parent="." instance=ExtResource( 10 )]
+[connection signal="interaction_complete" from="OxygenatorDevice" to="." method="_on_OxygenatorDevice_interaction_complete"]
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
