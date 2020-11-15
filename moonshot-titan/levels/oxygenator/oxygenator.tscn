@@ -7,7 +7,7 @@
 [ext_resource path="res://models/obstacles/bench.tscn" type="PackedScene" id=5]
 [ext_resource path="res://models/obstacles/stool.tscn" type="PackedScene" id=6]
 [ext_resource path="res://models/obstacles/desk_sw.tscn" type="PackedScene" id=7]
-[ext_resource path="res://models/obstacles/oxygenator.tscn" type="PackedScene" id=8]
+[ext_resource path="res://models/obstacles/oxygenator_device.tscn" type="PackedScene" id=8]
 [ext_resource path="res://levels/oxygenator/oxygenator.gd" type="Script" id=9]
 [ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=10]
 

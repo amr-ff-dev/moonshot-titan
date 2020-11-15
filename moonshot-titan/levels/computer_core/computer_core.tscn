@@ -1,11 +1,25 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
-[ext_resource path="res://models/hazards/hazard.png" type="Texture" id=2]
+[ext_resource path="res://models/obstacles/binder_decoration.png" type="Texture" id=2]
 [ext_resource path="res://models/obstacles/obstacle.png" type="Texture" id=3]
-[ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=4]
+[ext_resource path="res://models/obstacles/chair.tscn" type="PackedScene" id=4]
 [ext_resource path="res://levels/computer_core/computer_core.gd" type="Script" id=5]
 [ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/obstacles/computer_rear.png" type="Texture" id=7]
+[ext_resource path="res://models/obstacles/stool.tscn" type="PackedScene" id=8]
+[ext_resource path="res://models/obstacles/desk_se.tscn" type="PackedScene" id=9]
+[ext_resource path="res://models/obstacles/desk_sw.tscn" type="PackedScene" id=10]
+[ext_resource path="res://models/obstacles/desk_nw.tscn" type="PackedScene" id=11]
+[ext_resource path="res://models/obstacles/clipboard_with_pencils_decoration.png" type="Texture" id=12]
+[ext_resource path="res://models/obstacles/desk_ne.tscn" type="PackedScene" id=13]
+[ext_resource path="res://models/obstacles/computer_front.png" type="Texture" id=14]
+[ext_resource path="res://models/obstacles/computer_side.png" type="Texture" id=15]
+[ext_resource path="res://models/obstacles/coffee_cup.png" type="Texture" id=16]
+[ext_resource path="res://models/obstacles/desk_e.tscn" type="PackedScene" id=17]
+[ext_resource path="res://models/obstacles/desk_s.tscn" type="PackedScene" id=18]
+[ext_resource path="res://models/obstacles/desk_n.tscn" type="PackedScene" id=19]
+[ext_resource path="res://models/hazards/lightning_hazard.tscn" type="PackedScene" id=20]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -33,37 +47,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="TileSet" id=4]
-0/name = "hazard.png 0"
-0/texture = ExtResource( 2 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 32, 32 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 3 )
-0/shape_one_way = false
-0/shape_one_way_margin = 1.0
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-0/z_index = 0
-
-[sub_resource type="NavigationPolygon" id=5]
-vertices = PoolVector2Array( 464, 648, 496, 664, 496, 688, 464, 688, 392, 680, 408, 648, 344, 568, 344, 632, 328, 616, 328, 568, 264, 632, 280, 616, 264, 568, 280, 568, 472, 232, 472, 472, 464, 488, 264, 456, 264, 312, 440, 232, -16, 336, -16, 240, 8, 240, 24, 336, 8, 208, 24, 208, 216, 456, 112, 336, 112, 304, 144, 304, 216, 312, 144, 272, 176, 272, 176, 232, 424, 232, 424, 200, 440, 200, 504, 488, 504, 504, 472, 504, 472, 536, 440, 536, 440, 568, 408, 568, 496, 648, 528, 648, 528, 664, 392, 568, 216, 680, 464, 720, 176, 720, 176, 688, 144, 688, 144, 656, 200, 616, 112, 656, 112, 632, 80, 632, 80, 616, 96, 616, 216, 568, 200, 528, 176, 528, 176, 496, 144, 496, 144, 464, 112, 464, 112, 440, 24, 440, 24, 568, 8, 568, 8, 528, -16, 528, -16, 432, -48, 432, -48, 336 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ), PoolIntArray( 6, 7, 8, 9 ), PoolIntArray( 8, 7, 10, 11 ), PoolIntArray( 11, 10, 12, 13 ), PoolIntArray( 14, 15, 16, 17, 18, 19 ), PoolIntArray( 20, 21, 22, 23 ), PoolIntArray( 22, 24, 25, 23 ), PoolIntArray( 26, 27, 28, 29, 30 ), PoolIntArray( 30, 29, 31, 32, 18 ), PoolIntArray( 32, 33, 34, 18 ), PoolIntArray( 34, 35, 36, 19 ), PoolIntArray( 34, 19, 18 ), PoolIntArray( 16, 37, 38, 39 ), PoolIntArray( 16, 39, 40, 41, 17 ), PoolIntArray( 41, 42, 43, 17 ), PoolIntArray( 44, 45, 46, 1 ), PoolIntArray( 0, 44, 1 ), PoolIntArray( 5, 4, 47, 43 ), PoolIntArray( 48, 4, 3, 49, 50, 51 ), PoolIntArray( 51, 52, 53, 54, 48 ), PoolIntArray( 53, 55, 56, 54 ), PoolIntArray( 56, 57, 58, 59 ), PoolIntArray( 56, 59, 54 ), PoolIntArray( 60, 48, 54, 61 ), PoolIntArray( 61, 62, 63, 26, 17 ), PoolIntArray( 63, 64, 65, 26 ), PoolIntArray( 65, 66, 67, 26 ), PoolIntArray( 68, 69, 70, 71 ), PoolIntArray( 68, 71, 72, 73, 23 ), PoolIntArray( 73, 74, 75, 20 ), PoolIntArray( 73, 20, 23 ), PoolIntArray( 68, 23, 27, 67 ), PoolIntArray( 67, 27, 26 ), PoolIntArray( 17, 43, 47 ), PoolIntArray( 17, 47, 6 ), PoolIntArray( 17, 6, 9 ), PoolIntArray( 17, 9, 13, 61 ), PoolIntArray( 61, 13, 12 ), PoolIntArray( 61, 12, 60 ) ]
-outlines = [ PoolVector2Array( -48, 336, -48, 432, -16, 432, -16, 528, 8, 528, 8, 568, 24, 568, 24, 440, 112, 440, 112, 464, 144, 464, 144, 496, 176, 496, 176, 528, 200, 528, 200, 616, 96, 616, 80, 616, 80, 632, 112, 632, 112, 656, 144, 656, 144, 688, 176, 688, 176, 720, 464, 720, 464, 688, 496, 688, 496, 664, 528, 664, 528, 648, 496, 648, 464, 648, 408, 648, 408, 568, 440, 568, 440, 536, 472, 536, 472, 504, 504, 504, 504, 488, 464, 488, 472, 472, 472, 232, 440, 232, 440, 200, 424, 200, 424, 232, 176, 232, 176, 272, 144, 272, 144, 304, 112, 304, 112, 336, 24, 336, 24, 208, 8, 208, 8, 240, -16, 240, -16, 336 ), PoolVector2Array( 216, 568, 264, 568, 264, 632, 344, 632, 344, 568, 392, 568, 392, 680, 216, 680 ), PoolVector2Array( 280, 568, 328, 568, 328, 616, 280, 616 ), PoolVector2Array( 216, 312, 264, 312, 264, 456, 216, 456 ) ]
-
 [node name="ComputerCore" type="Node2D"]
 script = ExtResource( 5 )
 
@@ -78,41 +61,603 @@ tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 64
 format = 1
-tile_data = PoolIntArray( 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 262151, 0, 0, 262155, 0, 0, 327687, 0, 0, 327689, 0, 0, 327691, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393231, 0, 0, 393232, 0, 0, 458754, 0, 0, 458755, 0, 0, 458768, 0, 0, 524290, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 720893, 0, 0, 655367, 0, 0, 655378, 0, 0, 786429, 0, 0, 720903, 0, 0, 720912, 0, 0, 720914, 0, 0, 851965, 0, 0, 786439, 0, 0, 786450, 0, 0, 851975, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 983042, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048592, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1179655, 0, 0, 1179657, 0, 0, 1179659, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1245191, 0, 0, 1245195, 0, 0, 1310727, 0, 0, 1310728, 0, 0, 1310729, 0, 0, 1310730, 0, 0, 1310731, 0, 0 )
-
-[node name="HazardMap" type="TileMap" parent="."]
-tile_set = SubResource( 4 )
-cell_size = Vector2( 32, 32 )
-collision_layer = 16
-format = 1
-tile_data = PoolIntArray( 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 196614, 0, 0, 196620, 0, 0, 262150, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327688, 0, 0, 327690, 0, 0, 327692, 0, 0, 327693, 0, 0, 327697, 0, 0, 393217, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393230, 0, 0, 393233, 0, 0, 458753, 0, 0, 458756, 0, 0, 458767, 0, 0, 458769, 0, 0, 524289, 0, 0, 524291, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 589825, 0, 0, 589826, 0, 0, 589839, 0, 0, 589843, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655379, 0, 0, 720911, 0, 0, 720913, 0, 0, 720915, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786451, 0, 0, 851983, 0, 0, 851987, 0, 0, 917505, 0, 0, 917506, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 983041, 0, 0, 983043, 0, 0, 983056, 0, 0, 983057, 0, 0, 1048577, 0, 0, 1048580, 0, 0, 1048591, 0, 0, 1048593, 0, 0, 1114113, 0, 0, 1114117, 0, 0, 1114126, 0, 0, 1114129, 0, 0, 1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179661, 0, 0, 1179665, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0 )
+tile_data = PoolIntArray( 720893, 0, 0, 786429, 0, 0, 851965, 0, 0 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
-navpoly = SubResource( 5 )
-
-[node name="Spider" parent="." instance=ExtResource( 4 )]
-position = Vector2( 280, 272 )
-collision_mask = 63
-nav_2d_path = NodePath("../Navigation2D")
-
-[node name="Spider2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 416, 376 )
-collision_mask = 63
-nav_2d_path = NodePath("../Navigation2D")
-
-[node name="Spider3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 272, 512 )
-collision_mask = 63
-nav_2d_path = NodePath("../Navigation2D")
-
-[node name="Entrance" type="Area2D" parent="." instance=ExtResource( 6 )]
+[node name="Entrance" parent="." instance=ExtResource( 6 )]
 position = Vector2( -80, 384 )
 rotation = 1.5708
-collision_layer = 128
-collision_mask = 2
 
 [node name="PlayerRespawn" type="Position2D" parent="."]
 position = Vector2( -32, 384 )
+
+[node name="Stool" parent="." instance=ExtResource( 8 )]
+position = Vector2( 480, 552 )
+
+[node name="Stool2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 128, 552 )
+
+[node name="DeskSE" parent="." instance=ExtResource( 9 )]
+position = Vector2( 496, 560 )
+
+[node name="Computer" type="Sprite" parent="DeskSE"]
+position = Vector2( 8.19843, 25.6031 )
+texture = ExtResource( 7 )
+
+[node name="Binder" type="Sprite" parent="DeskSE"]
+position = Vector2( 41, -19 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="Binder2" type="Sprite" parent="DeskSE"]
+position = Vector2( 42, -5 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="Binder3" type="Sprite" parent="DeskSE"]
+position = Vector2( 44, -32 )
+rotation = -1.5708
+texture = ExtResource( 2 )
+
+[node name="CoffeeCup" type="Sprite" parent="DeskSE"]
+position = Vector2( -38, 23 )
+texture = ExtResource( 16 )
+
+[node name="DeskSW" parent="." instance=ExtResource( 10 )]
+position = Vector2( 136, 560 )
+
+[node name="Computer" type="Sprite" parent="DeskSW"]
+position = Vector2( 6.06759, 25.5281 )
+texture = ExtResource( 7 )
+
+[node name="CofeeCup" type="Sprite" parent="DeskSW"]
+position = Vector2( -40, 8 )
+texture = ExtResource( 16 )
+
+[node name="Computer2" type="Sprite" parent="DeskSW"]
+position = Vector2( -47, -25 )
+texture = ExtResource( 15 )
+
+[node name="DeskNW" parent="." instance=ExtResource( 11 )]
+position = Vector2( 144, 232 )
+
+[node name="Computer" type="Sprite" parent="DeskNW"]
+position = Vector2( 16, -49 )
+z_index = 99
+texture = ExtResource( 14 )
+
+[node name="CoffeeCup" type="Sprite" parent="DeskNW"]
+position = Vector2( -26, -46 )
+texture = ExtResource( 16 )
+
+[node name="Computer2" type="Sprite" parent="DeskNW"]
+position = Vector2( -42, 4 )
+texture = ExtResource( 15 )
+
+[node name="Clipboard" type="Sprite" parent="DeskNW"]
+position = Vector2( -38, -25 )
+rotation = -1.5708
+texture = ExtResource( 12 )
+
+[node name="Stool3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 152, 224 )
+
+[node name="Stool4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 144, 256 )
+
+[node name="DeskNE" parent="." instance=ExtResource( 13 )]
+position = Vector2( 496, 232 )
+
+[node name="Computer" type="Sprite" parent="DeskNE"]
+position = Vector2( -5.19415, -49.0962 )
+z_index = 99
+texture = ExtResource( 14 )
+
+[node name="CoffeeCup" type="Sprite" parent="DeskNE"]
+position = Vector2( -38.2068, -44.9492 )
+texture = ExtResource( 16 )
+
+[node name="Computer2" type="Sprite" parent="DeskNE"]
+position = Vector2( 41.5781, 12.3745 )
+rotation = 3.14159
+texture = ExtResource( 15 )
+
+[node name="Binder" type="Sprite" parent="DeskNE"]
+position = Vector2( 39.3306, -22.4746 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="Clipboard" type="Sprite" parent="DeskNE"]
+position = Vector2( 37.2034, -42.9492 )
+texture = ExtResource( 12 )
+flip_h = true
+
+[node name="Stool5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 480, 224 )
+
+[node name="Stool6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 504, 248 )
+
+[node name="DeskE" parent="." instance=ExtResource( 17 )]
+position = Vector2( 520, 400 )
+
+[node name="Computer" type="Sprite" parent="DeskE"]
+position = Vector2( -2, -80 )
+z_index = 99
+texture = ExtResource( 14 )
+
+[node name="Binder" type="Sprite" parent="DeskE"]
+position = Vector2( -39, -76 )
+texture = ExtResource( 2 )
+
+[node name="Computer2" type="Sprite" parent="DeskE"]
+position = Vector2( 41, -41 )
+rotation = 3.14159
+texture = ExtResource( 15 )
+offset = Vector2( 0, -10.1254 )
+
+[node name="Computer3" type="Sprite" parent="DeskE"]
+position = Vector2( 41, 1 )
+rotation = 3.14159
+texture = ExtResource( 15 )
+offset = Vector2( 0, -10.1254 )
+
+[node name="Computer4" type="Sprite" parent="DeskE"]
+position = Vector2( 4, 56 )
+texture = ExtResource( 7 )
+
+[node name="CoffeeCup" type="Sprite" parent="DeskE"]
+position = Vector2( -41, 55 )
+texture = ExtResource( 16 )
+
+[node name="CoffeeCup2" type="Sprite" parent="DeskE"]
+position = Vector2( 36, -72 )
+rotation = 1.5708
+texture = ExtResource( 16 )
+
+[node name="Chair" parent="." instance=ExtResource( 4 )]
+position = Vector2( 517, 360 )
+
+[node name="Chair2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 518, 407 )
+
+[node name="DeskS" parent="." instance=ExtResource( 18 )]
+position = Vector2( 320, 624 )
+
+[node name="Computer" type="Sprite" parent="DeskS"]
+position = Vector2( 44, 26 )
+texture = ExtResource( 7 )
+
+[node name="Computer2" type="Sprite" parent="DeskS"]
+position = Vector2( -43, 26 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="CoffeeCup" type="Sprite" parent="DeskS"]
+position = Vector2( -76, 3 )
+texture = ExtResource( 16 )
+
+[node name="CoffeeCup2" type="Sprite" parent="DeskS"]
+position = Vector2( 79, 6 )
+texture = ExtResource( 16 )
+flip_h = true
+
+[node name="Computer3" type="Sprite" parent="DeskS"]
+position = Vector2( -82, -31 )
+texture = ExtResource( 15 )
+
+[node name="Binder" type="Sprite" parent="DeskS"]
+position = Vector2( 78, -45 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="Computer4" type="Sprite" parent="DeskS"]
+position = Vector2( 82, -15 )
+rotation = 3.14159
+texture = ExtResource( 15 )
+
+[node name="Stool7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 296, 600 )
+
+[node name="Stool8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 344, 600 )
+
+[node name="DeskN" parent="." instance=ExtResource( 19 )]
+position = Vector2( 320, 184 )
+
+[node name="Computer" type="Sprite" parent="DeskN"]
+position = Vector2( -21, -49 )
+z_index = 99
+texture = ExtResource( 14 )
+
+[node name="Computer2" type="Sprite" parent="DeskN"]
+position = Vector2( 36, -49 )
+z_index = 99
+texture = ExtResource( 14 )
+
+[node name="Computer3" type="Sprite" parent="DeskN"]
+position = Vector2( -77, -9 )
+texture = ExtResource( 15 )
+
+[node name="Computer4" type="Sprite" parent="DeskN"]
+position = Vector2( 77, 2 )
+rotation = 3.14159
+texture = ExtResource( 15 )
+
+[node name="Binder" type="Sprite" parent="DeskN"]
+position = Vector2( -73, -39 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="CoffeeCup" type="Sprite" parent="DeskN"]
+position = Vector2( -75, 23 )
+texture = ExtResource( 16 )
+
+[node name="Sprite2" type="Sprite" parent="DeskN"]
+position = Vector2( 75, -38 )
+rotation = 1.5708
+texture = ExtResource( 12 )
+
+[node name="Stool9" parent="." instance=ExtResource( 8 )]
+position = Vector2( 349, 184 )
+
+[node name="Chair3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 292, 176 )
+flip_horizontal = true
+
+[node name="LightningHazard2" parent="." instance=ExtResource( 20 )]
+position = Vector2( 272, 112 )
+rotation = -0.76969
+
+[node name="LightningHazard3" parent="." instance=ExtResource( 20 )]
+position = Vector2( 296, 112 )
+
+[node name="LightningHazard4" parent="." instance=ExtResource( 20 )]
+position = Vector2( 312, 120 )
+rotation = 0.76969
+
+[node name="LightningHazard90" parent="." instance=ExtResource( 20 )]
+position = Vector2( 496, 160 )
+rotation = 0.256563
+
+[node name="LightningHazard5" parent="." instance=ExtResource( 20 )]
+position = Vector2( 344, 112 )
+
+[node name="LightningHazard6" parent="." instance=ExtResource( 20 )]
+position = Vector2( 368, 112 )
+
+[node name="LightningHazard7" parent="." instance=ExtResource( 20 )]
+position = Vector2( 384, 120 )
+rotation = 1.02625
+
+[node name="LightningHazard8" parent="." instance=ExtResource( 20 )]
+position = Vector2( 168, 160 )
+
+[node name="LightningHazard9" parent="." instance=ExtResource( 20 )]
+position = Vector2( 136, 160 )
+
+[node name="LightningHazard25" parent="." instance=ExtResource( 20 )]
+position = Vector2( 128, 136 )
+rotation = -0.256563
+
+[node name="LightningHazard10" parent="." instance=ExtResource( 20 )]
+position = Vector2( 216, 200 )
+rotation = -1.5708
+
+[node name="LightningHazard11" parent="." instance=ExtResource( 20 )]
+position = Vector2( 216, 176 )
+rotation = -1.5708
+
+[node name="LightningHazard13" parent="." instance=ExtResource( 20 )]
+position = Vector2( 232, 232 )
+rotation = -3.11018
+scale = Vector2( 1, 1 )
+
+[node name="LightningHazard14" parent="." instance=ExtResource( 20 )]
+position = Vector2( 256, 232 )
+rotation = 2.65988
+
+[node name="LightningHazard15" parent="." instance=ExtResource( 20 )]
+position = Vector2( 271, 208 )
+rotation = 2.14675
+
+[node name="LightningHazard30" parent="." instance=ExtResource( 20 )]
+position = Vector2( 264, 184 )
+rotation = 2.14675
+
+[node name="LightningHazard16" parent="." instance=ExtResource( 20 )]
+position = Vector2( 298, 195 )
+rotation = 2.88503
+scale = Vector2( 1, 1 )
+
+[node name="LightningHazard17" parent="." instance=ExtResource( 20 )]
+position = Vector2( 320, 168 )
+rotation = -3.14159
+
+[node name="LightningHazard28" parent="." instance=ExtResource( 20 )]
+position = Vector2( 291, 160 )
+rotation = -3.14159
+
+[node name="LightningHazard29" parent="." instance=ExtResource( 20 )]
+position = Vector2( 349, 160 )
+rotation = -3.14159
+
+[node name="LightningHazard19" parent="." instance=ExtResource( 20 )]
+position = Vector2( 376, 208 )
+rotation = -2.62847
+
+[node name="LightningHazard20" parent="." instance=ExtResource( 20 )]
+position = Vector2( 392, 224 )
+rotation = -3.91128
+
+[node name="LightningHazard18" parent="." instance=ExtResource( 20 )]
+position = Vector2( 360, 200 )
+rotation = -2.88503
+
+[node name="LightningHazard26" parent="." instance=ExtResource( 20 )]
+position = Vector2( 512, 248 )
+rotation = -1.85878
+
+[node name="LightningHazard32" parent="." instance=ExtResource( 20 )]
+position = Vector2( 520, 224 )
+rotation = -0.832522
+
+[node name="LightningHazard31" parent="." instance=ExtResource( 20 )]
+position = Vector2( 488, 248 )
+rotation = -1.85878
+
+[node name="LightningHazard38" parent="." instance=ExtResource( 20 )]
+position = Vector2( 464, 200 )
+rotation = -2.3719
+
+[node name="LightningHazard27" parent="." instance=ExtResource( 20 )]
+position = Vector2( 376, 176 )
+rotation = -1.85878
+
+[node name="LightningHazard21" parent="." instance=ExtResource( 20 )]
+position = Vector2( 416, 208 )
+rotation = 2.08392
+
+[node name="LightningHazard22" parent="." instance=ExtResource( 20 )]
+position = Vector2( 416, 184 )
+rotation = 1.5708
+
+[node name="LightningHazard23" parent="." instance=ExtResource( 20 )]
+position = Vector2( 416, 168 )
+rotation = 0.801106
+
+[node name="LightningHazard33" parent="." instance=ExtResource( 20 )]
+position = Vector2( 79, 230 )
+rotation = -1.5708
+
+[node name="LightningHazard34" parent="." instance=ExtResource( 20 )]
+position = Vector2( 80, 248 )
+rotation = -1.5708
+
+[node name="LightningHazard35" parent="." instance=ExtResource( 20 )]
+position = Vector2( 85, 271 )
+rotation = -2.59705
+
+[node name="LightningHazard36" parent="." instance=ExtResource( 20 )]
+position = Vector2( 152, 208 )
+rotation = -3.14159
+
+[node name="LightningHazard37" parent="." instance=ExtResource( 20 )]
+position = Vector2( 111, 269 )
+rotation = -3.14159
+
+[node name="LightningHazard39" parent="." instance=ExtResource( 20 )]
+position = Vector2( 152, 264 )
+rotation = -3.14159
+
+[node name="LightningHazard40" parent="." instance=ExtResource( 20 )]
+position = Vector2( 176, 208 )
+rotation = 2.88503
+
+[node name="LightningHazard41" parent="." instance=ExtResource( 20 )]
+position = Vector2( 192, 208 )
+rotation = 2.62847
+
+[node name="LightningHazard42" parent="." instance=ExtResource( 20 )]
+position = Vector2( 72, 536 )
+rotation = -1.5708
+
+[node name="LightningHazard43" parent="." instance=ExtResource( 20 )]
+position = Vector2( 72, 560 )
+rotation = -1.5708
+
+[node name="LightningHazard44" parent="." instance=ExtResource( 20 )]
+position = Vector2( 104, 510 )
+rotation = -5.77006
+
+[node name="LightningHazard45" parent="." instance=ExtResource( 20 )]
+position = Vector2( 112, 528 )
+rotation = -5.51349
+
+[node name="LightningHazard46" parent="." instance=ExtResource( 20 )]
+position = Vector2( 152, 560 )
+rotation = -6.28319
+
+[node name="LightningHazard47" parent="." instance=ExtResource( 20 )]
+position = Vector2( 144, 544 )
+rotation = -6.28319
+
+[node name="LightningHazard48" parent="." instance=ExtResource( 20 )]
+position = Vector2( 160, 544 )
+rotation = 0.256563
+
+[node name="LightningHazard49" parent="." instance=ExtResource( 20 )]
+position = Vector2( 176, 568 )
+rotation = 0.76969
+
+[node name="LightningHazard50" parent="." instance=ExtResource( 20 )]
+position = Vector2( 168, 600 )
+rotation = -3.59014
+
+[node name="LightningHazard51" parent="." instance=ExtResource( 20 )]
+position = Vector2( 144, 600 )
+rotation = -2.82045
+
+[node name="LightningHazard52" parent="." instance=ExtResource( 20 )]
+position = Vector2( 120, 600 )
+rotation = -2.82045
+
+[node name="LightningHazard53" parent="." instance=ExtResource( 20 )]
+position = Vector2( 104, 592 )
+rotation = -2.82045
+
+[node name="LightningHazard54" parent="." instance=ExtResource( 20 )]
+position = Vector2( 88, 608 )
+rotation = -2.82045
+
+[node name="LightningHazard55" parent="." instance=ExtResource( 20 )]
+position = Vector2( 224, 584 )
+rotation = -1.02451
+
+[node name="LightningHazard56" parent="." instance=ExtResource( 20 )]
+position = Vector2( 216, 600 )
+rotation = -1.53764
+
+[node name="LightningHazard65" parent="." instance=ExtResource( 20 )]
+position = Vector2( 380, 589 )
+rotation = -1.53764
+
+[node name="LightningHazard58" parent="." instance=ExtResource( 20 )]
+position = Vector2( 256, 592 )
+rotation = -4.87121
+
+[node name="LightningHazard64" parent="." instance=ExtResource( 20 )]
+position = Vector2( 279, 625 )
+rotation = -5.6409
+
+[node name="LightningHazard59" parent="." instance=ExtResource( 20 )]
+position = Vector2( 256, 568 )
+rotation = -5.89747
+
+[node name="LightningHazard60" parent="." instance=ExtResource( 20 )]
+position = Vector2( 272, 552 )
+rotation = -5.89747
+
+[node name="LightningHazard57" parent="." instance=ExtResource( 20 )]
+position = Vector2( 224, 624 )
+rotation = -2.56389
+
+[node name="LightningHazard61" parent="." instance=ExtResource( 20 )]
+position = Vector2( 248, 664 )
+rotation = -2.56389
+
+[node name="LightningHazard62" parent="." instance=ExtResource( 20 )]
+position = Vector2( 272, 664 )
+rotation = -3.33358
+
+[node name="LightningHazard63" parent="." instance=ExtResource( 20 )]
+position = Vector2( 288, 680 )
+rotation = -3.84671
+
+[node name="LightningHazard75" parent="." instance=ExtResource( 20 )]
+position = Vector2( 528, 608 )
+rotation = -3.84671
+
+[node name="LightningHazard77" parent="." instance=ExtResource( 20 )]
+position = Vector2( 504, 600 )
+rotation = -2.82045
+
+[node name="LightningHazard76" parent="." instance=ExtResource( 20 )]
+position = Vector2( 544, 624 )
+rotation = -3.84671
+
+[node name="LightningHazard66" parent="." instance=ExtResource( 20 )]
+position = Vector2( 376, 568 )
+rotation = -0.511381
+
+[node name="LightningHazard69" parent="." instance=ExtResource( 20 )]
+position = Vector2( 464, 568 )
+rotation = -0.511381
+
+[node name="LightningHazard70" parent="." instance=ExtResource( 20 )]
+position = Vector2( 448, 552 )
+rotation = -0.511381
+
+[node name="LightningHazard72" parent="." instance=ExtResource( 20 )]
+position = Vector2( 448, 552 )
+rotation = -0.511381
+
+[node name="LightningHazard78" parent="." instance=ExtResource( 20 )]
+position = Vector2( 496, 432 )
+rotation = -0.511381
+
+[node name="LightningHazard82" parent="." instance=ExtResource( 20 )]
+position = Vector2( 536, 392 )
+rotation = -1.28107
+
+[node name="LightningHazard83" parent="." instance=ExtResource( 20 )]
+position = Vector2( 512, 392 )
+rotation = -1.28107
+
+[node name="LightningHazard84" parent="." instance=ExtResource( 20 )]
+position = Vector2( 496, 344 )
+rotation = -2.82045
+
+[node name="LightningHazard85" parent="." instance=ExtResource( 20 )]
+position = Vector2( 528, 344 )
+rotation = -4.10327
+
+[node name="LightningHazard86" parent="." instance=ExtResource( 20 )]
+position = Vector2( 576, 376 )
+rotation = -4.10327
+
+[node name="LightningHazard87" parent="." instance=ExtResource( 20 )]
+position = Vector2( 576, 424 )
+rotation = -4.10327
+
+[node name="LightningHazard88" parent="." instance=ExtResource( 20 )]
+position = Vector2( 580, 396 )
+rotation = -5.12952
+
+[node name="LightningHazard89" parent="." instance=ExtResource( 20 )]
+position = Vector2( 560, 240 )
+rotation = -4.87296
+
+[node name="LightningHazard79" parent="." instance=ExtResource( 20 )]
+position = Vector2( 495, 469 )
+rotation = -2.56389
+
+[node name="LightningHazard80" parent="." instance=ExtResource( 20 )]
+position = Vector2( 528, 475 )
+rotation = -3.07702
+
+[node name="LightningHazard81" parent="." instance=ExtResource( 20 )]
+position = Vector2( 552, 480 )
+rotation = -3.59014
+
+[node name="LightningHazard74" parent="." instance=ExtResource( 20 )]
+position = Vector2( 456, 536 )
+rotation = 0.258309
+
+[node name="LightningHazard67" parent="." instance=ExtResource( 20 )]
+position = Vector2( 416, 584 )
+rotation = 0.771436
+
+[node name="LightningHazard71" parent="." instance=ExtResource( 20 )]
+position = Vector2( 512, 560 )
+rotation = -0.254818
+
+[node name="LightningHazard73" parent="." instance=ExtResource( 20 )]
+position = Vector2( 496, 544 )
+rotation = -0.254818
+
+[node name="LightningHazard68" parent="." instance=ExtResource( 20 )]
+position = Vector2( 416, 616 )
+rotation = 2.05425
+
+[node name="LightningHazard12" parent="." instance=ExtResource( 20 )]
+position = Vector2( 496, 296 )
+rotation = -0.513127
+scale = Vector2( 1, 1 )
+
+[node name="LightningHazard24" parent="." instance=ExtResource( 20 )]
+position = Vector2( 520, 296 )
+rotation = 0.256563
+scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/oxygenator_shadows.png-b8f837635f357b3f7fcddf3f5ed7f3ce.stex"
+path="res://.import/desk_ne.png-6c1bebdf9ebe915d3e8eb22bd978d3c0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/obstacles/oxygenator_shadows.png"
-dest_files=[ "res://.import/oxygenator_shadows.png-b8f837635f357b3f7fcddf3f5ed7f3ce.stex" ]
+source_file="res://models/obstacles/desk_ne.png"
+dest_files=[ "res://.import/desk_ne.png-6c1bebdf9ebe915d3e8eb22bd978d3c0.stex" ]
 
 [params]
 

@@ -8,7 +8,7 @@ extents = Vector2( 12, 14.5 )
 
 [node name="Chair" type="StaticBody2D"]
 position = Vector2( 409.517, 533.969 )
-collision_layer = 32
+collision_layer = 64
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
