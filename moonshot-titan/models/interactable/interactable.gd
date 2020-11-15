@@ -6,8 +6,8 @@ class_name Interactable
 signal interaction_complete()
 
 export(Texture) var sprite_texture
-export(int) var hint_radius = 128
-export(int) var click_radius = 64
+export(int, 32, 256) var hint_radius = 128
+export(int, 32, 256) var click_radius = 64
 
 onready var sprite = $Sprite
 onready var hint_collision_shape_2d = $HintArea/CollisionShape2D

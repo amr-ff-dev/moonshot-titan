@@ -4,15 +4,18 @@
 [ext_resource path="res://models/interactable/interactable.gd" type="Script" id=2]
 
 [sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/enabled = true
 shader_param/outline_width = 1.0
 shader_param/outline_color = Color( 0.12549, 0.12549, 0.501961, 0.768627 )
 
 [sub_resource type="CircleShape2D" id=2]
+resource_local_to_scene = true
 radius = 128.0
 
 [sub_resource type="CircleShape2D" id=3]
+resource_local_to_scene = true
 radius = 96.0
 
 [sub_resource type="Animation" id=4]
@@ -130,6 +133,8 @@ collision_mask = 2
 shape = SubResource( 2 )
 
 [node name="ClickArea" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
 shape = SubResource( 3 )
