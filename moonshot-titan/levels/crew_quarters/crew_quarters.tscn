@@ -1,17 +1,20 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://models/obstacles/table.tscn" type="PackedScene" id=1]
-[ext_resource path="res://models/obstacles/chess_board.png" type="Texture" id=2]
+[ext_resource path="res://models/obstacles/furniture/table.tscn" type="PackedScene" id=1]
+[ext_resource path="res://models/obstacles/decorations/chess_board.png" type="Texture" id=2]
 [ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=4]
 [ext_resource path="res://models/hazards/airlock_hazard.png" type="Texture" id=5]
-[ext_resource path="res://models/obstacles/crew_quarters_locker_rows.tscn" type="PackedScene" id=6]
-[ext_resource path="res://models/obstacles/card_game.png" type="Texture" id=7]
+[ext_resource path="res://models/obstacles/furniture/lockers/crew_quarters_locker_rows.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/obstacles/decorations/card_game.png" type="Texture" id=7]
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=8]
-[ext_resource path="res://models/obstacles/chair.tscn" type="PackedScene" id=10]
+[ext_resource path="res://models/obstacles/furniture/chair.tscn" type="PackedScene" id=10]
 [ext_resource path="res://levels/crew_quarters/crew_quarters.gd" type="Script" id=11]
-[ext_resource path="res://models/obstacles/stool.tscn" type="PackedScene" id=13]
-[ext_resource path="res://models/obstacles/bed.tscn" type="PackedScene" id=14]
+[ext_resource path="res://models/obstacles/furniture/stool.tscn" type="PackedScene" id=13]
+[ext_resource path="res://models/obstacles/furniture/bed.tscn" type="PackedScene" id=14]
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 51.5, 86 )

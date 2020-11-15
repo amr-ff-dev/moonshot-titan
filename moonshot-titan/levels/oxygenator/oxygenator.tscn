@@ -1,15 +1,17 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
-[ext_resource path="res://models/obstacles/oxygen_tank.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/obstacles/furniture/oxygen_tank.tscn" type="PackedScene" id=2]
 [ext_resource path="res://models/obstacles/obstacle.png" type="Texture" id=3]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=4]
-[ext_resource path="res://models/obstacles/bench.tscn" type="PackedScene" id=5]
-[ext_resource path="res://models/obstacles/stool.tscn" type="PackedScene" id=6]
-[ext_resource path="res://models/obstacles/desk_sw.tscn" type="PackedScene" id=7]
-[ext_resource path="res://models/obstacles/oxygenator_device.tscn" type="PackedScene" id=8]
+[ext_resource path="res://models/obstacles/furniture/bench.tscn" type="PackedScene" id=5]
+[ext_resource path="res://models/obstacles/furniture/stool.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/obstacles/furniture/desks/desk_sw.tscn" type="PackedScene" id=7]
+[ext_resource path="res://models/obstacles/furniture/oxygenator_device.tscn" type="PackedScene" id=8]
 [ext_resource path="res://levels/oxygenator/oxygenator.gd" type="Script" id=9]
 [ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=10]
+
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )

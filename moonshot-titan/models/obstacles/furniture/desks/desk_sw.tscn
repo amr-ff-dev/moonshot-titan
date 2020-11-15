@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://models/obstacles/furniture/desks/desk_sw.png" type="Texture" id=1]
+
+
+
+[node name="DeskSW" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -55.3772, -58.8317, -55.2196, 46.6866, 54.3935, 47.0016, 54.8659, 10.4639, -27.6589, 10.4639, -27.3439, -58.8317 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

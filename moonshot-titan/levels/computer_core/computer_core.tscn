@@ -1,24 +1,24 @@
 [gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
-[ext_resource path="res://models/obstacles/binder_decoration.png" type="Texture" id=2]
+[ext_resource path="res://models/obstacles/decorations/binder_decoration.png" type="Texture" id=2]
 [ext_resource path="res://models/obstacles/obstacle.png" type="Texture" id=3]
-[ext_resource path="res://models/obstacles/chair.tscn" type="PackedScene" id=4]
+[ext_resource path="res://models/obstacles/furniture/chair.tscn" type="PackedScene" id=4]
 [ext_resource path="res://levels/computer_core/computer_core.gd" type="Script" id=5]
 [ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=6]
-[ext_resource path="res://models/obstacles/computer_rear.png" type="Texture" id=7]
-[ext_resource path="res://models/obstacles/stool.tscn" type="PackedScene" id=8]
-[ext_resource path="res://models/obstacles/desk_se.tscn" type="PackedScene" id=9]
-[ext_resource path="res://models/obstacles/desk_sw.tscn" type="PackedScene" id=10]
-[ext_resource path="res://models/obstacles/desk_nw.tscn" type="PackedScene" id=11]
-[ext_resource path="res://models/obstacles/clipboard_with_pencils_decoration.png" type="Texture" id=12]
-[ext_resource path="res://models/obstacles/desk_ne.tscn" type="PackedScene" id=13]
-[ext_resource path="res://models/obstacles/computer_front.png" type="Texture" id=14]
-[ext_resource path="res://models/obstacles/computer_side.png" type="Texture" id=15]
-[ext_resource path="res://models/obstacles/coffee_cup.png" type="Texture" id=16]
-[ext_resource path="res://models/obstacles/desk_e.tscn" type="PackedScene" id=17]
-[ext_resource path="res://models/obstacles/desk_s.tscn" type="PackedScene" id=18]
-[ext_resource path="res://models/obstacles/desk_n.tscn" type="PackedScene" id=19]
+[ext_resource path="res://models/obstacles/decorations/computer_rear.png" type="Texture" id=7]
+[ext_resource path="res://models/obstacles/furniture/stool.tscn" type="PackedScene" id=8]
+[ext_resource path="res://models/obstacles/furniture/desks/desk_se.tscn" type="PackedScene" id=9]
+[ext_resource path="res://models/obstacles/furniture/desks/desk_sw.tscn" type="PackedScene" id=10]
+[ext_resource path="res://models/obstacles/furniture/desks/desk_nw.tscn" type="PackedScene" id=11]
+[ext_resource path="res://models/obstacles/decorations/clipboard_with_pencils_decoration.png" type="Texture" id=12]
+[ext_resource path="res://models/obstacles/furniture/desks/desk_ne.tscn" type="PackedScene" id=13]
+[ext_resource path="res://models/obstacles/decorations/computer_front.png" type="Texture" id=14]
+[ext_resource path="res://models/obstacles/decorations/computer_side.png" type="Texture" id=15]
+[ext_resource path="res://models/obstacles/decorations/coffee_cup.png" type="Texture" id=16]
+[ext_resource path="res://models/obstacles/furniture/desks/desk_e.tscn" type="PackedScene" id=17]
+[ext_resource path="res://models/obstacles/furniture/desks/desk_s.tscn" type="PackedScene" id=18]
+[ext_resource path="res://models/obstacles/furniture/desks/desk_n.tscn" type="PackedScene" id=19]
 [ext_resource path="res://models/hazards/lightning_hazard.tscn" type="PackedScene" id=20]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -352,7 +352,6 @@ rotation = -1.5708
 [node name="LightningHazard13" parent="." instance=ExtResource( 20 )]
 position = Vector2( 232, 232 )
 rotation = -3.11018
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard14" parent="." instance=ExtResource( 20 )]
 position = Vector2( 256, 232 )
@@ -369,7 +368,6 @@ rotation = 2.14675
 [node name="LightningHazard16" parent="." instance=ExtResource( 20 )]
 position = Vector2( 298, 195 )
 rotation = 2.88503
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard17" parent="." instance=ExtResource( 20 )]
 position = Vector2( 320, 168 )
@@ -654,10 +652,8 @@ rotation = 2.05425
 [node name="LightningHazard12" parent="." instance=ExtResource( 20 )]
 position = Vector2( 496, 296 )
 rotation = -0.513127
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard24" parent="." instance=ExtResource( 20 )]
 position = Vector2( 520, 296 )
 rotation = 0.256563
-scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]

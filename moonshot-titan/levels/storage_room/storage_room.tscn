@@ -1,18 +1,23 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
-[ext_resource path="res://models/obstacles/crate_row.tscn" type="PackedScene" id=2]
-[ext_resource path="res://models/obstacles/rock_debris.png" type="Texture" id=3]
+[ext_resource path="res://models/obstacles/furniture/crates/crate_row.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/obstacles/decorations/rock_debris.png" type="Texture" id=3]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=4]
-[ext_resource path="res://models/obstacles/crate_open.tscn" type="PackedScene" id=5]
-[ext_resource path="res://models/obstacles/crate_partially_open.tscn" type="PackedScene" id=6]
-[ext_resource path="res://models/obstacles/storage_room_locker_open.tscn" type="PackedScene" id=7]
-[ext_resource path="res://models/obstacles/locker.tscn" type="PackedScene" id=8]
-[ext_resource path="res://models/obstacles/crate.tscn" type="PackedScene" id=9]
-[ext_resource path="res://models/obstacles/bench.tscn" type="PackedScene" id=10]
-[ext_resource path="res://models/obstacles/fire_hazard.tscn" type="PackedScene" id=11]
+[ext_resource path="res://models/obstacles/furniture/crates/crate_open.tscn" type="PackedScene" id=5]
+[ext_resource path="res://models/obstacles/furniture/crates/crate_partially_open.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/obstacles/furniture/lockers/storage_room_locker_open.tscn" type="PackedScene" id=7]
+[ext_resource path="res://models/obstacles/furniture/lockers/locker.tscn" type="PackedScene" id=8]
+[ext_resource path="res://models/obstacles/furniture/crates/crate.tscn" type="PackedScene" id=9]
+[ext_resource path="res://models/obstacles/furniture/bench.tscn" type="PackedScene" id=10]
+[ext_resource path="res://models/hazards/fire_hazard.tscn" type="PackedScene" id=11]
 [ext_resource path="res://levels/storage_room/storage_room.gd" type="Script" id=12]
 [ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=13]
+
+
+
+
+
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 528, 656, 496, 656, 200, 648, 216, 648, 328, 464, 280, 464, 136, 456, 136, 408, 472, 368, 472, 424, 584, 552, 592, 560, 592, 592, 560, 592, 456, 584, 536, 552, 584, 304, 536, 304, 456, 296, 472, 296, 328, 528, 280, 528, 200, 520, 216, 520, 328, 592, 280, 592, 200, 584, 216, 584, 624, 528, 624, 560, 584, 496, 328, 520, 376, 504, 376, 536, 344, 536, 656, 528, 584, 488, 584, 432, 584, 360, 656, 240, 584, 296, 624, 240, 584, 240, 592, 208, 624, 208, 472, 432, 344, 248, 344, 296, 144, 272, 520, 552, 472, 552, 456, 536, 472, 496, 424, 616, 528, 624, 328, 648, 376, 616, 264, 200, 560, 176, 592, 176, 424, 216, 376, 216, 560, 144, 264, 152, 528, 144, -80, 432, -80, 336, -16, 336, -16, 432, -16, 240, 16, 240, 16, 208, 48, 208, 152, 200, 80, 176, 80, 144, 112, 144, 152, 152, 112, 112, 144, 112, 184, 120, 184, 152, 144, 80, 312, 80, 232, 120, 312, 48, 344, 48, 344, 80, 496, 80, 496, 112, 528, 112, 232, 152, 184, 200, 184, 232, 232, 232, 232, 200, 536, 240, 536, 296, 520, 296, 520, 240, 456, 248, 424, 248, 472, 240, 376, 248, 376, 296, 376, 328, 424, 328, 424, 296, 472, 304, 472, 360, 536, 360, 520, 360, 520, 304, 536, 368, 536, 424, 520, 424, 520, 368, 536, 432, 536, 488, 520, 488, 520, 432, 536, 496, 520, 496, 472, 488, 424, 536, 424, 504, 104, 408, 104, 376, 56, 376, 56, 408, 24, 408, 24, 456, 56, 456, 56, 488, 152, 592, 104, 488, 104, 456, 152, 584, 280, 520, 264, 520, 264, 464, 216, 464, 344, 584, 376, 584, 328, 584, 424, 584, 560, 624, 280, 648, 264, 648, 264, 592, 216, 592, 152, 648, 496, 688, 144, 688, 144, 656, 112, 656, 112, 624, 80, 624, 80, 592, 48, 592, 48, 560, 16, 560, 16, 528, -16, 528, 280, 584, 264, 584, 264, 528, 216, 528, 200, 528, 200, 592, 584, 424, 56, 272, 584, 368, 48, 176, 144, 200, 56, 200, 200, 464, 152, 464, 152, 520, 152, 528 )
