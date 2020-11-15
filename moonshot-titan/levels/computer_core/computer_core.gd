@@ -8,3 +8,7 @@ onready var quest = Quest.new("Initiate Launch Sequence", false)
 
 func _on_Entrance_body_entered(_body):
 	emit_signal("player_entered", quest, $PlayerRespawn)
+
+func _on_Interactable_interaction_complete():
+	emit_signal("quest_complete", quest)
+	$Interactable.queue_free()
