@@ -28,6 +28,10 @@ func _ready():
 			child.connect("player_entered", self, "_on_QuestRoom_player_entered")
 			child.connect("quest_complete", self, "_on_QuestRoom_quest_complete")
 
+func _input(event):
+	if event.is_action_pressed("full_screen"):
+		OS.window_fullscreen = !OS.window_fullscreen
+
 func _on_Player_shoot(projectile, origin, direction):
 	add_child(projectile)
 	projectile.launch(origin, direction)
