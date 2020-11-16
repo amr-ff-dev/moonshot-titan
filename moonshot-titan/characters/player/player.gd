@@ -11,6 +11,7 @@ const fatal_layers = [Titan.CollisionLayers.ENEMY, Titan.CollisionLayers.HAZARD,
 
 onready var animation_player = $AnimationPlayer
 onready var camera = $PlayerCamera
+onready var grav_detect = $GravDetect
 
 var state
 
@@ -32,6 +33,15 @@ func collision_is_stopping(collision):
 
 func collision_is_fatal(collision):
 	return collision and collision.collider.get_collision_layer() in fatal_layers
+
+func is_in_grav_area():
+	for area in grav_detect.get_overlapping_areas():
+		if area.collision_layer == Titan.CollisionLayers.GRAV:
+			return true
+	return false
+
+func is_grav_locked():
+	return Input.is_action_pressed("grav") and is_in_grav_area()
 
 func emit_shoot(projectile, origin, direction):
 	emit_signal("shoot", projectile, origin, direction)

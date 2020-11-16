@@ -21,3 +21,5 @@ func input(player, event):
 	.input(player, event)
 	if event.is_action_pressed("shoot"):
 		.shoot(player)
+	elif player.is_grav_locked():
+		player.change_state(PlayerActive.new())

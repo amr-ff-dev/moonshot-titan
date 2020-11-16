@@ -11,6 +11,7 @@ enum CollisionLayers {
 	PLAYER_HAZARD = 32,
 	OBSTACLE = 64,
 	DETECT = 128,
+	GRAV = 256,
 }
 
 var QuestRoom = preload("res://levels/quest_room/quest_room.gd")

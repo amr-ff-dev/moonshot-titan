@@ -24,4 +24,5 @@ func shoot(player):
 
 	player.emit_shoot(projectile, player.position, direction_to_target)
 	
-	player.change_state(PlayerRecoil.new(-direction_to_target * projectile.speed))
+	if not player.is_grav_locked():
+		player.change_state(PlayerRecoil.new(-direction_to_target * projectile.speed))
