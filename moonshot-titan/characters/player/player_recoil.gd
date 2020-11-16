@@ -16,10 +16,10 @@ func physics_process(player, delta):
 		player.change_state(PlayerActive.new())
 	elif player.collision_is_fatal(collision):
 		player.change_state(PlayerDead.new())
+	elif player.is_grav_locked():
+		player.change_state(PlayerActive.new())
 
 func input(player, event):
 	.input(player, event)
 	if event.is_action_pressed("shoot"):
 		.shoot(player)
-	elif player.is_grav_locked():
-		player.change_state(PlayerActive.new())
