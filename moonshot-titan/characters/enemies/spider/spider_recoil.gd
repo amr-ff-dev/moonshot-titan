@@ -31,7 +31,14 @@ func disable_hazard_for_enemies(hazard):
 	hazard.set_collision_layer(Titan.CollisionLayers.PLAYER_HAZARD)
 
 func idle_or_chase(spider):
-	if spider.get_node("PlayerDetection").get_overlapping_bodies().size() > 1:
-		spider.change_state(SpiderChase.new())
+	var target = find_player_target_in_detection_area(spider)
+	if target:
+		spider.change_state(SpiderChase.new(target))
 	else:
 		spider.change_state(SpiderIdle.new())
+
+func find_player_target_in_detection_area(spider):
+	for body in spider.player_detection.get_overlapping_bodies():
+		if body.get_collision_layer() == Titan.CollisionLayers.PLAYER:
+			return body
+	return null

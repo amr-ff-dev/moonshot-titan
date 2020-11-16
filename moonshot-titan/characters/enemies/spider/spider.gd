@@ -5,11 +5,10 @@ signal dead()
 export(int) var speed = 100
 export(NodePath) var nav_2d_path
 
-var target
-
 onready var state = SpiderIdle.new()
 onready var nav_2d : Navigation2D = get_node(nav_2d_path)
 onready var nav_line = $NavLine
+onready var player_detection = $PlayerDetection
 
 func _physics_process(delta):
 	state.physics_process(self, delta)

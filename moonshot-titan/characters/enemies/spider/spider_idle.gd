@@ -5,5 +5,4 @@ class_name SpiderIdle
 var SpiderChase = load("res://characters/enemies/spider/spider_chase.gd")
 
 func chase(spider, target):
-	.chase(spider, target)
-	spider.change_state(SpiderChase.new())
+	spider.change_state(SpiderChase.new(target))
