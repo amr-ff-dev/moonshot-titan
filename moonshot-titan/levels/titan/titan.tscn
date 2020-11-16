@@ -68,12 +68,14 @@ position = Vector2( 608, 992 )
 [node name="CrewQuarters" parent="." instance=ExtResource( 4 )]
 
 [node name="GravEntrance" type="Area2D" parent="."]
-position = Vector2( 320, 864 )
+position = Vector2( 320, 880 )
 collision_layer = 256
 collision_mask = 2
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GravEntrance"]
-position = Vector2( 0, 16 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 16 )]
