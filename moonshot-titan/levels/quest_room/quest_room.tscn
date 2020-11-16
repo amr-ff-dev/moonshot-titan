@@ -4,3 +4,4 @@
 
 [node name="QuestRoom" type="Node2D"]
 script = ExtResource( 1 )
+default_light_color = Color( 255, 50, 50, 255 )

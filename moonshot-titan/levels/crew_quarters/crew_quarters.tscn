@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://models/obstacles/furniture/table.tscn" type="PackedScene" id=1]
 [ext_resource path="res://models/obstacles/decorations/chess_board.png" type="Texture" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://models/obstacles/furniture/lockers/crew_quarters_locker_rows.tscn" type="PackedScene" id=6]
 [ext_resource path="res://models/obstacles/decorations/card_game.png" type="Texture" id=7]
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=8]
-[ext_resource path="res://effects/light.png" type="Texture" id=9]
 [ext_resource path="res://models/obstacles/furniture/chair.tscn" type="PackedScene" id=10]
 [ext_resource path="res://levels/crew_quarters/crew_quarters.gd" type="Script" id=11]
 [ext_resource path="res://models/obstacles/furniture/stool.tscn" type="PackedScene" id=13]
@@ -71,14 +70,18 @@ position = Vector2( 464, 576 )
 
 [node name="Chair1" parent="." instance=ExtResource( 10 )]
 position = Vector2( 408, 528 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 520, 528 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Chair3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 456, 272 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Table" parent="." instance=ExtResource( 1 )]
 
@@ -131,14 +134,5 @@ collision_layer = 64
 position = Vector2( 320, 720 )
 
 [node name="Entrance" parent="." instance=ExtResource( 3 )]
-
-[node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 320.655, 385.738 )
-texture = ExtResource( 9 )
-texture_scale = 1.8
-color = Color( 1, 0.196078, 0.196078, 1 )
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.392157, 0.392157, 0.392157, 1 )
 [connection signal="dead" from="Spider" to="." method="_on_Spider_dead"]
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]

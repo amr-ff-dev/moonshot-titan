@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=2]
@@ -18,7 +18,6 @@
 [ext_resource path="res://models/obstacles/decorations/clipboard_with_pencils_decoration.png" type="Texture" id=16]
 [ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=17]
 [ext_resource path="res://characters/npcs/engineer/engineer.png" type="Texture" id=18]
-[ext_resource path="res://effects/light.png" type="Texture" id=19]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 496, 656, 496, 688, 464, 688, 408, 672, 408, 592, 488, 608, 616, 328, 616, 248, 624, 240, 656, 240, 656, 528, 624, 528, 456, 64, 464, 48, 464, 80, 456, 136, 560, 624, 528, 624, 536, 608, 560, 592, 536, 520, 592, 560, 368, 48, 376, 64, 184, 624, 184, 544, 256, 592, 256, 672, 392, 472, 392, 528, 328, 520, 328, 472, 440, 304, 440, 328, 264, 320, 408, 304, 408, 248, 264, 248, 376, 136, 416, 440, 416, 472, 72, 448, 72, 368, 216, 320, 216, 472, 272, 48, 272, -16, 368, -16, 256, 136, 256, 64, 168, 48, 176, 64, 168, 80, 176, 136, 496, 80, 496, 112, 528, 112, 528, 144, 560, 144, 560, 176, 592, 176, 592, 208, 624, 208, 56, 248, 56, 304, 88, 304, 88, 320, 24, 368, 136, 320, 136, 304, 152, 304, 152, 320, 200, 320, 200, 304, 216, 304, 488, 328, 488, 304, 504, 304, 504, 328, 552, 328, 552, 304, 568, 304, 568, 328, 624, 560, 520, 408, 592, 592, 520, 520, 472, 408, 472, 472, 448, 472, 448, 440, 488, 528, 528, 656, 360, 592, 168, 520, 216, 520, 360, 672, 304, 672, 304, 592, 136, 544, 56, 520, 464, 720, 176, 720, 176, 688, 136, 624, 144, 656, 144, 688, 112, 656, 112, 624, 80, 592, 80, 624, 48, 592, 48, 560, 56, 472, 16, 560, 16, 528, 24, 448, -16, 528, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 80, 176, 80, 144, 112, 144, 112, 112, 144, 112, 144, 80, 168, 472 )
@@ -150,11 +149,5 @@ position = Vector2( 320, -48 )
 position = Vector2( 239.744, 275.386 )
 sprite_texture = ExtResource( 18 )
 click_radius = 45
-
-[node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 320.655, 385.738 )
-texture = ExtResource( 19 )
-texture_scale = 1.8
-color = Color( 1, 0.196078, 0.196078, 1 )
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]

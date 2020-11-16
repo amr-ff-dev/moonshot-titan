@@ -11,7 +11,7 @@ func _on_Entrance_body_entered(_body):
 	emit_signal("player_entered", quest, $PlayerRespawn)
 
 func _on_Interactable_interaction_complete():
-	emit_signal("quest_complete", quest)
+	emit_quest_complete(quest)
 	pick_up_toolbox()
 
 func pick_up_toolbox():
