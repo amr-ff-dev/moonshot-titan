@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://effects/outline.shader" type="Shader" id=1]
 [ext_resource path="res://models/interactable/interactable.gd" type="Script" id=2]
@@ -9,6 +9,18 @@ shader = ExtResource( 1 )
 shader_param/enabled = true
 shader_param/outline_width = 1.0
 shader_param/outline_color = Color( 0.12549, 0.12549, 0.501961, 0.768627 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.98, 0.6, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="CircleShape2D" id=2]
 resource_local_to_scene = true
@@ -116,10 +128,12 @@ __meta__ = {
 
 [node name="ProgressBar" type="ProgressBar" parent="Control"]
 visible = false
+light_mask = 0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -14.0
+custom_styles/fg = SubResource( 6 )
 percent_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
