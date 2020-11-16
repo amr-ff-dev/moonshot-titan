@@ -1,4 +1,5 @@
 # Moonshot Titan
+
 ## General
 In Moonshot Titan, you are an astronaut on board a mining station on Titan, the largest moon of Saturn. The mining company you work for drilled too deep, and uncovered an alien species hidden beneath the ice. Ready your ship for launch and try to escape this moon before it is overrun.
 
@@ -9,3 +10,7 @@ The player has one method of defending themselves: the repulsor gun. The gun fir
 * LMB to aim and fire
 * RMB to interact with the environment
 * Space to activate grav boots
+
+## Design and Plans
+* Refer to the [Concept Docs](concept/README.md) for full level design and concept
+* Review current progress on the [Project Board](https://github.com/amr-ff-dev/moonshot-titan/projects/1)
