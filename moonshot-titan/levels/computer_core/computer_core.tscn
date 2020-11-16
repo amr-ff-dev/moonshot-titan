@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://models/obstacles/decorations/binder_decoration.png" type="Texture" id=2]
@@ -20,6 +20,9 @@
 [ext_resource path="res://models/obstacles/furniture/desks/desk_s.tscn" type="PackedScene" id=18]
 [ext_resource path="res://models/obstacles/furniture/desks/desk_n.tscn" type="PackedScene" id=19]
 [ext_resource path="res://models/hazards/lightning_hazard.tscn" type="PackedScene" id=20]
+[ext_resource path="res://models/obstacles/furniture/server_rack.tscn" type="PackedScene" id=21]
+[ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=22]
+[ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -47,6 +50,11 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
+[sub_resource type="NavigationPolygon" id=3]
+vertices = PoolVector2Array( 512, 496, 512, 528, 504, 520, 312, 576, 280, 576, 291.32, 561.633, 212.231, 558.963, 200, 576, 192, 552, 472, 264, 488, 272, 472, 288, 416, 248, 480, 496, 472, 520, 456, 512, 320, 432, 320, 320, 488, 400, 496, 408, 472, 424, 456, 432, 472, 360, 496, 368, 488, 384, 456, 360, 456, 488, 472, 488, 440, 512, -16, 336, -16, 240, 16, 240, 56, 296, 16, 208, 48, 208, 48, 176, 72, 176, 56, 208, 72, 136, 104, 136, 80, 168, 104, 168, 80, 208, 136, 296, 136, 280, 176, 280, 176, 232, 208, 232, 208, 256, 280, 256, 280, 232, 296, 232, 296, 216, 320, 216, 320, 192, 328, 192, 328, 216, 344, 216, 344, 224, 224, 320, 360, 224, 360, 240, 416, 232, 432, 232, 464, 248, 472, 304, 456, 304, 472, 432, 424, 536, 424, 560, 400, 560, 376, 544, 352, 560, 352, 576, 328, 576, 224, 432, 328, 632, 312, 632, 64, 584, 64, 600, 40, 600, 40, 568, 48, 568, 48, 544, 16, 528, 16, 568, 56, 512, -16, 432, -16, 528, -48, 432, -48, 336, 432, 528, 360, 544, 80, 488, 72, 512, 287.649, 536.604, 432, 224, 440, 216, 448, 216, 464, 224, 112, 488, 224.244, 548.618, 184, 544, 168, 520, 360, 248, 136, 520, 254.946, 532.266 )
+polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 5 ), PoolIntArray( 6, 7, 8 ), PoolIntArray( 9, 10, 11, 12 ), PoolIntArray( 13, 0, 2, 14, 15 ), PoolIntArray( 16, 17, 18, 19, 20, 21 ), PoolIntArray( 22, 23, 24, 25 ), PoolIntArray( 26, 27, 13, 15, 28 ), PoolIntArray( 24, 18, 17, 25 ), PoolIntArray( 29, 30, 31, 32 ), PoolIntArray( 31, 33, 34, 32 ), PoolIntArray( 34, 35, 36, 37 ), PoolIntArray( 36, 38, 39, 40 ), PoolIntArray( 39, 41, 40 ), PoolIntArray( 36, 40, 42, 37 ), PoolIntArray( 34, 37, 32 ), PoolIntArray( 43, 44, 45 ), PoolIntArray( 45, 46, 47, 48 ), PoolIntArray( 49, 50, 51 ), PoolIntArray( 51, 52, 53 ), PoolIntArray( 53, 54, 55, 56 ), PoolIntArray( 56, 57, 58, 59 ), PoolIntArray( 58, 60, 61, 59 ), PoolIntArray( 12, 62, 63, 64, 9 ), PoolIntArray( 11, 65, 66, 12 ), PoolIntArray( 20, 67, 21 ), PoolIntArray( 16, 21, 26, 28 ), PoolIntArray( 16, 68, 69, 70, 71 ), PoolIntArray( 72, 73, 74, 75 ), PoolIntArray( 74, 76, 77, 3 ), PoolIntArray( 78, 79, 80, 81, 82 ), PoolIntArray( 83, 82, 81, 84 ), PoolIntArray( 81, 85, 84 ), PoolIntArray( 86, 83, 84, 87 ), PoolIntArray( 84, 88, 87 ), PoolIntArray( 87, 89, 90, 29 ), PoolIntArray( 16, 28, 91, 68 ), PoolIntArray( 16, 71, 92, 75 ), PoolIntArray( 93, 94, 86, 87, 29, 32, 43 ), PoolIntArray( 75, 92, 72 ), PoolIntArray( 75, 74, 3, 95 ), PoolIntArray( 96, 97, 98, 99, 64, 63 ), PoolIntArray( 100, 93, 43, 45 ), PoolIntArray( 101, 6, 8, 102, 103, 45, 48, 75 ), PoolIntArray( 12, 66, 25, 17, 104 ), PoolIntArray( 104, 17, 59, 61 ), PoolIntArray( 53, 56, 59, 49 ), PoolIntArray( 105, 100, 45, 103 ), PoolIntArray( 3, 5, 95 ), PoolIntArray( 75, 95, 106 ), PoolIntArray( 75, 106, 101 ), PoolIntArray( 59, 75, 48 ), PoolIntArray( 59, 48, 49 ), PoolIntArray( 53, 49, 51 ) ]
+outlines = [ PoolVector2Array( -16, 336, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 72, 176, 72, 136, 104, 136, 104, 168, 80, 168, 80, 208, 56, 208, 56, 296, 136, 296, 136, 280, 176, 280, 176, 232, 208, 232, 208, 256, 280, 256, 280, 232, 296, 232, 296, 216, 320, 216, 320, 192, 328, 192, 328, 216, 344, 216, 344, 224, 360, 224, 360, 240, 360, 248, 416, 248, 416, 232, 432, 232, 432, 224, 440, 216, 448, 216, 464, 224, 464, 248, 472, 264, 488, 272, 472, 288, 472, 304, 456, 304, 456, 360, 472, 360, 496, 368, 488, 384, 488, 400, 496, 408, 472, 424, 472, 432, 456, 432, 456, 488, 472, 488, 480, 496, 512, 496, 512, 528, 504, 520, 472, 520, 456, 512, 440, 512, 432, 528, 424, 536, 424, 560, 400, 560, 376, 544, 360, 544, 352, 560, 352, 576, 328, 576, 328, 632, 312, 632, 312, 576, 280, 576, 291.32, 561.633, 287.649, 536.604, 254.946, 532.266, 224.244, 548.618, 212.231, 558.963, 200, 576, 192, 552, 184, 544, 168, 520, 136, 520, 112, 488, 80, 488, 72, 512, 56, 512, 48, 544, 48, 568, 64, 584, 64, 600, 40, 600, 40, 568, 16, 568, 16, 528, -16, 528, -16, 432, -48, 432, -48, 336 ), PoolVector2Array( 224, 320, 320, 320, 320, 432, 224, 432 ) ]
+
 [node name="ComputerCore" type="Node2D"]
 script = ExtResource( 5 )
 
@@ -64,6 +72,9 @@ format = 1
 tile_data = PoolIntArray( 720893, 0, 0, 786429, 0, 0, 851965, 0, 0 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 3 )
 
 [node name="Entrance" parent="." instance=ExtResource( 6 )]
 position = Vector2( -80, 384 )
@@ -225,7 +236,7 @@ position = Vector2( 518, 407 )
 [node name="DeskS" parent="." instance=ExtResource( 18 )]
 position = Vector2( 320, 624 )
 
-[node name="Computer" type="Sprite" parent="DeskS"]
+[node name="ObjectiveComputer" type="Sprite" parent="DeskS"]
 position = Vector2( 44, 26 )
 texture = ExtResource( 7 )
 
@@ -256,6 +267,12 @@ texture = ExtResource( 2 )
 position = Vector2( 82, -15 )
 rotation = 3.14159
 texture = ExtResource( 15 )
+
+[node name="Interactable" parent="." instance=ExtResource( 23 )]
+position = Vector2( 364.209, 649.964 )
+sprite_texture = ExtResource( 7 )
+hint_radius = 256
+click_radius = 64
 
 [node name="Stool7" parent="." instance=ExtResource( 8 )]
 position = Vector2( 296, 600 )
@@ -513,6 +530,10 @@ rotation = -2.82045
 position = Vector2( 224, 584 )
 rotation = -1.02451
 
+[node name="LightningHazard91" parent="." instance=ExtResource( 20 )]
+position = Vector2( 232, 568 )
+rotation = -0.511381
+
 [node name="LightningHazard56" parent="." instance=ExtResource( 20 )]
 position = Vector2( 216, 600 )
 rotation = -1.53764
@@ -656,4 +677,33 @@ rotation = -0.513127
 [node name="LightningHazard24" parent="." instance=ExtResource( 20 )]
 position = Vector2( 520, 296 )
 rotation = 0.256563
+
+[node name="ServerRack" parent="." instance=ExtResource( 21 )]
+position = Vector2( 272, 400 )
+
+[node name="Spider" parent="." instance=ExtResource( 22 )]
+position = Vector2( 312, 280 )
+speed = 125
+nav_2d_path = NodePath("../Navigation2D")
+
+[node name="Spider2" parent="." instance=ExtResource( 22 )]
+position = Vector2( 224, 272 )
+speed = 125
+nav_2d_path = NodePath("../Navigation2D")
+
+[node name="Spider3" parent="." instance=ExtResource( 22 )]
+position = Vector2( 216, 528 )
+speed = 125
+nav_2d_path = NodePath("../Navigation2D")
+
+[node name="Spider4" parent="." instance=ExtResource( 22 )]
+position = Vector2( 360, 504 )
+speed = 125
+nav_2d_path = NodePath("../Navigation2D")
+
+[node name="Spider5" parent="." instance=ExtResource( 22 )]
+position = Vector2( 424, 392 )
+speed = 125
+nav_2d_path = NodePath("../Navigation2D")
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
+[connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
