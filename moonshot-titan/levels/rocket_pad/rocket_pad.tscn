@@ -1,10 +1,77 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://models/obstacles/decorations/computer_rear.png" type="Texture" id=2]
 [ext_resource path="res://models/obstacles/rocket/rocket.tscn" type="PackedScene" id=3]
 [ext_resource path="res://models/obstacles/furniture/bench.tscn" type="PackedScene" id=4]
 [ext_resource path="res://models/obstacles/rocket/launch_pad.tscn" type="PackedScene" id=5]
+[ext_resource path="res://models/hazards/fire.png" type="Texture" id=6]
+[ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=7]
+[ext_resource path="res://models/obstacles/rocket/rocket.gd" type="Script" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "launch_rocket"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 392, 280 ), Vector2( 392, -500 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Flames:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Flames:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 6 )
+region = Rect2( 28, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 6 )
+region = Rect2( 56, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 6 )
+region = Rect2( 84, 0, 28, 28 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="RocketPad" type="Node2D"]
 
@@ -20,13 +87,25 @@ position = Vector2( 392, 408 )
 [node name="Rocket" parent="." instance=ExtResource( 3 )]
 position = Vector2( 392, 280 )
 z_index = 99
+script = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rocket"]
+anims/launch_rocket = SubResource( 1 )
+
+[node name="Flames" type="AnimatedSprite" parent="Rocket"]
+visible = false
+position = Vector2( -3.05176e-05, 148 )
+scale = Vector2( 1.07143, 1.67857 )
+z_index = -1
+frames = SubResource( 6 )
+frame = 2
+playing = true
+flip_v = true
 
 [node name="Bench" parent="." instance=ExtResource( 4 )]
 position = Vector2( 544, 528 )
 
-[node name="Computer" type="Sprite" parent="Bench"]
-position = Vector2( -1, -9 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Interactable" parent="." instance=ExtResource( 7 )]
+position = Vector2( 542, 520 )
+sprite_texture = ExtResource( 2 )
+[connection signal="interaction_complete" from="Interactable" to="Rocket" method="_on_Interactable_interaction_complete"]
