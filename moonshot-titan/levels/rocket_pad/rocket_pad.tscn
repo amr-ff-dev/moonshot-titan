@@ -98,7 +98,7 @@ position = Vector2( -3.05176e-05, 148 )
 scale = Vector2( 1.07143, 1.67857 )
 z_index = -1
 frames = SubResource( 6 )
-frame = 2
+frame = 1
 playing = true
 flip_v = true
 
