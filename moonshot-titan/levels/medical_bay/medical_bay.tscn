@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=2]
@@ -18,6 +18,8 @@
 [ext_resource path="res://models/obstacles/decorations/clipboard_with_pencils_decoration.png" type="Texture" id=16]
 [ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=17]
 [ext_resource path="res://characters/npcs/engineer/engineer.png" type="Texture" id=18]
+[ext_resource path="res://user_interface/hud/button_font.tres" type="DynamicFont" id=19]
+[ext_resource path="res://characters/npcs/engineer/speech_bubble.png" type="Texture" id=20]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 496, 656, 496, 688, 464, 688, 408, 672, 408, 592, 488, 608, 616, 328, 616, 248, 624, 240, 656, 240, 656, 528, 624, 528, 456, 64, 464, 48, 464, 80, 456, 136, 560, 624, 528, 624, 536, 608, 560, 592, 536, 520, 592, 560, 368, 48, 376, 64, 184, 624, 184, 544, 256, 592, 256, 672, 392, 472, 392, 528, 328, 520, 328, 472, 440, 304, 440, 328, 264, 320, 408, 304, 408, 248, 264, 248, 376, 136, 416, 440, 416, 472, 72, 448, 72, 368, 216, 320, 216, 472, 272, 48, 272, -16, 368, -16, 256, 136, 256, 64, 168, 48, 176, 64, 168, 80, 176, 136, 496, 80, 496, 112, 528, 112, 528, 144, 560, 144, 560, 176, 592, 176, 592, 208, 624, 208, 56, 248, 56, 304, 88, 304, 88, 320, 24, 368, 136, 320, 136, 304, 152, 304, 152, 320, 200, 320, 200, 304, 216, 304, 488, 328, 488, 304, 504, 304, 504, 328, 552, 328, 552, 304, 568, 304, 568, 328, 624, 560, 520, 408, 592, 592, 520, 520, 472, 408, 472, 472, 448, 472, 448, 440, 488, 528, 528, 656, 360, 592, 168, 520, 216, 520, 360, 672, 304, 672, 304, 592, 136, 544, 56, 520, 464, 720, 176, 720, 176, 688, 136, 624, 144, 656, 144, 688, 112, 656, 112, 624, 80, 592, 80, 624, 48, 592, 48, 560, 56, 472, 16, 560, 16, 528, 24, 448, -16, 528, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 80, 176, 80, 144, 112, 144, 112, 112, 144, 112, 144, 80, 168, 472 )
@@ -25,7 +27,49 @@ polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ), PoolIntArray( 6, 7, 8, 9, 10, 11 
 outlines = [ PoolVector2Array( 168, 48, 272, 48, 272, -16, 368, -16, 368, 48, 464, 48, 464, 80, 496, 80, 496, 112, 528, 112, 528, 144, 560, 144, 560, 176, 592, 176, 592, 208, 624, 208, 624, 240, 656, 240, 656, 528, 624, 528, 624, 560, 592, 560, 592, 592, 560, 592, 560, 624, 528, 624, 528, 656, 496, 656, 496, 688, 464, 688, 464, 720, 176, 720, 176, 688, 144, 688, 144, 656, 112, 656, 112, 624, 80, 624, 80, 592, 48, 592, 48, 560, 16, 560, 16, 528, -16, 528, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 80, 176, 80, 144, 112, 144, 112, 112, 144, 112, 144, 80, 168, 80 ), PoolVector2Array( 24, 368, 72, 368, 72, 448, 24, 448 ), PoolVector2Array( 136, 544, 184, 544, 184, 624, 136, 624 ), PoolVector2Array( 256, 592, 304, 592, 304, 672, 256, 672 ), PoolVector2Array( 360, 592, 408, 592, 408, 672, 360, 672 ), PoolVector2Array( 408, 248, 616, 248, 616, 328, 568, 328, 568, 304, 552, 304, 552, 328, 504, 328, 504, 304, 488, 304, 488, 328, 440, 328, 440, 304, 408, 304 ), PoolVector2Array( 456, 64, 376, 64, 376, 136, 456, 136 ), PoolVector2Array( 176, 64, 256, 64, 256, 136, 176, 136 ), PoolVector2Array( 216, 472, 328, 472, 328, 520, 216, 520 ), PoolVector2Array( 56, 472, 168, 472, 168, 520, 56, 520 ), PoolVector2Array( 264, 248, 264, 320, 216, 320, 216, 304, 200, 304, 200, 320, 152, 320, 152, 304, 136, 304, 136, 320, 88, 320, 88, 304, 56, 304, 56, 248 ), PoolVector2Array( 392, 472, 416, 472, 416, 440, 448, 440, 448, 472, 472, 472, 472, 408, 520, 408, 520, 520, 536, 520, 536, 608, 488, 608, 488, 528, 392, 528 ) ]
 
 [sub_resource type="Animation" id=2]
-resource_name = "run_to_rocket"
+resource_name = "display_quest_text"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("QuestText:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("QuestText:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "You saved me!", "Please find 
+my tools...
+", "and I will fix the rocket
+" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("QuestBubble:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 6.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=3]
 length = 25.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -90,7 +134,26 @@ collision_layer = 64
 position = Vector2( 240, 275 )
 
 [node name="EngineerAnimation" type="AnimationPlayer" parent="Engineer"]
-anims/run_to_rocket = SubResource( 2 )
+anims/display_quest_text = SubResource( 2 )
+anims/run_to_rocket = SubResource( 3 )
+
+[node name="QuestBubble" type="Sprite" parent="Engineer"]
+visible = false
+position = Vector2( 43, -43 )
+texture = ExtResource( 20 )
+
+[node name="QuestText" type="RichTextLabel" parent="Engineer"]
+visible = false
+margin_left = -6.0
+margin_top = -65.0
+margin_right = 106.0
+margin_bottom = -9.0
+custom_fonts/normal_font = ExtResource( 19 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "You saved me!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MedicalLocker" parent="." instance=ExtResource( 14 )]
 

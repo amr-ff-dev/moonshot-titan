@@ -14,4 +14,6 @@ func _on_Entrance_body_entered(_body):
 func _on_Interactable_interaction_complete():
 	emit_quest_complete(quest)
 	$Interactable.queue_free()
+	completion_animation.play("display_quest_text")
+	yield(completion_animation, "animation_finished")
 	completion_animation.play("run_to_rocket")
