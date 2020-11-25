@@ -62,7 +62,15 @@ func _on_QuestRoom_quest_complete(quest):
 	quest.complete = true
 	update_quest_tracker()
 
+func final_quest_should_be_active():
+	for quest in quest_list:
+		if quest != final_quest and !quest.complete:
+			return false
+	return true
+
 func update_quest_tracker():
+	if final_quest_should_be_active():
+		final_quest.active = true
 	quest_tracker.update_quest_tracker(quest_list)
 
 func update_player_resapwn(spawn_point):
