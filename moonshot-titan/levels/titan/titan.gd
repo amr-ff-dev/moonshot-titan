@@ -15,6 +15,7 @@ enum CollisionLayers {
 }
 
 var QuestRoom = preload("res://levels/quest_room/quest_room.gd")
+var RocketPad = preload("res://levels/rocket_pad/rocket_pad.gd")
 
 onready var player = $Player
 onready var restart_button = $HUD/Restart
@@ -22,12 +23,18 @@ onready var player_respawn = $CrewQuarters/PlayerRespawn
 onready var quest_tracker = $HUD/QuestTracker
 
 var quest_list = []
+var final_quest
 
 func _ready():
 	for child in get_children():
 		if child is QuestRoom:
+			quest_list.push_back(child.get_quest())
 			child.connect("player_entered", self, "_on_QuestRoom_player_entered")
+			child.connect("quest_active", self, "_on_QuestRoom_quest_active")
 			child.connect("quest_complete", self, "_on_QuestRoom_quest_complete")
+		if child is RocketPad:
+			final_quest = child.get_quest()
+	update_quest_tracker()
 
 func _input(event):
 	if event.is_action_pressed("full_screen"):
@@ -44,26 +51,26 @@ func _on_HUD_restart():
 	player.respawn(player_respawn)
 	restart_button.visible = false
 
-func _on_QuestRoom_player_entered(quest, spawn_point):
-	add_quest(quest)
+func _on_QuestRoom_player_entered(spawn_point):
 	update_player_resapwn(spawn_point)
+
+func _on_QuestRoom_quest_active(quest):
+	quest.active = true
+	update_quest_tracker()
 
 func _on_QuestRoom_quest_complete(quest):
 	quest.complete = true
-	update_quest(quest)
-
-func add_quest(quest):
-	if !quest_list.has(quest):
-		quest_list.push_back(quest)
 	update_quest_tracker()
 
-func update_quest(quest):
-	var index = quest_list.find(quest)
-	if index >= 0:
-		quest_list[index] = quest
-	update_quest_tracker()
+func final_quest_should_be_active():
+	for quest in quest_list:
+		if quest != final_quest and !quest.complete:
+			return false
+	return true
 
 func update_quest_tracker():
+	if final_quest_should_be_active():
+		final_quest.active = true
 	quest_tracker.update_quest_tracker(quest_list)
 
 func update_player_resapwn(spawn_point):

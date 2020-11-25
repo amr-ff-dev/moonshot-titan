@@ -8,6 +8,7 @@ signal interaction_complete()
 export(Texture) var sprite_texture
 export(int, 32, 256) var hint_radius = 128
 export(int, 32, 256) var click_radius = 64
+export(bool) var enabled = true setget set_enabled
 
 onready var sprite = $Sprite
 onready var hint_collision_shape_2d = $HintArea/CollisionShape2D
@@ -41,6 +42,15 @@ func _on_ClickArea_body_entered(_body):
 
 func _on_ClickArea_body_exited(_body):
 	interact_enabled = false
+
+func set_enabled(value):
+	enabled = value
+	if not is_inside_tree():
+		yield(self, "ready")
+	update_monitoring()
+
+func update_monitoring():
+	click_area.monitoring = enabled
 
 func update_interact_duration(delta):
 	if interact_enabled and Input.is_action_pressed("interact"):
