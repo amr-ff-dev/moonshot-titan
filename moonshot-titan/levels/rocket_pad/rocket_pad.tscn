@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://models/obstacles/decorations/computer_rear.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://models/hazards/fire.png" type="Texture" id=6]
 [ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=7]
 [ext_resource path="res://models/obstacles/rocket/rocket.gd" type="Script" id=8]
+[ext_resource path="res://levels/rocket_pad/rocket_pad.gd" type="Script" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "launch_rocket"
@@ -74,6 +75,9 @@ animations = [ {
 } ]
 
 [node name="RocketPad" type="Node2D"]
+script = ExtResource( 9 )
+light_position = Vector2( 390, 390 )
+light_scale = 2.2
 
 [node name="FloorTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -98,7 +102,7 @@ position = Vector2( -3.05176e-05, 148 )
 scale = Vector2( 1.07143, 1.67857 )
 z_index = -1
 frames = SubResource( 6 )
-frame = 1
+frame = 3
 playing = true
 flip_v = true
 
@@ -108,4 +112,5 @@ position = Vector2( 544, 528 )
 [node name="Interactable" parent="." instance=ExtResource( 7 )]
 position = Vector2( 542, 520 )
 sprite_texture = ExtResource( 2 )
+hint_radius = 128
 [connection signal="interaction_complete" from="Interactable" to="Rocket" method="_on_Interactable_interaction_complete"]
