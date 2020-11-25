@@ -153,7 +153,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Moonshot Titan"
-run/main_scene="res://levels/titan/titan.tscn"
+run/main_scene="res://user_interface/splash_screen/splash_screen.tscn"
 config/icon="res://characters/player/player.png"
 
 [display]
