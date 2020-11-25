@@ -33,8 +33,8 @@ func get_quest():
 func emit_player_entered(spawn_point):
 	emit_signal("player_entered", spawn_point)
 
-func emit_quest_active(quest):
+func emit_quest_active():
 	emit_signal("quest_active", quest)
 
-func emit_quest_complete(quest):
+func emit_quest_complete():
 	emit_signal("quest_complete", quest)

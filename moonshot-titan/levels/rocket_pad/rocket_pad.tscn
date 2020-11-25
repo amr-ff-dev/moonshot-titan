@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://models/obstacles/decorations/computer_rear.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=7]
 [ext_resource path="res://models/obstacles/rocket/rocket.gd" type="Script" id=8]
 [ext_resource path="res://levels/rocket_pad/rocket_pad.gd" type="Script" id=9]
+[ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Animation" id=1]
 resource_name = "launch_rocket"
@@ -102,7 +103,7 @@ position = Vector2( -3.05176e-05, 148 )
 scale = Vector2( 1.07143, 1.67857 )
 z_index = -1
 frames = SubResource( 6 )
-frame = 3
+frame = 2
 playing = true
 flip_v = true
 
@@ -112,5 +113,12 @@ position = Vector2( 544, 528 )
 [node name="Interactable" parent="." instance=ExtResource( 7 )]
 position = Vector2( 542, 520 )
 sprite_texture = ExtResource( 2 )
-hint_radius = 128
-[connection signal="interaction_complete" from="Interactable" to="Rocket" method="_on_Interactable_interaction_complete"]
+enabled = false
+
+[node name="Entrance" type="Area2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 784, 400 )
+rotation = 1.5708
+collision_layer = 128
+collision_mask = 2
+[connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
+[connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]

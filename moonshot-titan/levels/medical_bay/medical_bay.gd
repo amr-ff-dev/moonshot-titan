@@ -9,10 +9,10 @@ func _init().("Rescue the Engineer"):
 
 func _on_Entrance_body_entered(_body):
 	emit_player_entered($PlayerRespawn)
-	emit_quest_active(quest)
+	emit_quest_active()
 
 func _on_Interactable_interaction_complete():
-	emit_quest_complete(quest)
+	emit_quest_complete()
 	$Interactable.queue_free()
 	completion_animation.play("display_quest_text")
 	yield(completion_animation, "animation_finished")

@@ -12,8 +12,8 @@ func _on_Entrance_body_entered(_body):
 	player_entered()
 
 func _on_Spider_dead():
-	emit_quest_complete(quest)
+	emit_quest_complete()
 
 func player_entered():
 	emit_player_entered($PlayerRespawn)
-	emit_quest_active(quest)
+	emit_quest_active()

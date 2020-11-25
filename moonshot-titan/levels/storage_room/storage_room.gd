@@ -9,10 +9,10 @@ func _init().("Get Repair Tools"):
 
 func _on_Entrance_body_entered(_body):
 	emit_player_entered($PlayerRespawn)
-	emit_quest_active(quest)
+	emit_quest_active()
 
 func _on_Interactable_interaction_complete():
-	emit_quest_complete(quest)
+	emit_quest_complete()
 	pick_up_toolbox()
 
 func pick_up_toolbox():
