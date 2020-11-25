@@ -2,12 +2,12 @@ extends QuestRoom
 
 class_name OxygenatorRoom
 
-var Quest = preload("res://levels/quest_room/quest.gd")
-
-onready var quest = Quest.new("Repair the Oxygenator", false)
+func _init().("Repair the Oxygenator"):
+	pass
 
 func _on_Entrance_body_entered(_body):
-	emit_player_entered(quest, $PlayerRespawn)
+	emit_player_entered($PlayerRespawn)
+	emit_quest_active(quest)
 
 func _on_OxygenatorDevice_interaction_complete():
 	emit_quest_complete(quest)

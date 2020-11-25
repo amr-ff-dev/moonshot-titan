@@ -14,5 +14,9 @@ func set_quest(value):
 
 func display_quest():
 	quest_name.text = quest.name
+	if quest.active:
+		show()
+	else:
+		hide()
 	if quest.complete:
 		quest_name.add_color_override("font_color", Color.palegreen)

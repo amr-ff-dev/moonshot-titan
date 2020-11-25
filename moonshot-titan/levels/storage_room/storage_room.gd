@@ -2,13 +2,14 @@ extends QuestRoom
 
 class_name StorageRoom
 
-var Quest = preload("res://levels/quest_room/quest.gd")
 onready var completion_animation = get_node("Interactable/CompletionAnimationPlayer")
 
-onready var quest = Quest.new("Get Repair Tools", false)
+func _init().("Get Repair Tools"):
+	pass
 
 func _on_Entrance_body_entered(_body):
-	emit_signal("player_entered", quest, $PlayerRespawn)
+	emit_player_entered($PlayerRespawn)
+	emit_quest_active(quest)
 
 func _on_Interactable_interaction_complete():
 	emit_quest_complete(quest)
