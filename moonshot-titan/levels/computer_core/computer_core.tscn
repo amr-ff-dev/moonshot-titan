@@ -195,9 +195,13 @@ texture = ExtResource( 16 )
 
 [node name="Chair" parent="." instance=ExtResource( 4 )]
 position = Vector2( 517, 360 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 518, 407 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="DeskS" parent="." instance=ExtResource( 18 )]
 position = Vector2( 320, 624 )
@@ -288,6 +292,7 @@ position = Vector2( 349, 184 )
 [node name="Chair3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 292, 176 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="LightningHazard2" parent="." instance=ExtResource( 20 )]
 position = Vector2( 272, 112 )

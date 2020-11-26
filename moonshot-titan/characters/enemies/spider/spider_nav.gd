@@ -4,9 +4,11 @@ class_name SpiderNav
 
 var SpiderIdle = load("res://characters/enemies/spider/spider_idle.gd")
 
-func physics_process(spider, delta):
+func active_physics_process(spider, delta):
 	if should_spider_nav(spider):
 		spider.move_and_slide(get_chasing_velocity(spider, delta))
+		if !should_spider_continue_nav(spider):
+			stop_nav(spider)
 	else:
 		stop_nav(spider)
 
@@ -17,6 +19,9 @@ func get_spider_target(spider):
 	return spider.position
 
 func should_spider_nav(_spider):
+	return true
+
+func should_spider_continue_nav(_spider):
 	return true
 	
 func get_chasing_velocity(spider, delta):

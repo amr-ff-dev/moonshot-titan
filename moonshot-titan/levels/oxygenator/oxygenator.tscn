@@ -11,8 +11,6 @@
 [ext_resource path="res://levels/oxygenator/oxygenator.gd" type="Script" id=9]
 [ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=10]
 
-
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 

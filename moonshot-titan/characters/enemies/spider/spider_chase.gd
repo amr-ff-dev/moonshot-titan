@@ -2,7 +2,7 @@ extends SpiderNav
 
 class_name SpiderChase
 
-var SpiderWander = preload("res://characters/enemies/spider/spider_wander.gd")
+var SpiderWander = load("res://characters/enemies/spider/spider_wander.gd")
 
 var target
 

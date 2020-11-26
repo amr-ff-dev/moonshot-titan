@@ -6,7 +6,7 @@ var home_target = null
 var wander_target = null
 var rng
 
-const MINIMUM_NAV_DISTANCE = 8.0
+const MINIMUM_NAV_DISTANCE = 16.0
 
 func _init(init_target):
 	home_target = init_target
@@ -21,6 +21,13 @@ func should_spider_nav(spider):
 		return true
 	else:
 		return false
+
+func should_spider_continue_nav(spider):
+	for i in spider.get_slide_count():
+		var collision = spider.get_slide_collision(i)
+		if collision.collider.get_collision_layer() == Titan.CollisionLayers.ENEMY:
+			return false
+	return true
 
 func get_wander_target(spider):
 	if !wander_target:
