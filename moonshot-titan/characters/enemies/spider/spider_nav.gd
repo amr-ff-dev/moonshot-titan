@@ -16,7 +16,7 @@ func stop_nav(spider):
 func get_spider_target(spider):
 	return spider.position
 
-func should_spider_nav(spider):
+func should_spider_nav(_spider):
 	return true
 	
 func get_chasing_velocity(spider, delta):

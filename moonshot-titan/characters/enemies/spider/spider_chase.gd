@@ -6,8 +6,8 @@ var SpiderWander = preload("res://characters/enemies/spider/spider_wander.gd")
 
 var target
 
-func _init(chase_target):
-	target = chase_target
+func _init(init_target):
+	target = init_target
 
 func stop_chase(spider):
 	spider.change_state(SpiderIdle.new())

@@ -4,6 +4,7 @@ signal dead()
 
 export(int) var speed = 100
 export(NodePath) var nav_2d_path
+export(float, 50.0, 200.0, 1.0) var wander_radius = 100
 
 onready var state = SpiderIdle.new()
 onready var nav_2d : Navigation2D = get_node(nav_2d_path)
