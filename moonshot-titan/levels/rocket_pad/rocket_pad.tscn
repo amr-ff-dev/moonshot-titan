@@ -13,7 +13,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "launch_rocket"
-length = 10.0
+length = 6.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -21,10 +21,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.5, 10 ),
+"times": PoolRealArray( 0.5, 6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 392, 280 ), Vector2( 392, -500 ) ]
+"values": [ Vector2( 392, 280 ), Vector2( 392, -100 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Flames:visible")
@@ -115,10 +115,8 @@ position = Vector2( 542, 520 )
 sprite_texture = ExtResource( 2 )
 enabled = false
 
-[node name="Entrance" type="Area2D" parent="." instance=ExtResource( 10 )]
+[node name="Entrance" parent="." instance=ExtResource( 10 )]
 position = Vector2( 784, 400 )
 rotation = 1.5708
-collision_layer = 128
-collision_mask = 2
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
