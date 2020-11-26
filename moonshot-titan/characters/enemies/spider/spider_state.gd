@@ -18,3 +18,6 @@ func stop_chase(_spider):
 
 func launch(spider, velocity):
 	spider.change_state(SpiderRecoil.new(velocity))
+
+func reset(_spider):
+	pass

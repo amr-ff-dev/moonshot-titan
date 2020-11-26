@@ -9,6 +9,7 @@ onready var state = SpiderIdle.new()
 onready var nav_2d : Navigation2D = get_node(nav_2d_path)
 onready var nav_line = $NavLine
 onready var player_detection = $PlayerDetection
+onready var start_position = position
 
 func _physics_process(delta):
 	state.physics_process(self, delta)
@@ -25,6 +26,9 @@ func change_state(new_state: SpiderState):
 	
 func launch(velocity):
 	state.launch(self, velocity)
+
+func reset():
+	state.reset(self)
 
 func emit_dead():
 	emit_signal("dead")

@@ -16,6 +16,7 @@ enum CollisionLayers {
 
 var QuestRoom = preload("res://levels/quest_room/quest_room.gd")
 var RocketPad = preload("res://levels/rocket_pad/rocket_pad.gd")
+var Spider = preload("res://characters/enemies/spider/spider.gd")
 
 onready var player = $Player
 onready var restart_button = $HUD/Restart
@@ -24,14 +25,12 @@ onready var quest_tracker = $HUD/QuestTracker
 
 var quest_list = []
 var final_quest
+var spider_list = []
 
 func _ready():
 	for child in get_children():
 		if child is QuestRoom:
-			quest_list.push_back(child.get_quest())
-			child.connect("player_entered", self, "_on_QuestRoom_player_entered")
-			child.connect("quest_active", self, "_on_QuestRoom_quest_active")
-			child.connect("quest_complete", self, "_on_QuestRoom_quest_complete")
+			init_room(child)
 		if child is RocketPad:
 			final_quest = child.get_quest()
 	update_quest_tracker()
@@ -47,6 +46,7 @@ func _on_Player_shoot(projectile, origin, direction):
 
 func _on_Player_game_over():
 	restart_button.visible = true
+	reset_spiders()
 
 func _on_HUD_restart():
 	player.respawn(player_respawn)
@@ -76,3 +76,22 @@ func update_quest_tracker():
 
 func update_player_resapwn(spawn_point):
 	player_respawn = spawn_point
+
+func init_room(room):
+	init_room_quest(room)
+	init_room_spiders(room)
+
+func init_room_quest(room):
+	quest_list.push_back(room.get_quest())
+	room.connect("player_entered", self, "_on_QuestRoom_player_entered")
+	room.connect("quest_active", self, "_on_QuestRoom_quest_active")
+	room.connect("quest_complete", self, "_on_QuestRoom_quest_complete")
+
+func init_room_spiders(room):
+	for child in room.get_children():
+		if child is Spider:
+			spider_list.push_back(child)
+
+func reset_spiders():
+	for spider in spider_list:
+		spider.reset()
