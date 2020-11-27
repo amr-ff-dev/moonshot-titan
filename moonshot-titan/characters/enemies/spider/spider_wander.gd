@@ -13,6 +13,9 @@ func _init(init_target):
 	rng = RandomNumberGenerator.new()
 	rng.randomize()
 
+func chase(spider, target):
+	spider.change_state(SpiderChase.new(target))
+
 func get_spider_target(spider):
 	return spider.nav_2d.get_closest_point(get_wander_target(spider))
 
