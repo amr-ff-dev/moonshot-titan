@@ -19,6 +19,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://levels/crew_quarters/crew_quarters.gd"
 }, {
+"base": "Node2D",
+"class": "GameScene",
+"language": "GDScript",
+"path": "res://levels/game_scene.gd"
+}, {
 "base": "CanvasLayer",
 "class": "HUD",
 "language": "GDScript",
@@ -129,7 +134,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://levels/storage_room/storage_room.gd"
 }, {
-"base": "Node2D",
+"base": "GameScene",
 "class": "Titan",
 "language": "GDScript",
 "path": "res://levels/titan/titan.gd"
@@ -137,6 +142,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "ComputerCore": "",
 "CrewQuarters": "",
+"GameScene": "",
 "HUD": "",
 "Interactable": "",
 "MedicalBay": "",

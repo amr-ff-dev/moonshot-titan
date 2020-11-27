@@ -1,4 +1,4 @@
-extends Node2D
+extends GameScene
 
 class_name Titan
 
@@ -34,11 +34,6 @@ func _ready():
 		if child is RocketPad:
 			final_quest = child.get_quest()
 	update_quest_tracker()
-
-func _input(event):
-	if event.is_action_pressed("full_screen"):
-		get_tree().set_input_as_handled()
-		OS.window_fullscreen = !OS.window_fullscreen
 
 func _on_Player_shoot(projectile, origin, direction):
 	add_child(projectile)
@@ -95,3 +90,6 @@ func init_room_spiders(room):
 func reset_spiders():
 	for spider in spider_list:
 		spider.reset()
+
+func _on_RocketPad_game_finished():
+	change_scene("OutroCredits")

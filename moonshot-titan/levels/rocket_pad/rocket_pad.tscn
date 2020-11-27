@@ -103,7 +103,7 @@ position = Vector2( -3.05176e-05, 148 )
 scale = Vector2( 1.07143, 1.67857 )
 z_index = -1
 frames = SubResource( 6 )
-frame = 2
+frame = 3
 playing = true
 flip_v = true
 
@@ -118,5 +118,6 @@ enabled = false
 [node name="Entrance" parent="." instance=ExtResource( 10 )]
 position = Vector2( 784, 400 )
 rotation = 1.5708
+[connection signal="game_finished" from="Rocket" to="." method="_on_Rocket_game_finished"]
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
