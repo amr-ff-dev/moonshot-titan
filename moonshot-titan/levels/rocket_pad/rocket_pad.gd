@@ -8,7 +8,7 @@ onready var rocket = $Rocket
 func _init().("Launch the Rocket"):
 	pass
 
-func _on_Entrance_body_entered(body):
+func _on_Entrance_body_entered(_body):
 	interactable.enabled = quest.active
 
 func _on_Interactable_interaction_complete():

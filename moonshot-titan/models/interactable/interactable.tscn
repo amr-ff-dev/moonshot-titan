@@ -6,9 +6,9 @@
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
-shader_param/enabled = true
+shader_param/enabled = false
 shader_param/outline_width = 1.0
-shader_param/outline_color = Color( 0.2, 0.2, 0.776471, 0.768627 )
+shader_param/outline_color = Color( 0.2, 0.2, 0.78, 0.77 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.98, 0.6, 1 )
