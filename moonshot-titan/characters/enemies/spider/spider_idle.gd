@@ -12,7 +12,7 @@ var target_idle_time = 0.0
 var idle_time = 0.0
 
 func _init():
-	var 	rng = RandomNumberGenerator.new()
+	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	target_idle_time = rng.randf_range(MIN_IDLE_TIME, MAX_IDLE_TIME)
 
