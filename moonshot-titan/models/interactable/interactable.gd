@@ -67,7 +67,13 @@ func set_sprite_texture(texture):
 	sprite_texture = texture
 	if not is_inside_tree():
 		yield(self, "ready")
-	sprite.texture = sprite_texture
+	update_sprite()
+
+func update_sprite():
+	if Engine.editor_hint:
+		$Sprite.texture = sprite_texture
+	else:
+		sprite.texture = sprite_texture
 
 func update_interact_duration(delta):
 	if interact_enabled and interacting:

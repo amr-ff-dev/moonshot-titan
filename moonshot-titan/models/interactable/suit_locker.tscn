@@ -24,5 +24,6 @@ texture = ExtResource( 3 )
 
 [node name="SuitInteractable" parent="." instance=ExtResource( 2 )]
 script = ExtResource( 1 )
-click_radius = 64
+hint_radius = 96
+click_radius = 48
 [connection signal="suit_interaction_complete" from="SuitInteractable" to="." method="_on_SuitInteractable_suit_interaction_complete"]

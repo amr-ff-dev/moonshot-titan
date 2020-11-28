@@ -1,8 +1,8 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://models/obstacles/decorations/binder_decoration.png" type="Texture" id=2]
-[ext_resource path="res://models/obstacles/furniture/lockers/locker_purple.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/player/suits/astronaut_purple.png" type="Texture" id=3]
 [ext_resource path="res://models/obstacles/furniture/chair.tscn" type="PackedScene" id=4]
 [ext_resource path="res://levels/computer_core/computer_core.gd" type="Script" id=5]
 [ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=6]
@@ -23,6 +23,8 @@
 [ext_resource path="res://models/obstacles/furniture/server_rack.tscn" type="PackedScene" id=21]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=22]
 [ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=23]
+[ext_resource path="res://models/obstacles/furniture/lockers/locker_purple.png" type="Texture" id=24]
+[ext_resource path="res://models/interactable/suit_locker.tscn" type="PackedScene" id=25]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 208, 560, 200, 576, 192, 552, 312, 576, 280, 576, 291.32, 561.633, 472, 264, 488, 272, 472, 288, 416, 248, 328, 440, 328, 312, 456, 432, 456, 488, 440, 512, 432, 520, 32, 256, -16, 256, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 72, 176, 56, 208, 72, 136, 104, 136, 80, 168, 104, 168, 80, 208, 56, 296, 32, 336, 216, 440, 136, 296, 136, 288, 176, 288, 216, 312, 176, 232, 208, 232, 208, 256, 280, 256, 280, 232, 296, 232, 296, 216, 320, 216, 320, 192, 328, 192, 328, 216, 344, 216, 344, 224, 360, 224, 360, 240, 416, 232, 432, 232, 464, 248, 432, 224, 440, 224, 448, 224, 464, 224, 472, 304, 456, 304, 472, 424, 472, 432, 480, 496, 512, 496, 512, 520, 472, 520, 456, 512, 472, 488, 424, 536, 424, 560, 400, 560, 376, 544, 352, 560, 352, 576, 328, 576, 288, 528, 328, 624, 312, 624, 64, 584, 64, 600, 40, 600, 40, 568, 48, 568, 48, 544, 16, 528, 16, 568, 56, 512, -16, 432, -16, 528, 72, 496, -48, 432, -48, 336, -16, 336, 80, 488, 360, 544, 224, 544, 184, 544, 168, 520, 488, 408, 488, 400, 488, 384, 456, 360, 472, 360, 488, 368, 112, 488, 360, 248, 136, 520, 256, 528 )
@@ -50,14 +52,16 @@ rotation = 1.5708
 [node name="PlayerRespawn" type="Position2D" parent="."]
 position = Vector2( -32, 384 )
 
-[node name="LockerPurple" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, 304 )
-
 [node name="Stool" parent="." instance=ExtResource( 8 )]
 position = Vector2( 480, 552 )
 
 [node name="Stool2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 128, 552 )
+
+[node name="SuitLocker" parent="." instance=ExtResource( 25 )]
+position = Vector2( 0, 295 )
+suit_texture = ExtResource( 3 )
+locker_texture = ExtResource( 24 )
 
 [node name="DeskSE" parent="." instance=ExtResource( 9 )]
 position = Vector2( 496, 560 )
@@ -199,9 +203,13 @@ texture = ExtResource( 16 )
 
 [node name="Chair" parent="." instance=ExtResource( 4 )]
 position = Vector2( 517, 360 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 518, 407 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="DeskS" parent="." instance=ExtResource( 18 )]
 position = Vector2( 320, 624 )
@@ -293,6 +301,7 @@ position = Vector2( 349, 184 )
 [node name="Chair3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 292, 176 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="LightningHazard2" parent="." instance=ExtResource( 20 )]
 position = Vector2( 272, 112 )

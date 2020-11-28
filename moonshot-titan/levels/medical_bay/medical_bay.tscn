@@ -240,5 +240,4 @@ position = Vector2( 320, 32 )
 [node name="Entrance" parent="." instance=ExtResource( 12 )]
 position = Vector2( 320, -48 )
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
-[connection signal="locker_interaction_complete" from="SuitLocker" to="." method="_on_SuitLocker_locker_interaction_complete"]
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]

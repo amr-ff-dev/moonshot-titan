@@ -15,4 +15,5 @@ func _input(event):
 
 func change_scene(scene_name):
 	if scene_name in scenes:
-		get_tree().change_scene(scenes[scene_name])
+		var error = get_tree().change_scene(scenes[scene_name])
+		assert(error == OK)
