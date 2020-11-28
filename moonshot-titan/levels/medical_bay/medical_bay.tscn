@@ -7,7 +7,7 @@
 [ext_resource path="res://models/obstacles/furniture/bed.tscn" type="PackedScene" id=5]
 [ext_resource path="res://models/obstacles/furniture/stool.tscn" type="PackedScene" id=6]
 [ext_resource path="res://models/obstacles/furniture/heart_monitor.tscn" type="PackedScene" id=7]
-[ext_resource path="res://models/obstacles/furniture/stasis_pod.tscn" type="PackedScene" id=8]
+[ext_resource path="res://models/obstacles/furniture/stasis_pods/stasis_pod.tscn" type="PackedScene" id=8]
 [ext_resource path="res://models/obstacles/furniture/desks/desk_se.tscn" type="PackedScene" id=9]
 [ext_resource path="res://levels/medical_bay/medical_bay.gd" type="Script" id=10]
 [ext_resource path="res://models/obstacles/decorations/computer_rear.png" type="Texture" id=11]
@@ -20,6 +20,7 @@
 [ext_resource path="res://characters/npcs/engineer/engineer.png" type="Texture" id=18]
 [ext_resource path="res://user_interface/hud/button_font.tres" type="DynamicFont" id=19]
 [ext_resource path="res://characters/npcs/engineer/speech_bubble.png" type="Texture" id=20]
+
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 408, 672, 496, 656, 496, 688, 464, 688, 392, 680, 616, 328, 616, 248, 624, 240, 656, 240, 656, 528, 624, 528, 456, 64, 464, 48, 464, 80, 456, 136, 560, 624, 528, 624, 536, 608, 560, 592, 520, 616, 536, 520, 592, 560, 368, 48, 376, 64, 184, 624, 184, 544, 256, 592, 256, 672, 504, 616, 408, 592, 488, 608, 392, 472, 392, 528, 328, 520, 328, 472, 440, 304, 440, 328, 264, 320, 408, 304, 408, 248, 264, 248, 376, 136, 416, 440, 416, 472, 72, 448, 72, 368, 216, 320, 216, 472, 56, 456, 272, 48, 272, -16, 368, -16, 256, 136, 256, 64, 168, 48, 176, 64, 168, 80, 176, 136, 496, 80, 496, 112, 528, 112, 528, 144, 560, 144, 560, 176, 592, 176, 592, 208, 624, 208, 56, 248, 56, 360, 56, 304, 88, 304, 88, 320, 136, 320, 136, 304, 152, 304, 152, 320, 200, 320, 200, 304, 216, 304, 488, 328, 488, 304, 504, 304, 504, 328, 552, 328, 552, 304, 568, 304, 568, 328, 624, 560, 520, 408, 592, 592, 520, 520, 472, 408, 472, 472, 448, 472, 448, 440, 488, 528, 392, 584, 528, 656, 376, 584, 168, 520, 216, 520, 360, 592, 304, 592, 288, 584, 360, 672, 304, 672, 272, 584, 168, 536, 56, 520, 152, 536, 136, 544, 464, 720, 176, 720, 176, 688, 376, 680, 144, 688, 144, 656, 152, 632, 168, 632, 272, 680, 112, 656, 112, 624, 136, 624, 80, 624, 80, 592, 48, 592, 48, 560, 16, 560, 16, 528, 40, 456, 56, 472, -16, 528, -16, 240, 16, 240, 24, 368, 24, 448, 16, 208, 48, 208, 40, 360, 48, 176, 80, 176, 80, 144, 112, 144, 112, 112, 144, 112, 144, 80, 288, 680, 168, 472 )
