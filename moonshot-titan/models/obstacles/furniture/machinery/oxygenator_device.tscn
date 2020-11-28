@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://models/obstacles/furniture/oxygenator_device.gd" type="Script" id=1]
-[ext_resource path="res://models/obstacles/furniture/oxygenator_no_shadows.png" type="Texture" id=2]
-[ext_resource path="res://models/obstacles/furniture/oxygenator_shadows.png" type="Texture" id=3]
-[ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=4]
+[ext_resource path="res://models/obstacles/furniture/machinery/oxygenator_device.gd" type="Script" id=1]
+[ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/obstacles/furniture/machinery/oxygenator_no_shadows.png" type="Texture" id=3]
+[ext_resource path="res://models/obstacles/furniture/machinery/oxygenator_shadows.png" type="Texture" id=4]
 
 [node name="OxygenatorDevice" type="StaticBody2D"]
 collision_layer = 64
@@ -15,9 +15,9 @@ polygon = PoolVector2Array( -40.798, 63.5626, -12.4498, 63.8776, -10.8748, 61.35
 
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( -0.353554, 29.4254 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
-[node name="Interactable" parent="." instance=ExtResource( 4 )]
+[node name="Interactable" parent="." instance=ExtResource( 2 )]
 position = Vector2( -0.375, -14.608 )
-sprite_texture = ExtResource( 2 )
+sprite_texture = ExtResource( 3 )
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]

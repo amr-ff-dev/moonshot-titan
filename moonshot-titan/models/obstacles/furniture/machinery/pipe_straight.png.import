@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/oxygenator_shadows.png-909c03a7d87d3dce8d567259d1e4f199.stex"
+path="res://.import/pipe_straight.png-ed0cf005e20618fc9829d8ddfa696ae3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/obstacles/furniture/oxygenator_shadows.png"
-dest_files=[ "res://.import/oxygenator_shadows.png-909c03a7d87d3dce8d567259d1e4f199.stex" ]
+source_file="res://models/obstacles/furniture/machinery/pipe_straight.png"
+dest_files=[ "res://.import/pipe_straight.png-ed0cf005e20618fc9829d8ddfa696ae3.stex" ]
 
 [params]
 

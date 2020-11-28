@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/oxygenator_no_shadows.png-e51091f55b50ad73fca9c93b9bf27b77.stex"
+path="res://.import/lamp_post.png-0a5391c7ed436d500adf1d149e0ba324.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/obstacles/furniture/oxygenator_no_shadows.png"
-dest_files=[ "res://.import/oxygenator_no_shadows.png-e51091f55b50ad73fca9c93b9bf27b77.stex" ]
+source_file="res://models/obstacles/furniture/lamp_post.png"
+dest_files=[ "res://.import/lamp_post.png-0a5391c7ed436d500adf1d149e0ba324.stex" ]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://models/obstacles/furniture/oxygen_tank.png" type="Texture" id=1]
+[ext_resource path="res://models/obstacles/furniture/machinery/oxygen_tank.png" type="Texture" id=1]
 [ext_resource path="res://models/hazards/fire.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]

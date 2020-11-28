@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://models/obstacles/furniture/machinery/pipe_straight.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 5.53997, 3.00508 )
+
+[node name="Pipe" type="StaticBody2D"]
+position = Vector2( 225.765, 411.439 )
+scale = Vector2( 16, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
