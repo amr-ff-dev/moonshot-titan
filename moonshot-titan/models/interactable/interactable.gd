@@ -8,6 +8,7 @@ signal interaction_complete()
 export(Texture) var sprite_texture
 export(int, 32, 256) var hint_radius = 128
 export(int, 32, 256) var click_radius = 64
+export(float, 0.5, 3.0, 0.1) var interact_time = 1.0
 export(bool) var enabled = true setget set_enabled
 
 onready var sprite = $Sprite
@@ -19,6 +20,7 @@ onready var progress_bar = $Control/ProgressBar
 
 var interact_duration = 0.0
 var interact_enabled = false
+var interacting = false
 
 func _ready():
 	sprite.texture = sprite_texture
@@ -30,6 +32,14 @@ func _physics_process(delta):
 		update_interact_duration(delta)
 		update_progress_bar()
 		update_completion()
+
+func _input(event):
+	if event.is_action_released("interact"):
+		interacting = false
+
+func _on_ClickArea_input_event(_viewport, event, _shape_idx):
+	if interact_enabled and event.is_action_pressed("interact"):
+		interacting = true
 
 func _on_HintArea_body_entered(_body):
 	animation_player.play("hint_entered")
@@ -50,23 +60,24 @@ func set_enabled(value):
 	update_monitoring()
 
 func update_monitoring():
-	click_area.monitoring = enabled
+	if not Engine.editor_hint:
+		click_area.monitoring = enabled
 
 func update_interact_duration(delta):
-	if interact_enabled and Input.is_action_pressed("interact"):
-		interact_duration += 100 * delta
+	if interact_enabled and interacting:
+		interact_duration += delta
 	else:
 		interact_duration = 0
 
 func update_progress_bar():
 	if interact_duration > 0:
 		progress_bar.visible = true
-		progress_bar.value = interact_duration
+		progress_bar.value = interact_duration * 100.0 / interact_time
 	else:
 		progress_bar.visible = false
 
 func update_completion():
-	if interact_duration >= 100.0:
+	if interact_duration >= interact_time:
 		click_area.monitoring = false
 		interact_enabled = false
 		progress_bar.visible = false

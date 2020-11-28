@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal shoot(projectile, origin, direction)
+signal damaged()
 signal game_over()
 
 export(int) var speed = 200
@@ -45,6 +46,9 @@ func is_grav_locked():
 
 func emit_shoot(projectile, origin, direction):
 	emit_signal("shoot", projectile, origin, direction)
+
+func emit_damaged():
+	emit_signal("damaged")
 
 func emit_game_over():
 	emit_signal("game_over")

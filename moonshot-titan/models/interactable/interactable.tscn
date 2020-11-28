@@ -120,6 +120,7 @@ margin_left = -40.0
 margin_top = -40.0
 margin_right = 40.0
 margin_bottom = 40.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -131,6 +132,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -14.0
+mouse_filter = 2
 custom_styles/fg = SubResource( 2 )
 percent_visible = false
 __meta__ = {
@@ -158,3 +160,4 @@ anims/hint_exited = SubResource( 6 )
 [connection signal="body_exited" from="HintArea" to="." method="_on_HintArea_body_exited"]
 [connection signal="body_entered" from="ClickArea" to="." method="_on_ClickArea_body_entered"]
 [connection signal="body_exited" from="ClickArea" to="." method="_on_ClickArea_body_exited"]
+[connection signal="input_event" from="ClickArea" to="." method="_on_ClickArea_input_event"]

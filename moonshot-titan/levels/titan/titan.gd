@@ -39,6 +39,9 @@ func _on_Player_shoot(projectile, origin, direction):
 	add_child(projectile)
 	projectile.launch(origin, direction)
 
+func _on_Player_damaged():
+	stop_interactions()
+
 func _on_Player_game_over():
 	restart_button.visible = true
 	reset_spiders()
@@ -57,6 +60,9 @@ func _on_QuestRoom_quest_active(quest):
 func _on_QuestRoom_quest_complete(quest):
 	quest.complete = true
 	update_quest_tracker()
+
+func _on_RocketPad_game_finished():
+	change_scene("OutroCredits")
 
 func final_quest_should_be_active():
 	for quest in quest_list:
@@ -91,5 +97,8 @@ func reset_spiders():
 	for spider in spider_list:
 		spider.reset()
 
-func _on_RocketPad_game_finished():
-	change_scene("OutroCredits")
+func stop_interactions():
+	var event = InputEventAction.new()
+	event.action = "interact"
+	event.pressed = false
+	Input.parse_input_event(event)

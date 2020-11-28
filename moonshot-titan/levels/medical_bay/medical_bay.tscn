@@ -148,6 +148,7 @@ margin_left = -49.0
 margin_top = -22.0
 margin_right = 63.0
 margin_bottom = 34.0
+mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 19 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "You saved me!"
@@ -231,5 +232,6 @@ position = Vector2( 320, -48 )
 position = Vector2( 240, 275 )
 sprite_texture = ExtResource( 18 )
 click_radius = 45
+interact_time = 3.0
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
