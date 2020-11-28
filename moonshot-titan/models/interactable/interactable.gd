@@ -5,7 +5,7 @@ class_name Interactable
 
 signal interaction_complete()
 
-export(Texture) var sprite_texture
+export(Texture) var sprite_texture setget set_sprite_texture
 export(int, 32, 256) var hint_radius = 128
 export(int, 32, 256) var click_radius = 64
 export(float, 0.5, 3.0, 0.1) var interact_time = 1.0
@@ -63,6 +63,12 @@ func update_monitoring():
 	if not Engine.editor_hint:
 		click_area.monitoring = enabled
 
+func set_sprite_texture(texture):
+	sprite_texture = texture
+	if not is_inside_tree():
+		yield(self, "ready")
+	sprite.texture = sprite_texture
+
 func update_interact_duration(delta):
 	if interact_enabled and interacting:
 		interact_duration += delta
@@ -78,10 +84,10 @@ func update_progress_bar():
 
 func update_completion():
 	if interact_duration >= interact_time:
-		disable_interactions()
+		finish_interactions()
 		emit_interaction_complete()
 
-func disable_interactions():
+func finish_interactions():
 	click_area.monitoring = false
 	interact_enabled = false
 	progress_bar.visible = false

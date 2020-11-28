@@ -18,5 +18,5 @@ func _on_Interactable_interaction_complete():
 	yield(completion_animation, "animation_finished")
 	completion_animation.play("run_to_rocket")
 
-func _on_SuitLocker_suit_interaction_complete(texture):
+func _on_SuitLocker_locker_interaction_complete(texture):
 	emit_suit_change(texture)

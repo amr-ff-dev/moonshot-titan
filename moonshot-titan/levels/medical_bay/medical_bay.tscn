@@ -1,8 +1,8 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=2]
-[ext_resource path="res://models/obstacles/furniture/lockers/locker_grey_gold.png" type="Texture" id=3]
+[ext_resource path="res://models/interactable/suit_locker.tscn" type="PackedScene" id=3]
 [ext_resource path="res://models/obstacles/furniture/bench.tscn" type="PackedScene" id=4]
 [ext_resource path="res://models/obstacles/furniture/bed.tscn" type="PackedScene" id=5]
 [ext_resource path="res://models/obstacles/furniture/stool.tscn" type="PackedScene" id=6]
@@ -17,10 +17,9 @@
 [ext_resource path="res://models/obstacles/decorations/binder_decoration.png" type="Texture" id=15]
 [ext_resource path="res://models/obstacles/decorations/clipboard_with_pencils_decoration.png" type="Texture" id=16]
 [ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=17]
-[ext_resource path="res://characters/npcs/engineer/engineer.png" type="Texture" id=18]
 [ext_resource path="res://user_interface/hud/button_font.tres" type="DynamicFont" id=19]
 [ext_resource path="res://characters/npcs/engineer/speech_bubble.png" type="Texture" id=20]
-[ext_resource path="res://models/interactable/suit_interactable.gd" type="Script" id=21]
+[ext_resource path="res://models/obstacles/furniture/lockers/locker_grey_gold.png" type="Texture" id=21]
 [ext_resource path="res://characters/player/suits/astronaut_grey_gold.png" type="Texture" id=22]
 
 [sub_resource type="NavigationPolygon" id=1]
@@ -88,6 +87,9 @@ tracks/0/keys = {
 
 [node name="MedicalBay" type="Node2D"]
 script = ExtResource( 10 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="FloorTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -160,7 +162,6 @@ __meta__ = {
 
 [node name="Interactable" parent="." instance=ExtResource( 17 )]
 position = Vector2( 240, 275 )
-sprite_texture = ExtResource( 18 )
 click_radius = 45
 interact_time = 2.0
 
@@ -172,12 +173,10 @@ position = Vector2( 234, 112 )
 [node name="MedicalLocker3" parent="." instance=ExtResource( 14 )]
 position = Vector2( 400, 112 )
 
-[node name="SuitLocker" parent="." instance=ExtResource( 17 )]
-position = Vector2( 432, 112 )
-script = ExtResource( 21 )
-sprite_texture = ExtResource( 3 )
-click_radius = 64
+[node name="SuitLocker" parent="." instance=ExtResource( 3 )]
+position = Vector2( 430, 104 )
 suit_texture = ExtResource( 22 )
+locker_texture = ExtResource( 21 )
 
 [node name="HeartMonitor" parent="." instance=ExtResource( 7 )]
 
@@ -241,5 +240,5 @@ position = Vector2( 320, 32 )
 [node name="Entrance" parent="." instance=ExtResource( 12 )]
 position = Vector2( 320, -48 )
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
-[connection signal="suit_interaction_complete" from="SuitLocker" to="." method="_on_SuitLocker_suit_interaction_complete"]
+[connection signal="locker_interaction_complete" from="SuitLocker" to="." method="_on_SuitLocker_locker_interaction_complete"]
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
