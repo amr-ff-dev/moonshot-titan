@@ -78,7 +78,13 @@ func update_progress_bar():
 
 func update_completion():
 	if interact_duration >= interact_time:
-		click_area.monitoring = false
-		interact_enabled = false
-		progress_bar.visible = false
-		emit_signal("interaction_complete")
+		disable_interactions()
+		emit_interaction_complete()
+
+func disable_interactions():
+	click_area.monitoring = false
+	interact_enabled = false
+	progress_bar.visible = false
+
+func emit_interaction_complete():
+	emit_signal("interaction_complete")

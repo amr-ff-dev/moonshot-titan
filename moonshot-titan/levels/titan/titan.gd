@@ -61,6 +61,9 @@ func _on_QuestRoom_quest_complete(quest):
 	quest.complete = true
 	update_quest_tracker()
 
+func on_QuestRoom_suit_change(texture):
+	player.change_suit(texture)
+
 func _on_RocketPad_game_finished():
 	change_scene("OutroCredits")
 
@@ -87,6 +90,7 @@ func init_room_quest(room):
 	room.connect("player_entered", self, "_on_QuestRoom_player_entered")
 	room.connect("quest_active", self, "_on_QuestRoom_quest_active")
 	room.connect("quest_complete", self, "_on_QuestRoom_quest_complete")
+	room.connect("suit_change", self, "on_QuestRoom_suit_change")
 
 func init_room_spiders(room):
 	for child in room.get_children():

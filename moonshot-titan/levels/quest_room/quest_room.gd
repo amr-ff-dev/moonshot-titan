@@ -6,6 +6,7 @@ class_name QuestRoom
 signal player_entered(spawn_point)
 signal quest_active(quest)
 signal quest_complete(quest)
+signal suit_change(texture)
 
 export(Color, RGBA) var start_light_color = Color(1, 0.196078, 0.196078, 1)
 export(Color, RGBA) var finish_light_color = Color(0.8, 0.8, 0.8, 0.8)
@@ -60,3 +61,6 @@ func emit_quest_complete():
 
 func finish_room():
 	light.color = finish_light_color
+
+func emit_suit_change(texture):
+	emit_signal("suit_change", texture)

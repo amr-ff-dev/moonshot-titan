@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/medical_locker_open.png-49436ba6a0f29df921791507b854ebb8.stex"
+path="res://.import/locker_grey_gold.png-c87cd660c25d3bb4e38c2f8e1e1886c4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/obstacles/furniture/lockers/medical_locker_open.png"
-dest_files=[ "res://.import/medical_locker_open.png-49436ba6a0f29df921791507b854ebb8.stex" ]
+source_file="res://models/obstacles/furniture/lockers/locker_grey_gold.png"
+dest_files=[ "res://.import/locker_grey_gold.png-c87cd660c25d3bb4e38c2f8e1e1886c4.stex" ]
 
 [params]
 

@@ -13,6 +13,7 @@ const fatal_layers = [Titan.CollisionLayers.ENEMY, Titan.CollisionLayers.HAZARD,
 onready var animation_player = $AnimationPlayer
 onready var camera = $PlayerCamera
 onready var grav_detect = $GravDetect
+onready var sprite = $Sprite
 
 var state
 
@@ -55,3 +56,6 @@ func emit_game_over():
 
 func respawn(respawn_point):
 	change_state(PlayerRespawn.new(respawn_point))
+
+func change_suit(texture):
+	sprite.texture = texture

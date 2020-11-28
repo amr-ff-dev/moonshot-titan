@@ -9,8 +9,9 @@
 [ext_resource path="res://models/obstacles/furniture/crates/crate_closed.png" type="Texture" id=7]
 [ext_resource path="res://models/obstacles/furniture/server_rack.png" type="Texture" id=8]
 [ext_resource path="res://models/obstacles/furniture/table.png" type="Texture" id=9]
-[ext_resource path="res://models/obstacles/furniture/lockers/medical_locker_open.png" type="Texture" id=10]
+[ext_resource path="res://models/obstacles/furniture/lockers/locker_grey_gold.png" type="Texture" id=10]
 [ext_resource path="res://models/obstacles/furniture/crates/crate_open.png" type="Texture" id=11]
+
 
 
 [node name="ReactorRoom" type="Node2D"]
