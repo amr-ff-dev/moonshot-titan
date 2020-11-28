@@ -239,6 +239,7 @@ position = Vector2( 364.209, 649.964 )
 sprite_texture = ExtResource( 7 )
 hint_radius = 256
 click_radius = 64
+interact_time = 1.5
 
 [node name="Stool7" parent="." instance=ExtResource( 8 )]
 position = Vector2( 288, 600 )

@@ -20,4 +20,5 @@ texture = ExtResource( 4 )
 [node name="Interactable" parent="." instance=ExtResource( 2 )]
 position = Vector2( -0.375, -14.608 )
 sprite_texture = ExtResource( 3 )
+interact_time = 2.0
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]

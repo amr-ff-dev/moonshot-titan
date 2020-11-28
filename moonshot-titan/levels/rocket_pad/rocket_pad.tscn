@@ -82,7 +82,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 184, 40 )
+extents = Vector2( 192, 40 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 56, 48 )
@@ -124,6 +124,7 @@ position = Vector2( 544, 528 )
 [node name="Interactable" parent="." instance=ExtResource( 7 )]
 position = Vector2( 542, 520 )
 sprite_texture = ExtResource( 2 )
+interact_time = 3.0
 enabled = false
 
 [node name="Entrance" parent="." instance=ExtResource( 10 )]

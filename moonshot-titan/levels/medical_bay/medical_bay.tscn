@@ -156,6 +156,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Interactable" parent="." instance=ExtResource( 17 )]
+position = Vector2( 240, 275 )
+sprite_texture = ExtResource( 18 )
+click_radius = 45
+interact_time = 2.0
+
 [node name="MedicalLocker" parent="." instance=ExtResource( 14 )]
 
 [node name="MedicalLocker2" parent="." instance=ExtResource( 14 )]
@@ -227,11 +233,5 @@ position = Vector2( 320, 32 )
 
 [node name="Entrance" parent="." instance=ExtResource( 12 )]
 position = Vector2( 320, -48 )
-
-[node name="Interactable" parent="." instance=ExtResource( 17 )]
-position = Vector2( 240, 275 )
-sprite_texture = ExtResource( 18 )
-click_radius = 45
-interact_time = 3.0
-[connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
+[connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
