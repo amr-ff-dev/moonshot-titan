@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/storage_bay_locker_open.png-c39a0f60cac2d4282dd95b42063c63eb.stex"
+path="res://.import/locker_firefighter.png-3d34d484eb41a3e5659c74526f7e1da5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/obstacles/furniture/lockers/storage_bay_locker_open.png"
-dest_files=[ "res://.import/storage_bay_locker_open.png-c39a0f60cac2d4282dd95b42063c63eb.stex" ]
+source_file="res://models/obstacles/furniture/lockers/locker_firefighter.png"
+dest_files=[ "res://.import/locker_firefighter.png-3d34d484eb41a3e5659c74526f7e1da5.stex" ]
 
 [params]
 
