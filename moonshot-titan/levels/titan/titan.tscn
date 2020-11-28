@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://models/exterior/moon_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://user_interface/hud/hud.tscn" type="PackedScene" id=15]
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=16]
 [ext_resource path="res://models/obstacles/barriers/desk_barrier_h.tscn" type="PackedScene" id=17]
+[ext_resource path="res://levels/titan/titan.ogg" type="AudioStream" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 56, 40 )
@@ -176,6 +177,10 @@ color = Color( 0.501961, 0.501961, 0.501961, 1 )
 
 [node name="DeskBarrierH" parent="." instance=ExtResource( 17 )]
 position = Vector2( 2767, 1968 )
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+autoplay = true
 [connection signal="game_finished" from="RocketPad" to="." method="_on_RocketPad_game_finished"]
 [connection signal="damaged" from="Player" to="." method="_on_Player_damaged"]
 [connection signal="game_over" from="Player" to="." method="_on_Player_game_over"]

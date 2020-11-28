@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/titan.ogg-84e26bd132ced7ea1a6deba9d7b90d96.oggstr"
+
+[deps]
+
+source_file="res://levels/titan/titan.ogg"
+dest_files=[ "res://.import/titan.ogg-84e26bd132ced7ea1a6deba9d7b90d96.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
