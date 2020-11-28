@@ -1,9 +1,9 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://effects/light.png" type="Texture" id=2]
 [ext_resource path="res://models/obstacles/furniture/bench.tscn" type="PackedScene" id=3]
-[ext_resource path="res://characters/enemies/spider/spider.png" type="Texture" id=4]
+[ext_resource path="res://models/obstacles/decorations/spider_experiment.png" type="Texture" id=4]
 [ext_resource path="res://models/obstacles/decorations/clipboard_with_pencils_decoration.png" type="Texture" id=5]
 [ext_resource path="res://models/obstacles/furniture/stasis_pods/stasis_pod_full.tscn" type="PackedScene" id=6]
 [ext_resource path="res://models/obstacles/furniture/lamp_y.tscn" type="PackedScene" id=7]
@@ -18,10 +18,45 @@
 [ext_resource path="res://models/obstacles/decorations/rock_debris.png" type="Texture" id=16]
 [ext_resource path="res://models/obstacles/decorations/computer_front.png" type="Texture" id=17]
 [ext_resource path="res://models/obstacles/furniture/stool.tscn" type="PackedScene" id=18]
-[ext_resource path="res://models/obstacles/furniture/stasis_pods/stasis_chamber_broken.png" type="Texture" id=19]
-[ext_resource path="res://models/obstacles/flippable.gd" type="Script" id=20]
+[ext_resource path="res://models/obstacles/furniture/stasis_pods/stasis_pod_broken.tscn" type="PackedScene" id=19]
+[ext_resource path="res://models/obstacles/furniture/stasis_pods/goo.png" type="Texture" id=20]
+[ext_resource path="res://levels/research_lab/research_lab.gd" type="Script" id=21]
+[ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=22]
+[ext_resource path="res://user_interface/hud/button_font.tres" type="DynamicFont" id=23]
+[ext_resource path="res://user_interface/story_text/text_bubble.png" type="Texture" id=24]
+[ext_resource path="res://models/obstacles/decorations/goo_trail.png" type="Texture" id=25]
+
+[sub_resource type="Animation" id=1]
+resource_name = "play_spider_story"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bench/QuestStoryBubble:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Bench/QuestStoryBubble/QuestText:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "...", "Have they been ...", "studying
+them?", "why did they keep this a secret?" ]
+}
 
 [node name="ResearchLab" type="Node2D"]
+script = ExtResource( 21 )
 
 [node name="FloorTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -36,18 +71,51 @@ texture_scale = 1.3
 color = Color( 0.168627, 0.686275, 0.0588235, 0.8 )
 energy = 0.8
 
-[node name="StasisPodFull" parent="." instance=ExtResource( 6 )]
-position = Vector2( 176, 520 )
+[node name="GooTrail" type="Sprite" parent="."]
+position = Vector2( 352, -176 )
+texture = ExtResource( 25 )
 
-[node name="StasisPodFull2" parent="." instance=ExtResource( 6 )]
+[node name="StasisPodFull" parent="." instance=ExtResource( 6 )]
 position = Vector2( 320, 576 )
 
-[node name="StasisPodFull3" parent="." instance=ExtResource( 6 )]
+[node name="StasisPodFull2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 464, 520 )
+
+[node name="Goo" type="Sprite" parent="."]
+position = Vector2( 552, 448 )
+texture = ExtResource( 20 )
+
+[node name="Goo2" type="Sprite" parent="."]
+position = Vector2( 184, 520 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Goo3" type="Sprite" parent="."]
+position = Vector2( 544, 320 )
+texture = ExtResource( 20 )
+
+[node name="StasisPodBroken" parent="." instance=ExtResource( 19 )]
+z_index = 99
+flip_horizontal = true
+
+[node name="StasisPodBroken2" parent="." instance=ExtResource( 19 )]
+position = Vector2( 552, 304 )
+z_index = 99
+flip_horizontal = true
+
+[node name="StasisPodBroken3" parent="." instance=ExtResource( 19 )]
+position = Vector2( 184, 512 )
+z_index = 99
 
 [node name="Lamp" parent="." instance=ExtResource( 7 )]
 position = Vector2( 276, 339 )
 z_index = 2
+
+[node name="SpiderInteractable" parent="." instance=ExtResource( 22 )]
+position = Vector2( 304, 368 )
+z_index = 4
+sprite_texture = ExtResource( 4 )
+hint_radius = 256
 
 [node name="Bench" parent="." instance=ExtResource( 3 )]
 position = Vector2( 320, 376 )
@@ -55,12 +123,32 @@ z_index = 3
 
 [node name="DeadSpider" type="Sprite" parent="Bench"]
 position = Vector2( -14, -11 )
-rotation = 3.14159
 texture = ExtResource( 4 )
 
 [node name="Clipboard" type="Sprite" parent="Bench"]
 position = Vector2( 15, -11 )
 texture = ExtResource( 5 )
+
+[node name="QuestStoryBubble" type="Sprite" parent="Bench"]
+visible = false
+position = Vector2( 56, -8 )
+texture = ExtResource( 24 )
+
+[node name="QuestText" type="RichTextLabel" parent="Bench/QuestStoryBubble"]
+margin_left = -49.0
+margin_top = -22.0
+margin_right = 63.0
+margin_bottom = 34.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 23 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpiderStoryQuestAnimation" type="AnimationPlayer" parent="."]
+anims/play_spider_story = SubResource( 1 )
 
 [node name="CrateOpen6" parent="." instance=ExtResource( 11 )]
 position = Vector2( 200, 640 )
@@ -96,10 +184,12 @@ position = Vector2( 216, 216 )
 
 [node name="SpiderJar" type="Sprite" parent="DeskNW"]
 position = Vector2( 32, -56 )
+z_index = 5
 texture = ExtResource( 13 )
 
 [node name="SpiderJar2" type="Sprite" parent="DeskNW"]
 position = Vector2( -8, -56 )
+z_index = 5
 texture = ExtResource( 13 )
 
 [node name="Computer" type="Sprite" parent="DeskNW"]
@@ -116,6 +206,7 @@ position = Vector2( 424, 216 )
 
 [node name="Computer" type="Sprite" parent="DeskNE"]
 position = Vector2( -4, -49 )
+z_index = 5
 texture = ExtResource( 17 )
 
 [node name="Binder" type="Sprite" parent="DeskNE"]
@@ -125,10 +216,14 @@ texture = ExtResource( 15 )
 
 [node name="SpiderJar" type="Sprite" parent="DeskNE"]
 position = Vector2( 40, -45 )
+z_index = 5
 texture = ExtResource( 13 )
 
 [node name="Stool" parent="." instance=ExtResource( 18 )]
 position = Vector2( 416, 224 )
+
+[node name="Stool4" parent="." instance=ExtResource( 18 )]
+position = Vector2( 320, 392 )
 
 [node name="Stool2" parent="." instance=ExtResource( 18 )]
 position = Vector2( 224, 224 )
@@ -180,10 +275,4 @@ position = Vector2( 16, 472 )
 
 [node name="CrateLid" parent="." instance=ExtResource( 12 )]
 position = Vector2( 48, 408 )
-
-[node name="StasisPodBroken" type="StaticBody2D" parent="."]
-position = Vector2( 568, 424 )
-script = ExtResource( 20 )
-
-[node name="Sprite" type="Sprite" parent="StasisPodBroken"]
-texture = ExtResource( 19 )
+[connection signal="interaction_complete" from="SpiderInteractable" to="." method="_on_SpiderInteractable_interaction_complete"]
