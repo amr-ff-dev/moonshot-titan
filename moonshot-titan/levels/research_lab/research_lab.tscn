@@ -112,7 +112,7 @@ position = Vector2( 276, 339 )
 z_index = 2
 
 [node name="SpiderInteractable" parent="." instance=ExtResource( 22 )]
-position = Vector2( 304, 368 )
+position = Vector2( 306, 365 )
 z_index = 4
 sprite_texture = ExtResource( 4 )
 hint_radius = 256
