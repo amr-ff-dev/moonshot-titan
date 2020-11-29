@@ -7,10 +7,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 16 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 64, 4 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "close_door"
 length = 0.4
 tracks/0/type = "value"
@@ -110,7 +110,7 @@ tracks/7/keys = {
 "values": [ Vector2( 8, 8 ), Vector2( 32, 8 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "open_door"
 length = 0.4
 tracks/0/type = "value"
@@ -210,10 +210,10 @@ tracks/7/keys = {
 "values": [ Vector2( 32, 8 ), Vector2( 8, 8 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 8, 8 )
 
 [node name="Entrance" type="Node2D"]
@@ -232,11 +232,11 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTrigger"]
 position = Vector2( 0, -76 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/close_door = SubResource( 4 )
-anims/open_door = SubResource( 5 )
+anims/close_door = SubResource( 3 )
+anims/open_door = SubResource( 4 )
 
 [node name="LeftDoor" type="StaticBody2D" parent="."]
 
@@ -252,7 +252,7 @@ texture = ExtResource( 2 )
 
 [node name="LeftDoorBase" type="CollisionShape2D" parent="LeftDoor"]
 position = Vector2( -56, 0 )
-shape = SubResource( 2 )
+shape = SubResource( 5 )
 
 [node name="RightDoor" type="StaticBody2D" parent="."]
 
@@ -265,10 +265,11 @@ centered = false
 
 [node name="RightDoorEnd" type="Sprite" parent="RightDoor"]
 position = Vector2( 50, 0 )
+rotation = 3.14159
 texture = ExtResource( 2 )
 
 [node name="RightDoorBase" type="CollisionShape2D" parent="RightDoor"]
 position = Vector2( 56, 0 )
-shape = SubResource( 3 )
+shape = SubResource( 6 )
 [connection signal="body_entered" from="EntranceDetection" to="." method="_on_EntranceDetection_body_entered"]
 [connection signal="body_entered" from="DoorTrigger" to="." method="_on_DoorTrigger_body_entered"]
