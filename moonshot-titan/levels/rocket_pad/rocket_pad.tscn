@@ -9,7 +9,6 @@
 [ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=7]
 [ext_resource path="res://models/obstacles/rocket/rocket.gd" type="Script" id=8]
 [ext_resource path="res://levels/rocket_pad/rocket_pad.gd" type="Script" id=9]
-[ext_resource path="res://models/entrance/entrance.tscn" type="PackedScene" id=10]
 [ext_resource path="res://models/obstacles/furniture/machinery/machine.tscn" type="PackedScene" id=11]
 [ext_resource path="res://models/obstacles/furniture/machinery/pipe.tscn" type="PackedScene" id=12]
 [ext_resource path="res://models/obstacles/furniture/machinery/pipe_corner.png" type="Texture" id=13]
@@ -82,9 +81,12 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 192, 40 )
+extents = Vector2( 8, 48 )
 
 [sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 192, 40 )
+
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 56, 48 )
 
 [node name="RocketPad" type="Node2D"]
@@ -115,21 +117,25 @@ position = Vector2( -3.05176e-05, 148 )
 scale = Vector2( 1.07143, 1.67857 )
 z_index = -1
 frames = SubResource( 6 )
+frame = 3
 playing = true
 flip_v = true
 
 [node name="Bench" parent="." instance=ExtResource( 4 )]
 position = Vector2( 544, 528 )
 
+[node name="Entrance" type="Area2D" parent="."]
+position = Vector2( 8, 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance"]
+position = Vector2( 816, 392 )
+shape = SubResource( 7 )
+
 [node name="Interactable" parent="." instance=ExtResource( 7 )]
 position = Vector2( 542, 520 )
 sprite_texture = ExtResource( 2 )
 interact_time = 3.0
 enabled = false
-
-[node name="Entrance" parent="." instance=ExtResource( 10 )]
-position = Vector2( 784, 400 )
-rotation = 1.5708
 
 [node name="Machine" parent="." instance=ExtResource( 11 )]
 position = Vector2( 100.767, 393.938 )
@@ -175,6 +181,8 @@ position = Vector2( 640, 624 )
 
 [node name="Lamp" parent="." instance=ExtResource( 14 )]
 position = Vector2( 208, 216 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Light2D" type="Light2D" parent="Lamp"]
 position = Vector2( 16, -16 )
@@ -186,6 +194,7 @@ energy = 0.7
 [node name="Lamp2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 592, 216 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Light2D" type="Light2D" parent="Lamp2"]
 position = Vector2( -8, -16 )
@@ -201,7 +210,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HallwayGrav"]
 position = Vector2( 8, 0 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="BenchGrav" type="Area2D" parent="."]
 position = Vector2( 632, 400 )
@@ -210,7 +219,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BenchGrav"]
 position = Vector2( -88, 88 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 [connection signal="game_finished" from="Rocket" to="." method="_on_Rocket_game_finished"]
-[connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
+[connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]

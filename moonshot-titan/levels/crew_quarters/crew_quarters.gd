@@ -2,13 +2,15 @@ extends QuestRoom
 
 class_name CrewQuarters
 
+onready var entrance = $Entrance
+
 func _init().("Clear Crew Quarters"):
 	pass
 
 func _ready():
 	call_deferred("player_entered")
 
-func _on_Entrance_body_entered(_body):
+func _on_Entrance_player_entered(_player):
 	player_entered()
 
 func _on_Spider_dead():
@@ -17,3 +19,8 @@ func _on_Spider_dead():
 func player_entered():
 	emit_player_entered($PlayerRespawn)
 	emit_quest_active()
+	entrance.close_door()
+
+func finish_room():
+	.finish_room()
+	entrance.open_permanently()

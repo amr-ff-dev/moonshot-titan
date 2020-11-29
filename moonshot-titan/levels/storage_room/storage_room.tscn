@@ -223,5 +223,5 @@ click_radius = 64
 
 [node name="CompletionAnimationPlayer" type="AnimationPlayer" parent="Interactable"]
 anims/get_toolbox = SubResource( 2 )
-[connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
+[connection signal="player_entered" from="Entrance" to="." method="_on_Entrance_player_entered"]
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
