@@ -1,10 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
-[ext_resource path="res://models/obstacles/barriers/desk_barrier_v.tscn" type="PackedScene" id=2]
-[ext_resource path="res://effects/darken.png" type="Texture" id=3]
-[ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=4]
-[ext_resource path="res://effects/light.png" type="Texture" id=5]
+[ext_resource path="res://models/hazards/electrical_pit_hazard.tscn" type="PackedScene" id=2]
 [ext_resource path="res://models/obstacles/furniture/table.tscn" type="PackedScene" id=6]
 [ext_resource path="res://models/obstacles/furniture/chair.tscn" type="PackedScene" id=7]
 [ext_resource path="res://models/obstacles/furniture/stool.tscn" type="PackedScene" id=8]
@@ -12,9 +9,9 @@
 [ext_resource path="res://models/obstacles/decorations/coffee_cup.png" type="Texture" id=10]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 408, 192, 520, 200, 376, 200, 336, 192, 496, 656, 496, 688, 464, 688, 416, 680, 416, 592, 328, 560, 264, 560, 264, 192, 312, 192, 120, 560, 80, 592, 48, 592, 48, 176, 80, 176, 120, 192, 80, 144, 112, 144, 112, 112, 144, 112, 144, 80, 176, 80, 224, 136, 464, 80, 496, 80, 496, 112, 528, 112, 528, 144, 560, 144, 560, 176, 592, 176, 592, 208, 624, 208, 624, 240, 656, 240, 656, 336, 656, 472, 656, 528, 624, 528, 624, 560, 592, 560, 520, 560, 592, 592, 560, 592, 656, 408, 376, 560, 560, 624, 528, 624, 384, 576, 528, 656, 248, 680, 464, 720, 176, 720, 176, 688, 144, 688, 144, 656, 112, 656, 112, 624, 80, 624, 352, 80, 464, 48, 336, 56, 248, 592, 304, 136, 176, 48, 224, 56 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 2, 9, 10, 11, 12 ), PoolIntArray( 13, 14, 15, 16, 17, 18 ), PoolIntArray( 18, 17, 19, 20, 11 ), PoolIntArray( 20, 21, 22, 11 ), PoolIntArray( 11, 22, 23, 24, 25 ), PoolIntArray( 26, 27, 28 ), PoolIntArray( 0, 28, 29, 30, 1 ), PoolIntArray( 30, 31, 32, 1 ), PoolIntArray( 32, 33, 34, 1 ), PoolIntArray( 34, 35, 36 ), PoolIntArray( 36, 37, 38 ), PoolIntArray( 39, 40, 41, 1 ), PoolIntArray( 41, 42, 43, 1 ), PoolIntArray( 44, 1, 43, 45, 46 ), PoolIntArray( 47, 39, 1 ), PoolIntArray( 36, 38, 47, 1, 34 ), PoolIntArray( 48, 44, 46, 49, 50, 8, 51 ), PoolIntArray( 50, 52, 4, 8 ), PoolIntArray( 53, 7, 6, 54, 55, 56 ), PoolIntArray( 56, 57, 58 ), PoolIntArray( 58, 59, 60, 13 ), PoolIntArray( 60, 61, 14, 13 ), PoolIntArray( 28, 0, 62, 26 ), PoolIntArray( 63, 26, 62, 64 ), PoolIntArray( 48, 51, 9 ), PoolIntArray( 2, 48, 9 ), PoolIntArray( 10, 9, 65 ), PoolIntArray( 13, 10, 65, 56, 58 ), PoolIntArray( 65, 53, 56 ), PoolIntArray( 25, 66, 12, 11 ), PoolIntArray( 67, 63, 64, 68 ), PoolIntArray( 24, 67, 68, 25 ), PoolIntArray( 2, 12, 3 ) ]
-outlines = [ PoolVector2Array( 48, 592, 48, 176, 80, 176, 80, 144, 112, 144, 112, 112, 144, 112, 144, 80, 176, 80, 176, 48, 464, 48, 464, 80, 496, 80, 496, 112, 528, 112, 528, 144, 560, 144, 560, 176, 592, 176, 592, 208, 624, 208, 624, 240, 656, 240, 656, 336, 656, 408, 656, 472, 656, 528, 624, 528, 624, 560, 592, 560, 592, 592, 560, 592, 560, 624, 528, 624, 528, 656, 496, 656, 496, 688, 464, 688, 464, 720, 176, 720, 176, 688, 144, 688, 144, 656, 112, 656, 112, 624, 80, 624, 80, 592 ), PoolVector2Array( 120, 192, 264, 192, 264, 560, 120, 560 ), PoolVector2Array( 376, 200, 520, 200, 520, 560, 376, 560 ), PoolVector2Array( 224, 136, 304, 136, 312, 192, 336, 192, 408, 192, 352, 80, 336, 56, 224, 56 ), PoolVector2Array( 384, 576, 328, 560, 248, 592, 248, 680, 416, 680, 416, 592 ) ]
+vertices = PoolVector2Array( 26.0823, 241.316, 24, 208, 48, 208, -16, 528, -16, 240, 16, 528, 48, 176, 80, 176, 80, 144, 112, 144, 112, 112, 144, 112, 144, 80, 176, 80, 176, 48, 464, 48, 464, 80, 496, 80, 496, 112, 528, 112, 528, 144, 48, 560, 560, 144, 560, 176, 80, 592, 112, 624, 592, 176, 592, 208, 144, 656, 112, 656, 624, 208, 624, 240, 656, 240, 656, 336, 656, 472, 656, 528, 624, 528, 624, 560, 592, 560, 592, 592, 560, 592, 560, 624, 528, 624, 528, 656, 496, 656, 496, 688, 464, 688, 464, 720, 176, 720, 176, 688, 144, 688, 80, 624, 48, 592, 16, 560, 656, 408 )
+polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 0, 5 ), PoolIntArray( 2, 6, 7 ), PoolIntArray( 7, 8, 9 ), PoolIntArray( 9, 10, 11 ), PoolIntArray( 11, 12, 13 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 11, 16, 17, 18, 9 ), PoolIntArray( 9, 18, 19, 20, 7 ), PoolIntArray( 21, 0, 2, 7, 20, 22, 23, 24 ), PoolIntArray( 25, 23, 26, 27, 28, 29 ), PoolIntArray( 27, 30, 31, 28 ), PoolIntArray( 31, 32, 33, 28 ), PoolIntArray( 34, 35, 36 ), PoolIntArray( 36, 37, 38 ), PoolIntArray( 38, 39, 40 ), PoolIntArray( 40, 41, 42 ), PoolIntArray( 42, 43, 44 ), PoolIntArray( 44, 45, 46, 28 ), PoolIntArray( 46, 47, 48, 49 ), PoolIntArray( 49, 50, 28 ), PoolIntArray( 25, 51, 24, 23 ), PoolIntArray( 24, 52, 21 ), PoolIntArray( 21, 53, 5, 0 ), PoolIntArray( 11, 13, 16 ), PoolIntArray( 28, 33, 54 ), PoolIntArray( 28, 54, 34, 36, 38 ), PoolIntArray( 28, 38, 40 ), PoolIntArray( 28, 40, 42 ), PoolIntArray( 28, 42, 44 ), PoolIntArray( 28, 46, 49 ) ]
+outlines = [ PoolVector2Array( 16, 528, -16, 528, -16, 240, 26.0823, 241.316, 24, 208, 48, 208, 48, 176, 80, 176, 80, 144, 112, 144, 112, 112, 144, 112, 144, 80, 176, 80, 176, 48, 464, 48, 464, 80, 496, 80, 496, 112, 528, 112, 528, 144, 560, 144, 560, 176, 592, 176, 592, 208, 624, 208, 624, 240, 656, 240, 656, 336, 656, 408, 656, 472, 656, 528, 624, 528, 624, 560, 592, 560, 592, 592, 560, 592, 560, 624, 528, 624, 528, 656, 496, 656, 496, 688, 464, 688, 464, 720, 176, 720, 176, 688, 144, 688, 144, 656, 112, 656, 112, 624, 80, 624, 80, 592, 48, 592, 48, 560, 16, 560 ) ]
 
 [node name="MessHall" type="Node2D"]
 
@@ -29,19 +26,14 @@ tile_data = PoolIntArray( 65541, 0, 65536, 65542, 0, 65537, 65543, 0, 0, 65544, 
 [node name="NavigationPolygon2D" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 1 )
 
-[node name="Spider" parent="." instance=ExtResource( 4 )]
-position = Vector2( 608, 328 )
-speed = 150
-nav_2d_path = NodePath("../Navigation2D")
+[node name="ElectricalPitHazard" parent="." instance=ExtResource( 2 )]
+position = Vector2( 244, 268 )
 
-[node name="Spider2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 600, 416 )
-speed = 150
-nav_2d_path = NodePath("../Navigation2D")
+[node name="ElectricalPitHazard2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 408, 532 )
 
-[node name="DeskBarrierV" parent="." instance=ExtResource( 2 )]
-position = Vector2( 700, 385 )
-collision_layer = 64
+[node name="ElectricalPitHazard3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 184, 476 )
 
 [node name="Table" parent="." instance=ExtResource( 6 )]
 position = Vector2( 448, 256 )
@@ -60,26 +52,26 @@ rotation = -1.309
 flip_horizontal = true
 
 [node name="Chair4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 144, 240 )
+position = Vector2( 176, 248 )
 
 [node name="Chair5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 144, 376 )
+position = Vector2( 176, 376 )
 
 [node name="Chair6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 144, 504 )
+position = Vector2( 168, 504 )
 rotation = -0.261799
 
 [node name="Chair7" parent="." instance=ExtResource( 7 )]
-position = Vector2( 240, 504 )
+position = Vector2( 264, 504 )
 rotation = -2.40506
 
 [node name="Chair8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 240, 376 )
+position = Vector2( 256, 376 )
 rotation = 1.28282
 flip_horizontal = true
 
 [node name="Chair9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 240, 240 )
+position = Vector2( 256, 240 )
 flip_horizontal = true
 
 [node name="Chair10" parent="." instance=ExtResource( 7 )]
@@ -98,14 +90,14 @@ rotation = 1.5708
 flip_horizontal = true
 
 [node name="Table2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 192, 248 )
+position = Vector2( 208, 248 )
 rotation = 0.523599
 
 [node name="Table3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 192, 384 )
+position = Vector2( 216, 384 )
 
 [node name="Table4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 192, 512 )
+position = Vector2( 216, 512 )
 rotation = -0.610865
 
 [node name="Table5" parent="." instance=ExtResource( 6 )]
@@ -113,6 +105,10 @@ position = Vector2( 448, 384 )
 
 [node name="Table6" parent="." instance=ExtResource( 6 )]
 position = Vector2( 448, 512 )
+
+[node name="Table8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 56, 384 )
+rotation = 0.785398
 
 [node name="Table7" parent="." instance=ExtResource( 6 )]
 position = Vector2( 320, 616 )
@@ -124,13 +120,13 @@ rotation = 1.13446
 texture = ExtResource( 10 )
 
 [node name="Coffee2" type="Sprite" parent="."]
-position = Vector2( 224, 472 )
+position = Vector2( 216, 488 )
 rotation = 1.13446
 texture = ExtResource( 10 )
 
 [node name="Coffee3" type="Sprite" parent="."]
 position = Vector2( 408, 416 )
-rotation = -0.872665
+rotation = 0.666716
 texture = ExtResource( 10 )
 
 [node name="Coffee4" type="Sprite" parent="."]
@@ -155,6 +151,27 @@ rotation = 0.523599
 position = Vector2( 344, 600 )
 rotation = 1.309
 
+[node name="Stool4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 192, 528 )
+rotation = 1.309
+
+[node name="Stool5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 40, 400 )
+rotation = 1.309
+
+[node name="Stool6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 424, 272 )
+rotation = 0.261799
+
+[node name="Stool7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 472, 408 )
+rotation = -0.610865
+
+[node name="Chair13" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 360 )
+rotation = -1.74533
+flip_horizontal = true
+
 [node name="Locker" parent="." instance=ExtResource( 9 )]
 position = Vector2( 248, 104 )
 
@@ -163,17 +180,3 @@ position = Vector2( 280, 104 )
 
 [node name="Locker3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 312, 104 )
-
-[node name="Locker4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 352, 152 )
-rotation = 2.0944
-
-[node name="DarkenRoom" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 0.72549 )
-position = Vector2( 320, 384 )
-texture = ExtResource( 3 )
-
-[node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 320, 384 )
-texture = ExtResource( 5 )
-color = Color( 0.576471, 0.0196078, 0.0196078, 1 )
