@@ -18,3 +18,7 @@ func _on_Interactable_interaction_complete():
 func finish_room():
 	.finish_room()
 	entrance.open_permanently()
+
+
+func _on_SuitLocker_locker_interaction_complete(texture):
+	pass # Replace with function body.
