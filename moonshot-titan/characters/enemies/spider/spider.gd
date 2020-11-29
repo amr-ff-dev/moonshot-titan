@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+class_name Spider
+
 signal dead()
 
 export(int) var speed = 100

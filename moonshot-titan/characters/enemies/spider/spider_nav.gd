@@ -3,11 +3,15 @@ extends SpiderState
 class_name SpiderNav
 
 var SpiderIdle = load("res://characters/enemies/spider/spider_idle.gd")
+var SpiderDeadHazard = load("res://characters/enemies/spider/spider_dead_hazard.gd")
 
 func active_physics_process(spider, delta):
 	if should_spider_nav(spider):
 		spider.move_and_slide(get_chasing_velocity(spider, delta))
-		if !should_spider_continue_nav(spider):
+		var collision = get_first_fatal_collision(spider)
+		if collision:
+			spider.change_state(SpiderDeadHazard.new(collision.collider))
+		elif !should_spider_continue_nav(spider):
 			stop_nav(spider)
 	else:
 		stop_nav(spider)
@@ -23,6 +27,9 @@ func should_spider_nav(_spider):
 
 func should_spider_continue_nav(_spider):
 	return true
+
+func get_first_fatal_collision(_spider):
+	return null
 	
 func get_chasing_velocity(spider, delta):
 	var path = get_nav_path(spider)
