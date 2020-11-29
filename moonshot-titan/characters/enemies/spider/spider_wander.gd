@@ -25,12 +25,10 @@ func should_spider_nav(spider):
 	else:
 		return false
 
-func should_spider_continue_nav(spider):
-	for i in spider.get_slide_count():
-		var collision = spider.get_slide_collision(i)
-		if collision.collider.get_collision_layer() == Titan.CollisionLayers.ENEMY:
-			return false
-	return true
+func check_collisions(spider):
+	var collision = spider.first_collision_in(spider.nav_reset_layers())
+	if collision:
+		spider.change_state(SpiderIdle.new())
 
 func get_wander_target(spider):
 	if !wander_target:

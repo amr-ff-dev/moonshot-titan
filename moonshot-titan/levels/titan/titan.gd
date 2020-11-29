@@ -16,7 +16,7 @@ enum CollisionLayers {
 
 var QuestRoom = preload("res://levels/quest_room/quest_room.gd")
 var RocketPad = preload("res://levels/rocket_pad/rocket_pad.gd")
-var Spider = preload("res://characters/enemies/spider/spider.gd")
+var Spider = load("res://characters/enemies/spider/spider.gd")
 
 onready var player = $Player
 onready var restart_button = $HUD/Restart

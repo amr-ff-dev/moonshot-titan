@@ -17,8 +17,8 @@ onready var light_texture = preload("res://effects/light.png")
 onready var light = Light2D.new()
 
 var Quest = preload("res://levels/quest_room/quest.gd")
-var Spider = preload("res://characters/enemies/spider/spider.gd")
 var SuitLocker = preload("res://models/interactable/suit_locker.gd")
+var Spider = load("res://characters/enemies/spider/spider.gd")
 
 var quest = null
 var live_spiders = 0

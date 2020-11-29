@@ -151,7 +151,6 @@ collision_layer = 64
 
 [node name="Engineer" parent="." instance=ExtResource( 13 )]
 position = Vector2( 240, 275 )
-collision_layer = 64
 
 [node name="EngineerAnimation" type="AnimationPlayer" parent="Engineer"]
 anims/display_quest_text = SubResource( 2 )

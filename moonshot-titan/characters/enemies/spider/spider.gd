@@ -41,3 +41,16 @@ func reset():
 
 func emit_dead():
 	emit_signal("dead")
+
+func first_collision_in(layers):
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.get_collision_layer() in layers:
+			return collision
+	return null
+
+func nav_fatal_layers():
+	return []
+
+func nav_reset_layers():
+	return [Titan.CollisionLayers.ENEMY]
