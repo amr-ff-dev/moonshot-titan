@@ -62,10 +62,16 @@ func _on_QuestRoom_quest_complete(quest):
 	update_quest_tracker()
 
 func on_QuestRoom_suit_change(texture):
-	player.change_suit(texture)
+	change_player_suit(texture)
 
 func _on_RocketPad_game_finished():
 	change_scene("OutroCredits")
+
+func _on_ResearchLab_suit_change(texture):
+	change_player_suit(texture)
+
+func change_player_suit(texture):
+	player.change_suit(texture)
 
 func final_quest_should_be_active():
 	for quest in quest_list:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://effects/light.png" type="Texture" id=2]
@@ -25,6 +25,9 @@
 [ext_resource path="res://user_interface/hud/button_font.tres" type="DynamicFont" id=23]
 [ext_resource path="res://user_interface/story_text/text_bubble.png" type="Texture" id=24]
 [ext_resource path="res://models/obstacles/decorations/goo_trail.png" type="Texture" id=25]
+[ext_resource path="res://models/obstacles/furniture/lockers/locker_robot.png" type="Texture" id=26]
+[ext_resource path="res://characters/player/suits/astronaut_robot.png" type="Texture" id=27]
+[ext_resource path="res://models/interactable/suit_locker.tscn" type="PackedScene" id=28]
 
 [sub_resource type="Animation" id=1]
 resource_name = "play_spider_story"
@@ -275,4 +278,10 @@ position = Vector2( 16, 472 )
 
 [node name="CrateLid" parent="." instance=ExtResource( 12 )]
 position = Vector2( 48, 408 )
+
+[node name="SuitLocker" parent="." instance=ExtResource( 28 )]
+position = Vector2( 456, 64 )
+suit_texture = ExtResource( 27 )
+locker_texture = ExtResource( 26 )
 [connection signal="interaction_complete" from="SpiderInteractable" to="." method="_on_SpiderInteractable_interaction_complete"]
+[connection signal="locker_interaction_complete" from="SuitLocker" to="." method="_on_SuitLocker_locker_interaction_complete"]
