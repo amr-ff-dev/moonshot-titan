@@ -27,9 +27,9 @@
 [ext_resource path="res://models/interactable/suit_locker.tscn" type="PackedScene" id=25]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 208, 560, 200, 576, 192, 552, 312, 576, 280, 576, 291.32, 561.633, 472, 264, 488, 272, 472, 288, 416, 248, 328, 440, 328, 312, 456, 432, 456, 488, 440, 512, 432, 520, 32, 256, -16, 256, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 72, 176, 56, 208, 72, 136, 104, 136, 80, 168, 104, 168, 80, 208, 56, 296, 32, 336, 216, 440, 136, 296, 136, 288, 176, 288, 216, 312, 176, 232, 208, 232, 208, 256, 280, 256, 280, 232, 296, 232, 296, 216, 320, 216, 320, 192, 328, 192, 328, 216, 344, 216, 344, 224, 360, 224, 360, 240, 416, 232, 432, 232, 464, 248, 432, 224, 440, 224, 448, 224, 464, 224, 472, 304, 456, 304, 472, 424, 472, 432, 480, 496, 512, 496, 512, 520, 472, 520, 456, 512, 472, 488, 424, 536, 424, 560, 400, 560, 376, 544, 352, 560, 352, 576, 328, 576, 288, 528, 328, 624, 312, 624, 64, 584, 64, 600, 40, 600, 40, 568, 48, 568, 48, 544, 16, 528, 16, 568, 56, 512, -16, 432, -16, 528, 72, 496, -48, 432, -48, 336, -16, 336, 80, 488, 360, 544, 224, 544, 184, 544, 168, 520, 488, 408, 488, 400, 488, 384, 456, 360, 472, 360, 488, 368, 112, 488, 360, 248, 136, 520, 256, 528 )
-polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 5 ), PoolIntArray( 6, 7, 8, 9 ), PoolIntArray( 10, 11, 12, 13, 14, 15 ), PoolIntArray( 16, 17, 18, 19 ), PoolIntArray( 19, 20, 21, 16 ), PoolIntArray( 21, 22, 23, 24 ), PoolIntArray( 23, 25, 26, 27 ), PoolIntArray( 26, 28, 27 ), PoolIntArray( 23, 27, 29, 24 ), PoolIntArray( 16, 21, 24, 30, 31 ), PoolIntArray( 32, 33, 34, 35, 36 ), PoolIntArray( 35, 37, 38, 39 ), PoolIntArray( 40, 41, 42 ), PoolIntArray( 42, 43, 44 ), PoolIntArray( 44, 45, 46, 47 ), PoolIntArray( 47, 48, 49, 36, 40 ), PoolIntArray( 49, 50, 51, 36 ), PoolIntArray( 9, 52, 53, 54, 6 ), PoolIntArray( 53, 55, 56, 54 ), PoolIntArray( 57, 58, 54 ), PoolIntArray( 8, 59, 60, 9 ), PoolIntArray( 61, 62, 12, 11 ), PoolIntArray( 63, 64, 65, 66, 67 ), PoolIntArray( 13, 68, 63, 67, 14 ), PoolIntArray( 10, 69, 70, 71, 72 ), PoolIntArray( 32, 73, 74, 75, 76 ), PoolIntArray( 75, 77, 78, 3 ), PoolIntArray( 79, 80, 81, 82, 83 ), PoolIntArray( 84, 83, 82, 85 ), PoolIntArray( 82, 86, 85 ), PoolIntArray( 87, 84, 85, 88 ), PoolIntArray( 85, 89, 88 ), PoolIntArray( 90, 87, 88 ), PoolIntArray( 88, 91, 92, 93 ), PoolIntArray( 94, 90, 88, 93 ), PoolIntArray( 10, 15, 69 ), PoolIntArray( 10, 72, 95, 32 ), PoolIntArray( 32, 95, 73 ), PoolIntArray( 96, 0, 2, 97, 98 ), PoolIntArray( 99, 61, 11, 100 ), PoolIntArray( 101, 100, 11, 102 ), PoolIntArray( 103, 104, 101, 102 ), PoolIntArray( 31, 30, 33, 32 ), PoolIntArray( 32, 105, 94, 93, 31 ), PoolIntArray( 56, 57, 54 ), PoolIntArray( 9, 60, 102, 11, 106 ), PoolIntArray( 106, 11, 36, 51 ), PoolIntArray( 98, 107, 105, 32 ), PoolIntArray( 108, 96, 98, 32 ), PoolIntArray( 3, 5, 76, 75 ), PoolIntArray( 32, 76, 108 ), PoolIntArray( 35, 39, 40, 36 ), PoolIntArray( 42, 44, 47, 40 ), PoolIntArray( 31, 93, 93 ) ]
-outlines = [ PoolVector2Array( -16, 336, -16, 336, 32, 336, 32, 256, -16, 256, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 72, 176, 72, 136, 104, 136, 104, 168, 80, 168, 80, 208, 56, 208, 56, 296, 136, 296, 136, 288, 176, 288, 176, 232, 208, 232, 208, 256, 280, 256, 280, 232, 296, 232, 296, 216, 320, 216, 320, 192, 328, 192, 328, 216, 344, 216, 344, 224, 360, 224, 360, 240, 360, 248, 416, 248, 416, 232, 432, 232, 432, 224, 440, 224, 448, 224, 464, 224, 464, 248, 472, 264, 488, 272, 472, 288, 472, 304, 456, 304, 456, 360, 472, 360, 488, 368, 488, 384, 488, 400, 488, 408, 472, 424, 472, 432, 456, 432, 456, 488, 472, 488, 480, 496, 512, 496, 512, 520, 472, 520, 456, 512, 440, 512, 432, 520, 424, 536, 424, 560, 400, 560, 376, 544, 360, 544, 352, 560, 352, 576, 328, 576, 328, 624, 312, 624, 312, 576, 280, 576, 291.32, 561.633, 288, 528, 256, 528, 224, 544, 208, 560, 200, 576, 192, 552, 184, 544, 168, 520, 136, 520, 112, 488, 80, 488, 72, 496, 56, 512, 48, 544, 48, 568, 64, 584, 64, 600, 40, 600, 40, 568, 16, 568, 16, 528, -16, 528, -16, 432, -48, 432, -48, 336 ), PoolVector2Array( 216, 312, 328, 312, 328, 440, 216, 440 ) ]
+vertices = PoolVector2Array( 208, 560, 200, 576, 192, 552, 312, 576, 280, 576, 291.32, 561.633, 472, 264, 488, 272, 472, 288, 416, 248, 328, 440, 328, 312, 456, 432, 456, 488, 440, 512, 432, 520, 32, 256, -16, 256, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 64, 176, 80, 192, 56, 208, 80, 208, 56, 296, 32, 336, 216, 440, 136, 296, 136, 288, 176, 288, 216, 312, 176, 232, 208, 232, 208, 256, 280, 256, 280, 232, 296, 232, 296, 216, 320, 216, 320, 192, 328, 192, 328, 216, 344, 216, 344, 224, 360, 224, 360, 240, 416, 232, 432, 232, 464, 248, 432, 224, 440, 224, 448, 224, 464, 224, 472, 304, 456, 304, 472, 424, 472, 432, 480, 496, 512, 496, 512, 520, 472, 520, 456, 512, 472, 488, 424, 536, 424, 560, 400, 560, 376, 544, 352, 560, 352, 576, 328, 576, 288, 528, 328, 624, 312, 624, 64, 584, 64, 600, 40, 600, 40, 568, 48, 568, 48, 544, 16, 528, 16, 568, 56, 512, -16, 432, -16, 528, 72, 496, -48, 432, -48, 336, -16, 336, 80, 488, 360, 544, 224, 544, 184, 544, 168, 520, 488, 408, 488, 400, 488, 384, 456, 360, 472, 360, 488, 368, 112, 488, 360, 248, 136, 520, 256, 528 )
+polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 5 ), PoolIntArray( 6, 7, 8, 9 ), PoolIntArray( 10, 11, 12, 13, 14, 15 ), PoolIntArray( 16, 17, 18, 19 ), PoolIntArray( 19, 20, 21, 16 ), PoolIntArray( 21, 22, 23, 24, 25 ), PoolIntArray( 24, 26, 25 ), PoolIntArray( 16, 21, 25, 27, 28 ), PoolIntArray( 29, 30, 31, 32, 33 ), PoolIntArray( 32, 34, 35, 36 ), PoolIntArray( 37, 38, 39 ), PoolIntArray( 39, 40, 41 ), PoolIntArray( 41, 42, 43, 44 ), PoolIntArray( 44, 45, 46, 33, 37 ), PoolIntArray( 46, 47, 48, 33 ), PoolIntArray( 9, 49, 50, 51, 6 ), PoolIntArray( 50, 52, 53, 51 ), PoolIntArray( 54, 55, 51 ), PoolIntArray( 8, 56, 57, 9 ), PoolIntArray( 58, 59, 12, 11 ), PoolIntArray( 60, 61, 62, 63, 64 ), PoolIntArray( 13, 65, 60, 64, 14 ), PoolIntArray( 10, 66, 67, 68, 69 ), PoolIntArray( 29, 70, 71, 72, 73 ), PoolIntArray( 72, 74, 75, 3 ), PoolIntArray( 76, 77, 78, 79, 80 ), PoolIntArray( 81, 80, 79, 82 ), PoolIntArray( 79, 83, 82 ), PoolIntArray( 84, 81, 82, 85 ), PoolIntArray( 82, 86, 85 ), PoolIntArray( 87, 84, 85 ), PoolIntArray( 85, 88, 89, 90 ), PoolIntArray( 91, 87, 85, 90 ), PoolIntArray( 10, 15, 66 ), PoolIntArray( 10, 69, 92, 29 ), PoolIntArray( 29, 92, 70 ), PoolIntArray( 93, 0, 2, 94, 95 ), PoolIntArray( 96, 58, 11, 97 ), PoolIntArray( 98, 97, 11, 99 ), PoolIntArray( 100, 101, 98, 99 ), PoolIntArray( 28, 27, 30, 29 ), PoolIntArray( 29, 102, 91, 90, 28 ), PoolIntArray( 53, 54, 51 ), PoolIntArray( 9, 57, 99, 11, 103 ), PoolIntArray( 103, 11, 33, 48 ), PoolIntArray( 95, 104, 102, 29 ), PoolIntArray( 105, 93, 95, 29 ), PoolIntArray( 3, 5, 73, 72 ), PoolIntArray( 29, 73, 105 ), PoolIntArray( 32, 36, 37, 33 ), PoolIntArray( 39, 41, 44, 37 ), PoolIntArray( 28, 90, 90 ) ]
+outlines = [ PoolVector2Array( -16, 336, -16, 336, 32, 336, 32, 256, -16, 256, -16, 240, 16, 240, 16, 208, 48, 208, 48, 176, 64, 176, 80, 192, 80, 208, 56, 208, 56, 296, 136, 296, 136, 288, 176, 288, 176, 232, 208, 232, 208, 256, 280, 256, 280, 232, 296, 232, 296, 216, 320, 216, 320, 192, 328, 192, 328, 216, 344, 216, 344, 224, 360, 224, 360, 240, 360, 248, 416, 248, 416, 232, 432, 232, 432, 224, 440, 224, 448, 224, 464, 224, 464, 248, 472, 264, 488, 272, 472, 288, 472, 304, 456, 304, 456, 360, 472, 360, 488, 368, 488, 384, 488, 400, 488, 408, 472, 424, 472, 432, 456, 432, 456, 488, 472, 488, 480, 496, 512, 496, 512, 520, 472, 520, 456, 512, 440, 512, 432, 520, 424, 536, 424, 560, 400, 560, 376, 544, 360, 544, 352, 560, 352, 576, 328, 576, 328, 624, 312, 624, 312, 576, 280, 576, 291.32, 561.633, 288, 528, 256, 528, 224, 544, 208, 560, 200, 576, 192, 552, 184, 544, 168, 520, 136, 520, 112, 488, 80, 488, 72, 496, 56, 512, 48, 544, 48, 568, 64, 584, 64, 600, 40, 600, 40, 568, 16, 568, 16, 528, -16, 528, -16, 432, -48, 432, -48, 336 ), PoolVector2Array( 216, 312, 328, 312, 328, 440, 216, 440 ) ]
 
 [node name="ComputerCore" type="Node2D"]
 script = ExtResource( 5 )
@@ -103,6 +103,10 @@ texture = ExtResource( 16 )
 [node name="Computer2" type="Sprite" parent="DeskSW"]
 position = Vector2( -47, -25 )
 texture = ExtResource( 15 )
+
+[node name="LightningHazard33" parent="." instance=ExtResource( 20 )]
+position = Vector2( 85, 170 )
+rotation = -0.801106
 
 [node name="DeskNW" parent="." instance=ExtResource( 11 )]
 position = Vector2( 144, 232 )
@@ -203,13 +207,9 @@ texture = ExtResource( 16 )
 
 [node name="Chair" parent="." instance=ExtResource( 4 )]
 position = Vector2( 517, 360 )
-flip_horizontal = false
-flip_vertical = false
 
 [node name="Chair2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 518, 407 )
-flip_horizontal = false
-flip_vertical = false
 
 [node name="DeskS" parent="." instance=ExtResource( 18 )]
 position = Vector2( 320, 624 )
@@ -259,6 +259,10 @@ position = Vector2( 288, 600 )
 [node name="Stool8" parent="." instance=ExtResource( 8 )]
 position = Vector2( 352, 600 )
 
+[node name="LightningHazard20" parent="." instance=ExtResource( 20 )]
+position = Vector2( 392, 232 )
+rotation = 3.14159
+
 [node name="DeskN" parent="." instance=ExtResource( 19 )]
 position = Vector2( 320, 184 )
 
@@ -301,49 +305,9 @@ position = Vector2( 349, 184 )
 [node name="Chair3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 292, 176 )
 flip_horizontal = true
-flip_vertical = false
-
-[node name="LightningHazard2" parent="." instance=ExtResource( 20 )]
-position = Vector2( 272, 112 )
-rotation = -0.76969
-
-[node name="LightningHazard3" parent="." instance=ExtResource( 20 )]
-position = Vector2( 296, 112 )
-
-[node name="LightningHazard4" parent="." instance=ExtResource( 20 )]
-position = Vector2( 312, 120 )
-rotation = 0.76969
-
-[node name="LightningHazard90" parent="." instance=ExtResource( 20 )]
-position = Vector2( 496, 160 )
-rotation = 0.256563
-
-[node name="LightningHazard5" parent="." instance=ExtResource( 20 )]
-position = Vector2( 344, 112 )
-
-[node name="LightningHazard6" parent="." instance=ExtResource( 20 )]
-position = Vector2( 368, 112 )
-
-[node name="LightningHazard7" parent="." instance=ExtResource( 20 )]
-position = Vector2( 384, 120 )
-rotation = 1.02625
-
-[node name="LightningHazard8" parent="." instance=ExtResource( 20 )]
-position = Vector2( 168, 160 )
-
-[node name="LightningHazard9" parent="." instance=ExtResource( 20 )]
-position = Vector2( 136, 160 )
-
-[node name="LightningHazard25" parent="." instance=ExtResource( 20 )]
-position = Vector2( 128, 136 )
-rotation = -0.256563
 
 [node name="LightningHazard10" parent="." instance=ExtResource( 20 )]
 position = Vector2( 216, 200 )
-rotation = -1.5708
-
-[node name="LightningHazard11" parent="." instance=ExtResource( 20 )]
-position = Vector2( 216, 176 )
 rotation = -1.5708
 
 [node name="LightningHazard13" parent="." instance=ExtResource( 20 )]
@@ -359,8 +323,8 @@ position = Vector2( 271, 208 )
 rotation = 2.14675
 
 [node name="LightningHazard30" parent="." instance=ExtResource( 20 )]
-position = Vector2( 264, 184 )
-rotation = 2.14675
+position = Vector2( 167, 164 )
+rotation = 0.349066
 
 [node name="LightningHazard16" parent="." instance=ExtResource( 20 )]
 position = Vector2( 298, 195 )
@@ -371,20 +335,12 @@ position = Vector2( 320, 168 )
 rotation = -3.14159
 
 [node name="LightningHazard28" parent="." instance=ExtResource( 20 )]
-position = Vector2( 291, 160 )
-rotation = -3.14159
+position = Vector2( 279, 115 )
+rotation = -0.785398
 
 [node name="LightningHazard29" parent="." instance=ExtResource( 20 )]
 position = Vector2( 349, 160 )
 rotation = -3.14159
-
-[node name="LightningHazard19" parent="." instance=ExtResource( 20 )]
-position = Vector2( 376, 208 )
-rotation = -2.62847
-
-[node name="LightningHazard20" parent="." instance=ExtResource( 20 )]
-position = Vector2( 392, 224 )
-rotation = -3.91128
 
 [node name="LightningHazard18" parent="." instance=ExtResource( 20 )]
 position = Vector2( 360, 200 )
@@ -395,8 +351,8 @@ position = Vector2( 512, 248 )
 rotation = -1.85878
 
 [node name="LightningHazard32" parent="." instance=ExtResource( 20 )]
-position = Vector2( 520, 224 )
-rotation = -0.832522
+position = Vector2( 556, 257 )
+rotation = -4.1661
 
 [node name="LightningHazard31" parent="." instance=ExtResource( 20 )]
 position = Vector2( 488, 248 )
@@ -422,10 +378,6 @@ rotation = 1.5708
 position = Vector2( 416, 168 )
 rotation = 0.801106
 
-[node name="LightningHazard33" parent="." instance=ExtResource( 20 )]
-position = Vector2( 79, 230 )
-rotation = -1.5708
-
 [node name="LightningHazard34" parent="." instance=ExtResource( 20 )]
 position = Vector2( 80, 248 )
 rotation = -1.5708
@@ -439,19 +391,15 @@ position = Vector2( 152, 208 )
 rotation = -3.14159
 
 [node name="LightningHazard37" parent="." instance=ExtResource( 20 )]
-position = Vector2( 111, 269 )
-rotation = -3.14159
+position = Vector2( 120, 264 )
+rotation = -3.65472
 
 [node name="LightningHazard39" parent="." instance=ExtResource( 20 )]
-position = Vector2( 152, 264 )
-rotation = -3.14159
-
-[node name="LightningHazard40" parent="." instance=ExtResource( 20 )]
-position = Vector2( 176, 208 )
-rotation = 2.88503
+position = Vector2( 168, 232 )
+rotation = -3.91128
 
 [node name="LightningHazard41" parent="." instance=ExtResource( 20 )]
-position = Vector2( 192, 208 )
+position = Vector2( 184, 216 )
 rotation = 2.62847
 
 [node name="LightningHazard42" parent="." instance=ExtResource( 20 )]
@@ -474,10 +422,6 @@ rotation = -5.51349
 position = Vector2( 152, 560 )
 rotation = -6.28319
 
-[node name="LightningHazard47" parent="." instance=ExtResource( 20 )]
-position = Vector2( 144, 544 )
-rotation = -6.28319
-
 [node name="LightningHazard48" parent="." instance=ExtResource( 20 )]
 position = Vector2( 160, 544 )
 rotation = 0.256563
@@ -486,45 +430,21 @@ rotation = 0.256563
 position = Vector2( 176, 568 )
 rotation = 0.76969
 
-[node name="LightningHazard50" parent="." instance=ExtResource( 20 )]
-position = Vector2( 168, 600 )
-rotation = -3.59014
-
-[node name="LightningHazard51" parent="." instance=ExtResource( 20 )]
-position = Vector2( 144, 600 )
-rotation = -2.82045
-
-[node name="LightningHazard52" parent="." instance=ExtResource( 20 )]
-position = Vector2( 120, 600 )
-rotation = -2.82045
-
-[node name="LightningHazard53" parent="." instance=ExtResource( 20 )]
-position = Vector2( 104, 592 )
-rotation = -2.82045
-
 [node name="LightningHazard54" parent="." instance=ExtResource( 20 )]
 position = Vector2( 88, 608 )
 rotation = -2.82045
 
 [node name="LightningHazard55" parent="." instance=ExtResource( 20 )]
-position = Vector2( 224, 584 )
+position = Vector2( 216, 584 )
 rotation = -1.02451
 
 [node name="LightningHazard91" parent="." instance=ExtResource( 20 )]
 position = Vector2( 232, 568 )
 rotation = -0.511381
 
-[node name="LightningHazard56" parent="." instance=ExtResource( 20 )]
-position = Vector2( 216, 600 )
-rotation = -1.53764
-
 [node name="LightningHazard65" parent="." instance=ExtResource( 20 )]
 position = Vector2( 380, 589 )
 rotation = -1.53764
-
-[node name="LightningHazard58" parent="." instance=ExtResource( 20 )]
-position = Vector2( 256, 592 )
-rotation = -4.87121
 
 [node name="LightningHazard64" parent="." instance=ExtResource( 20 )]
 position = Vector2( 279, 625 )
@@ -546,25 +466,9 @@ rotation = -2.56389
 position = Vector2( 248, 664 )
 rotation = -2.56389
 
-[node name="LightningHazard62" parent="." instance=ExtResource( 20 )]
-position = Vector2( 272, 664 )
-rotation = -3.33358
-
-[node name="LightningHazard63" parent="." instance=ExtResource( 20 )]
-position = Vector2( 288, 680 )
-rotation = -3.84671
-
-[node name="LightningHazard75" parent="." instance=ExtResource( 20 )]
-position = Vector2( 528, 608 )
-rotation = -3.84671
-
 [node name="LightningHazard77" parent="." instance=ExtResource( 20 )]
 position = Vector2( 504, 600 )
 rotation = -2.82045
-
-[node name="LightningHazard76" parent="." instance=ExtResource( 20 )]
-position = Vector2( 544, 624 )
-rotation = -3.84671
 
 [node name="LightningHazard66" parent="." instance=ExtResource( 20 )]
 position = Vector2( 376, 568 )
@@ -599,24 +503,8 @@ position = Vector2( 496, 344 )
 rotation = -2.82045
 
 [node name="LightningHazard85" parent="." instance=ExtResource( 20 )]
-position = Vector2( 528, 344 )
+position = Vector2( 582, 376 )
 rotation = -4.10327
-
-[node name="LightningHazard86" parent="." instance=ExtResource( 20 )]
-position = Vector2( 576, 376 )
-rotation = -4.10327
-
-[node name="LightningHazard87" parent="." instance=ExtResource( 20 )]
-position = Vector2( 576, 424 )
-rotation = -4.10327
-
-[node name="LightningHazard88" parent="." instance=ExtResource( 20 )]
-position = Vector2( 580, 396 )
-rotation = -5.12952
-
-[node name="LightningHazard89" parent="." instance=ExtResource( 20 )]
-position = Vector2( 560, 240 )
-rotation = -4.87296
 
 [node name="LightningHazard79" parent="." instance=ExtResource( 20 )]
 position = Vector2( 495, 469 )
@@ -627,7 +515,7 @@ position = Vector2( 528, 475 )
 rotation = -3.07702
 
 [node name="LightningHazard81" parent="." instance=ExtResource( 20 )]
-position = Vector2( 552, 480 )
+position = Vector2( 392, 672 )
 rotation = -3.59014
 
 [node name="LightningHazard74" parent="." instance=ExtResource( 20 )]
