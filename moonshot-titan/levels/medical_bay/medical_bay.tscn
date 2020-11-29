@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://characters/enemies/spider/spider.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://models/obstacles/decorations/binder_decoration.png" type="Texture" id=15]
 [ext_resource path="res://models/obstacles/decorations/clipboard_with_pencils_decoration.png" type="Texture" id=16]
 [ext_resource path="res://models/interactable/interactable.tscn" type="PackedScene" id=17]
+[ext_resource path="res://characters/npcs/engineer/engineer.png" type="Texture" id=18]
 [ext_resource path="res://user_interface/hud/button_font.tres" type="DynamicFont" id=19]
 [ext_resource path="res://characters/npcs/engineer/speech_bubble.png" type="Texture" id=20]
 [ext_resource path="res://models/obstacles/furniture/lockers/locker_grey_gold.png" type="Texture" id=21]
@@ -162,6 +163,7 @@ __meta__ = {
 
 [node name="Interactable" parent="." instance=ExtResource( 17 )]
 position = Vector2( 240, 275 )
+sprite_texture = ExtResource( 18 )
 click_radius = 45
 interact_time = 2.0
 
