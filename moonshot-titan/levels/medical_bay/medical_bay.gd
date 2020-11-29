@@ -21,4 +21,6 @@ func _on_Interactable_interaction_complete():
 
 func finish_room():
 	.finish_room()
+
+func open_door_permanently():
 	entrance.open_permanently()
