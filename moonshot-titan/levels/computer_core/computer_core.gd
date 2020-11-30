@@ -4,7 +4,7 @@ class_name ComputerCore
 
 onready var entrance = $Entrance
 
-func _init().("Initiate Launch Sequence"):
+func _init().("Enter Launch Sequence"):
 	pass
 
 func _on_Entrance_player_entered(_player):

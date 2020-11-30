@@ -124,7 +124,7 @@ func update_engineer_hint():
 func get_active_quest():
 	var active_quest = null
 	for quest in quest_list:
-		if !quest.active:
+		if quest.active and !quest.complete:
 			active_quest = quest
 	return active_quest
 
