@@ -32,6 +32,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=7]
+resource_local_to_scene = true
 radius = 250.0
 
 [node name="Spider" type="KinematicBody2D"]
@@ -49,6 +50,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
+frame = 3
 playing = true
 
 [node name="PlayerDetection" type="Area2D" parent="."]

@@ -116,13 +116,13 @@ vertices = PoolVector2Array( 512, 608, 488, 608, 496, 592, 528, 592, 440, 384, 4
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 4, 7, 9, 10, 11, 12 ), PoolIntArray( 13, 14, 15, 7 ), PoolIntArray( 16, 17, 18, 19, 20, 21 ), PoolIntArray( 22, 21, 20, 23 ), PoolIntArray( 24, 25, 26, 27, 28, 22, 23 ), PoolIntArray( 29, 30, 31, 32, 33 ), PoolIntArray( 34, 35, 36, 37 ), PoolIntArray( 37, 38, 39, 0 ), PoolIntArray( 34, 37, 0 ), PoolIntArray( 3, 34, 0 ), PoolIntArray( 3, 2, 33 ), PoolIntArray( 32, 3, 33 ), PoolIntArray( 40, 29, 33, 41, 42 ), PoolIntArray( 43, 44, 45, 46, 47 ), PoolIntArray( 27, 26, 40, 42 ), PoolIntArray( 42, 41, 48, 9 ), PoolIntArray( 9, 48, 10 ), PoolIntArray( 7, 15, 9 ), PoolIntArray( 49, 8, 12, 50 ), PoolIntArray( 49, 50, 43, 47, 51 ), PoolIntArray( 49, 51, 52, 53, 54, 55 ) ]
 outlines = [ PoolVector2Array( 424, 408, 272, 408, 256, 392, 240, 392, 216, 416, 216, 456, 232, 472, 232, 496, 216, 512, 216, 544, 248, 552, 272, 536, 304, 536, 336, 560, 440, 560, 504, 520, 544, 520, 560, 536, 560, 560, 496, 592, 488, 608, 512, 608, 512, 656, 528, 656, 528, 632, 560, 632, 560, 624, 528, 624, 528, 592, 560, 592, 592, 592, 592, 568, 584, 560, 584, 536, 624, 536, 656, 536, 656, 464, 648, 440, 648, 424, 656, 408, 656, 360, 616, 360, 616, 416, 624, 424, 624, 440, 616, 456, 616, 512, 568, 512, 536, 480, 536, 448, 552, 432, 528, 408, 464, 400, 464, 328, 440, 328, 440, 384 ) ]
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 104, 8 )
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 24, 8 )
 
 [node name="FuelBay" type="Node2D"]
@@ -390,7 +390,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GravPlating"]
-shape = SubResource( 16 )
+shape = SubResource( 3 )
 
 [node name="GravPlating2" type="Area2D" parent="."]
 position = Vector2( 336, 528 )
@@ -401,7 +401,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GravPlating2"]
-shape = SubResource( 16 )
+shape = SubResource( 3 )
 
 [node name="GravPlating3" type="Area2D" parent="."]
 position = Vector2( 496, 432 )
@@ -412,7 +412,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GravPlating3"]
-shape = SubResource( 16 )
+shape = SubResource( 3 )
 
 [node name="GravPlating7" type="Area2D" parent="."]
 position = Vector2( 624, 400 )
@@ -423,7 +423,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GravPlating7"]
-shape = SubResource( 16 )
+shape = SubResource( 3 )
 
 [node name="GravPlating4" type="Area2D" parent="."]
 position = Vector2( 272, 272 )
@@ -434,7 +434,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GravPlating4"]
-shape = SubResource( 17 )
+shape = SubResource( 4 )
 
 [node name="GravPlating5" type="Area2D" parent="."]
 position = Vector2( 448, 144 )
@@ -445,7 +445,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GravPlating5"]
-shape = SubResource( 18 )
+shape = SubResource( 5 )
 
 [node name="GravPlating6" type="Area2D" parent="."]
 position = Vector2( 320, 48 )
@@ -456,21 +456,22 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GravPlating6"]
-shape = SubResource( 18 )
+shape = SubResource( 5 )
 
 [node name="Spider" parent="." instance=ExtResource( 24 )]
-position = Vector2( 240, 528 )
+position = Vector2( 248, 520 )
+detection_radius = 150.0
 nav_2d_path = NodePath("../Navigation2D")
-wander_radius = 50.0
 
 [node name="Spider2" parent="." instance=ExtResource( 24 )]
 position = Vector2( 512, 600 )
+detection_radius = 175.0
 nav_2d_path = NodePath("../Navigation2D")
-wander_radius = 50.0
+wander_radius = 75.0
 
 [node name="Spider3" parent="." instance=ExtResource( 24 )]
-position = Vector2( 640, 520 )
+position = Vector2( 600, 520 )
+detection_radius = 200.0
 nav_2d_path = NodePath("../Navigation2D")
-wander_radius = 50.0
 [connection signal="player_entered" from="Entrance" to="." method="_on_Entrance_player_entered"]
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]
