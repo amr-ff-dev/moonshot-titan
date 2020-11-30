@@ -5,9 +5,6 @@
 [ext_resource path="res://characters/enemies/spider_queen/spider_queen.gd" type="Script" id=3]
 [ext_resource path="res://characters/enemies/spider_queen/spider_queen_shadow.png" type="Texture" id=4]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 23.7128
-
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 36, 30 )
@@ -35,6 +32,8 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=7]
 radius = 250.0
 
+[sub_resource type="CircleShape2D" id=1]
+
 [node name="SpiderQueen" type="KinematicBody2D"]
 collision_layer = 4
 collision_mask = 63
@@ -44,17 +43,13 @@ __meta__ = {
 }
 speed = 150
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
-scale = Vector2( 1.01211, 1.00745 )
-shape = SubResource( 1 )
-
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( 0, 8 )
 texture = ExtResource( 4 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
+frame = 3
 playing = true
 
 [node name="PlayerDetection" type="Area2D" parent="."]
@@ -69,6 +64,11 @@ shape = SubResource( 7 )
 [node name="NavLine" type="Line2D" parent="."]
 modulate = Color( 1, 1, 1, 0.376471 )
 width = 8.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+scale = Vector2( 1.01211, 1.00745 )
+shape = SubResource( 1 )
 [connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_PlayerDetection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="PlayerDetection" method="_on_PlayerDetection_body_exited"]
 [connection signal="chase" from="PlayerDetection" to="." method="_on_PlayerDetection_chase"]
