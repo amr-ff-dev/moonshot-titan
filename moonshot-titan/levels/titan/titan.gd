@@ -64,6 +64,10 @@ func _on_QuestRoom_quest_complete(quest):
 
 func on_QuestRoom_suit_change(texture):
 	change_player_suit(texture)
+	
+func _on_RocketPad_board_player_and_engineer():
+	player.visible = false
+	engineer.visible = false
 
 func _on_RocketPad_game_finished():
 	change_scene("OutroCredits")

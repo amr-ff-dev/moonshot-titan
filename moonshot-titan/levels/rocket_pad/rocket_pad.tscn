@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://models/floors/base_floor_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://models/obstacles/decorations/computer_rear.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://levels/rocket_pad/rocket_pad.gd" type="Script" id=9]
 [ext_resource path="res://models/floors/pipe_tiles.tres" type="TileSet" id=10]
 [ext_resource path="res://models/obstacles/furniture/machinery/machine.tscn" type="PackedScene" id=11]
+[ext_resource path="res://characters/enemies/spider/spider_sprite_animation.png" type="Texture" id=12]
 [ext_resource path="res://models/obstacles/furniture/machinery/pipe_corner.png" type="Texture" id=13]
 [ext_resource path="res://models/obstacles/furniture/lamp.tscn" type="PackedScene" id=14]
 [ext_resource path="res://models/obstacles/furniture/crates/crate_row.tscn" type="PackedScene" id=15]
@@ -18,7 +19,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "launch_rocket"
-length = 6.0
+length = 7.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -26,10 +27,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.5, 6 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1.5, 7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 392, 280 ), Vector2( 392, -100 ) ]
+"values": [ Vector2( 392, 280 ), Vector2( 392, 280 ), Vector2( 392, -100 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Flames:visible")
@@ -38,10 +39,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false, true ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Flames:playing")
@@ -50,10 +51,34 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../OutroSpider:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../OutroSpider:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1248, 400 ), Vector2( 500, 400 ) ]
 }
 
 [sub_resource type="AtlasTexture" id=2]
@@ -88,6 +113,30 @@ extents = Vector2( 192, 40 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 56, 48 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 24, 18 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 12 )
+region = Rect2( 24, 0, 24, 18 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 12 )
+region = Rect2( 48, 0, 24, 18 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 12 )
+region = Rect2( 72, 0, 24, 18 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
 
 [node name="RocketPad" type="Node2D"]
 script = ExtResource( 9 )
@@ -126,8 +175,7 @@ position = Vector2( -3.05176e-05, 148 )
 scale = Vector2( 1.07143, 1.67857 )
 z_index = -1
 frames = SubResource( 6 )
-frame = 3
-playing = true
+frame = 2
 flip_v = true
 
 [node name="Bench" parent="." instance=ExtResource( 4 )]
@@ -221,6 +269,13 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BenchGrav"]
 position = Vector2( -88, 88 )
 shape = SubResource( 9 )
+
+[node name="OutroSpider" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 928, 400 )
+frames = SubResource( 14 )
+frame = 1
+playing = true
 [connection signal="game_finished" from="Rocket" to="." method="_on_Rocket_game_finished"]
 [connection signal="body_entered" from="Entrance" to="." method="_on_Entrance_body_entered"]
 [connection signal="interaction_complete" from="Interactable" to="." method="_on_Interactable_interaction_complete"]

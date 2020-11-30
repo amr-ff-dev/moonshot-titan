@@ -192,6 +192,7 @@ position = Vector2( 2767, 1968 )
 [node name="Soundtrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
 autoplay = true
+[connection signal="board_player_and_engineer" from="RocketPad" to="." method="_on_RocketPad_board_player_and_engineer"]
 [connection signal="game_finished" from="RocketPad" to="." method="_on_RocketPad_game_finished"]
 [connection signal="suit_change" from="ResearchLab" to="." method="_on_ResearchLab_suit_change"]
 [connection signal="damaged" from="Player" to="." method="_on_Player_damaged"]
