@@ -1,17 +1,107 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://characters/npcs/engineer/engineer.png" type="Texture" id=1]
+[ext_resource path="res://characters/npcs/engineer/engineer.gd" type="Script" id=2]
+[ext_resource path="res://characters/npcs/engineer/speech_bubble.png" type="Texture" id=3]
+[ext_resource path="res://user_interface/hud/button_font.tres" type="DynamicFont" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.39154
 height = 9.82715
 
+[sub_resource type="Animation" id=2]
+resource_name = "display_quest_text"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("QuestBubble/QuestText:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 2, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "", "You saved me!", "Please find 
+my tools...
+", "and I will fix the rocket
+" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("QuestBubble:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 25.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 4, 9, 20, 25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 240, 275 ), Vector2( 265, 275 ), Vector2( 310, -110 ), Vector2( 1007, -110 ), Vector2( 1007, 1325 ), Vector2( 325, 1325 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "open_door"
+} ]
+}
+
 [node name="Engineer" type="KinematicBody2D"]
+position = Vector2( 240, 275 )
 collision_layer = 64
 collision_mask = 127
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+
+[node name="EngineerAnimation" type="AnimationPlayer" parent="."]
+anims/display_quest_text = SubResource( 2 )
+anims/run_to_rocket = SubResource( 3 )
+
+[node name="QuestBubble" type="Sprite" parent="."]
+visible = false
+position = Vector2( 43, -43 )
+z_index = 98
+texture = ExtResource( 3 )
+
+[node name="QuestText" type="RichTextLabel" parent="QuestBubble"]
+margin_left = -49.0
+margin_top = -22.0
+margin_right = 63.0
+margin_bottom = 34.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

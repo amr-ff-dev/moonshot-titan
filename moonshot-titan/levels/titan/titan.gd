@@ -22,6 +22,7 @@ onready var player = $Player
 onready var restart_button = $HUD/Restart
 onready var player_respawn = $CrewQuarters/PlayerRespawn
 onready var quest_tracker = $HUD/QuestTracker
+onready var engineer = $MedicalBay/Engineer
 
 var quest_list = []
 var final_quest
@@ -83,6 +84,7 @@ func update_quest_tracker():
 	if final_quest_should_be_active():
 		final_quest.active = true
 	quest_tracker.update_quest_tracker(quest_list)
+	update_engineer_hint()
 
 func update_player_resapwn(spawn_point):
 	player_respawn = spawn_point
@@ -112,3 +114,23 @@ func stop_interactions():
 	event.action = "interact"
 	event.pressed = false
 	Input.parse_input_event(event)
+
+func update_engineer_hint():
+	var hint_quest = get_active_quest()
+	if !hint_quest:
+		hint_quest = get_unfinished_quest()
+	engineer.update_hint_quest(hint_quest)
+
+func get_active_quest():
+	var active_quest = null
+	for quest in quest_list:
+		if !quest.active:
+			active_quest = quest
+	return active_quest
+
+func get_unfinished_quest():
+	var unfinished_quest = null
+	for quest in quest_list:
+		if !quest.complete:
+			unfinished_quest = quest
+	return unfinished_quest
