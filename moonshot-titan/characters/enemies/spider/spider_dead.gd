@@ -6,6 +6,7 @@ func enter(spider):
 	.enter(spider)
 	spider.emit_dead()
 	spider.sprite.rotate(PI)
+	spider.sprite.playing = false
 	spider.nav_line.queue_free()
 
 func launch(_spider, _velocity):
