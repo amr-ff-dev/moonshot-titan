@@ -14,10 +14,10 @@ func enter(player):
 func physics_process(player, delta):
 	velocity = velocity.linear_interpolate(desired_velocity, player.acceleration)
 	var collision = player.move_and_collide(velocity * delta)
-	if player.collision_is_stopping(collision):
-		velocity = velocity.slide(collision.normal)
-	elif player.collision_is_fatal(collision):
+	if player.collision_is_fatal(collision):
 		player.change_state(PlayerDead.new())
+	elif player.collision_is_stopping(collision):
+		velocity = velocity.slide(collision.normal)
 
 func input(player, event):
 	.input(player, event)
