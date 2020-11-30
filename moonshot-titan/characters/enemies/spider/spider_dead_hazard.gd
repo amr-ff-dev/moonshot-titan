@@ -13,7 +13,7 @@ func enter(spider):
 	move_enemy_to_hazard(spider)
 
 func move_enemy_to_hazard(spider):
-	spider.position = hazard.position
+	spider.global_position = hazard.global_position
 
 func disable_hazard_for_enemies():
 	hazard.set_collision_layer(Titan.CollisionLayers.PLAYER_HAZARD)
