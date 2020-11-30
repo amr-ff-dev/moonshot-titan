@@ -4,12 +4,12 @@
 
 [node name="ElectricalPitHazard" type="StaticBody2D"]
 collision_layer = 16
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 8, -20, 16, -12, 24, 4, 20, 20, 8, 20, -24, 20, -16, 0, -12, -8, -8, -8, -4, -16 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 8, -4, 4, -4, -4, 4, -4, 8, 8, 8, 8, 4 )
+__meta__ = {
+"_edit_group_": true
+}
