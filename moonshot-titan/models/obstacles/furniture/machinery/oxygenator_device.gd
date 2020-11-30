@@ -4,3 +4,4 @@ signal interaction_complete()
 
 func _on_Interactable_interaction_complete():
 	emit_signal("interaction_complete")
+	$Interactable.queue_free()
