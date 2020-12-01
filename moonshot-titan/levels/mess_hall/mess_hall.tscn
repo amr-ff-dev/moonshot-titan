@@ -51,52 +51,70 @@ rotation = -0.261799
 [node name="Chair" parent="." instance=ExtResource( 7 )]
 position = Vector2( 400, 248 )
 rotation = 0.575959
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 400, 376 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 400, 504 )
 rotation = -1.309
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Chair4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 176, 248 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 176, 376 )
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 168, 504 )
 rotation = -0.261799
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 264, 504 )
 rotation = -2.40506
+flip_horizontal = false
+flip_vertical = false
 
 [node name="Chair8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 256, 376 )
 rotation = 1.28282
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Chair9" parent="." instance=ExtResource( 7 )]
 position = Vector2( 256, 240 )
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Chair10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 496, 248 )
 rotation = -0.785398
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Chair11" parent="." instance=ExtResource( 7 )]
 position = Vector2( 496, 376 )
 rotation = 0.785398
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Chair12" parent="." instance=ExtResource( 7 )]
 position = Vector2( 496, 504 )
 rotation = 1.5708
 flip_horizontal = true
+flip_vertical = false
 
 [node name="Table2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 208, 248 )
@@ -180,6 +198,7 @@ rotation = -0.610865
 position = Vector2( 88, 360 )
 rotation = -1.74533
 flip_horizontal = true
+flip_vertical = false
 
 [node name="SpiderQueen" parent="." instance=ExtResource( 3 )]
 position = Vector2( 124, 572 )

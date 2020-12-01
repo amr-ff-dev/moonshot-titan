@@ -78,6 +78,9 @@ func _on_RocketPad_game_finished():
 func _on_ResearchLab_suit_change(texture):
 	change_player_suit(texture)
 
+func _on_ComputerCore_unlock_security_doors():
+	$FuelBay.open_door()
+
 func change_player_suit(texture):
 	player.change_suit(texture)
 

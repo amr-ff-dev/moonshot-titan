@@ -1,10 +1,12 @@
 extends QuestRoom
 
+signal unlock_security_doors()
+
 class_name ComputerCore
 
 onready var entrance = $Entrance
 
-func _init().("Enter Launch Sequence"):
+func _init().("Unlock Security Doors"):
 	pass
 
 func _on_Entrance_player_entered(_player):
@@ -18,3 +20,4 @@ func _on_Interactable_interaction_complete():
 func finish_room():
 	.finish_room()
 	entrance.open_permanently()
+	emit_signal("unlock_security_doors")

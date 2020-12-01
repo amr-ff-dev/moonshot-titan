@@ -470,7 +470,7 @@ nav_2d_path = NodePath("../Navigation2D")
 wander_radius = 75.0
 
 [node name="Spider3" parent="." instance=ExtResource( 24 )]
-position = Vector2( 600, 520 )
+position = Vector2( 632, 432 )
 detection_radius = 200.0
 nav_2d_path = NodePath("../Navigation2D")
 [connection signal="player_entered" from="Entrance" to="." method="_on_Entrance_player_entered"]
