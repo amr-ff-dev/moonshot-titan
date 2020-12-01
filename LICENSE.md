@@ -12,9 +12,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Music
 
-* Keep The Distance - /moonshot-titan/user_interface/splash_screen/intro.ogg
-* Dystopia - /moonshot-titan/levels/titan/titan.ogg
-* Backstabbed - /moonshot-titan/user_interface/splash_screen/outro.ogg
+* [Keep The Distance](moonshot-titan/user_interface/splash_screen/intro.ogg)
+* [Dystopia](moonshot-titan/levels/titan/titan.ogg)
+* [Backstabbed](moonshot-titan/user_interface/splash_screen/outro.ogg)
 
 All of the music tracks for this project have been licensed for use in this project only by Nicolas Jeudy / DARK FANTASY STUDIO and are copyrighted by the original creator. 
 
