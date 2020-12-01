@@ -6,7 +6,7 @@ class_name ComputerCore
 
 onready var entrance = $Entrance
 
-func _init().("Unlock Security Doors"):
+func _init().("Unlock the Secure Doors"):
 	pass
 
 func _on_Entrance_player_entered(_player):

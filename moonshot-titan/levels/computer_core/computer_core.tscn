@@ -327,37 +327,30 @@ position = Vector2( 520, 296 )
 [node name="LightningHazard23" parent="." instance=ExtResource( 20 )]
 position = Vector2( 416, 159 )
 rotation = 0.785398
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard45" parent="." instance=ExtResource( 20 )]
 position = Vector2( 112, 528 )
 rotation = 0.785398
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard49" parent="." instance=ExtResource( 20 )]
 position = Vector2( 176, 568 )
 rotation = 0.785398
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard64" parent="." instance=ExtResource( 20 )]
 position = Vector2( 279, 625 )
 rotation = 0.785398
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard59" parent="." instance=ExtResource( 20 )]
 position = Vector2( 256, 568 )
 rotation = 0.785398
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard60" parent="." instance=ExtResource( 20 )]
 position = Vector2( 272, 552 )
 rotation = 0.785398
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard67" parent="." instance=ExtResource( 20 )]
 position = Vector2( 416, 584 )
 rotation = 0.785398
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard32" parent="." instance=ExtResource( 20 )]
 position = Vector2( 556, 257 )
@@ -374,32 +367,26 @@ rotation = 1.5708
 [node name="LightningHazard15" parent="." instance=ExtResource( 20 )]
 position = Vector2( 271, 208 )
 rotation = 2.35619
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard21" parent="." instance=ExtResource( 20 )]
 position = Vector2( 416, 200 )
 rotation = 2.35619
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard37" parent="." instance=ExtResource( 20 )]
 position = Vector2( 120, 264 )
 rotation = 2.35619
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard39" parent="." instance=ExtResource( 20 )]
 position = Vector2( 168, 232 )
 rotation = 2.35619
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard41" parent="." instance=ExtResource( 20 )]
 position = Vector2( 184, 216 )
 rotation = 2.35619
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard81" parent="." instance=ExtResource( 20 )]
 position = Vector2( 392, 672 )
 rotation = 2.35619
-scale = Vector2( 1, 1 )
 
 [node name="LightningHazard13" parent="." instance=ExtResource( 20 )]
 position = Vector2( 232, 232 )
