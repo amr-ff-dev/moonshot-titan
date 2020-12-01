@@ -51,6 +51,9 @@ func _on_HUD_restart():
 	player.respawn(player_respawn)
 	restart_button.visible = false
 
+func _on_CrewQuarters_show_suit_achievement():
+	$HUD/AchievementBanner/AnimationPlayer.play("display_achievement_popup")
+
 func _on_QuestRoom_player_entered(spawn_point):
 	update_player_resapwn(spawn_point)
 
