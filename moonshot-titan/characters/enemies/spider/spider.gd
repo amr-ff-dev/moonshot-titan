@@ -13,12 +13,11 @@ onready var state
 onready var nav_2d : Navigation2D = get_node(nav_2d_path)
 onready var nav_line = $NavLine
 onready var player_detection = $PlayerDetection
-onready var player_detection_shape = $PlayerDetection/CollisionShape2D
 onready var sprite = $Sprite
 onready var start_position = position
 
 func _ready():
-	player_detection_shape.shape.radius = detection_radius
+	$PlayerDetection/CollisionShape2D.shape.radius = detection_radius
 	change_state(SpiderIdle.new())
 
 func _physics_process(delta):
