@@ -16,7 +16,7 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "display_achievement_popup"
-length = 4.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -24,7 +24,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 4 ),
+"times": PoolRealArray( 0, 0.1, 5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
